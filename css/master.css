@@ -37,6 +37,56 @@
 
 /**************** Basic Settings ****************/
 
+:root[color-theme='light'] {
+    --bg-color: #fff;
+    --font-color: #000;
+    --bg-1: rgba(0,0,0,0.1);
+    --bg-2: rgba(0,0,0,0.2);
+    --bg-3: rgba(0,0,0,0.3);
+    --bg-4: rgba(0,0,0,0.4);
+    --bg-5: rgba(0,0,0,0.5);
+    --bg-6: rgba(0,0,0,0.6);
+    --bg-7: rgba(0,0,0,0.7);
+    --bg-8: rgba(0,0,0,0.8);
+    --bg-9: rgba(0,0,0,0.9);
+    --bg-10: rgba(0,0,0,1);
+    --bg-rev-1: rgba(255,255,255,0.1);
+    --bg-rev-2: rgba(255,255,255,0.2);
+    --bg-rev-3: rgba(255,255,255,0.3);
+    --bg-rev-4: rgba(255,255,255,0.4);
+    --bg-rev-5: rgba(255,255,255,0.5);
+    --bg-rev-6: rgba(255,255,255,0.6);
+    --bg-rev-7: rgba(255,255,255,0.7);
+    --bg-rev-8: rgba(255,255,255,0.8);
+    --bg-rev-9: rgba(255,255,255,0.9);
+    --bg-rev-10: rgba(255,255,255,1);
+}
+
+:root[color-theme='dark'] {
+    --bg-color: #000;
+    --font-color: #fff;
+    --bg-1: rgba(255,255,255,0.1);
+    --bg-2: rgba(255,255,255,0.2);
+    --bg-3: rgba(255,255,255,0.3);
+    --bg-4: rgba(255,255,255,0.4);
+    --bg-5: rgba(255,255,255,0.5);
+    --bg-6: rgba(255,255,255,0.6);
+    --bg-7: rgba(255,255,255,0.7);
+    --bg-8: rgba(255,255,255,0.8);
+    --bg-9: rgba(255,255,255,0.9);
+    --bg-10: rgba(255,255,255,1);
+    --bg-rev-1: rgba(0,0,0,0.1);
+    --bg-rev-2: rgba(0,0,0,0.2);
+    --bg-rev-3: rgba(0,0,0,0.3);
+    --bg-rev-4: rgba(0,0,0,0.4);
+    --bg-rev-5: rgba(0,0,0,0.5);
+    --bg-rev-6: rgba(0,0,0,0.6);
+    --bg-rev-7: rgba(0,0,0,0.7);
+    --bg-rev-8: rgba(0,0,0,0.8);
+    --bg-rev-9: rgba(0,0,0,0.9);
+    --bg-rev-10: rgba(0,0,0,1);
+}
+
 * {
     text-decoration: none;
     border-collapse: collapse;
@@ -73,15 +123,43 @@ div.row{
     padding-right: 20px;
 }
 
-span.gridone-button{
+span.gridone-button.white{
     padding: 9px 18px;
     border: 1px solid #ffffff;
+    color: #ffffff;
     border-radius: 4px;
     cursor: pointer;
 }
 
-span.gridone-button:hover{
-    background-color: rgba(255, 255, 255, 0.1);
+span.gridone-button.white:hover{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+span.gridone-button.light{
+    padding: 9px 18px;
+    border: 1px solid var(--bg-color);
+    color: var(--bg-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+span.gridone-button.light:hover{
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+span.gridone-button.dark{
+    padding: 9px 18px;
+    border: 1px solid var(--font-color);
+    color: var(--font-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+span.gridone-button.dark:hover{
+    background-color: var(--font-color);
+    color: var(--bg-color);
 }
 
 img#go-down{
@@ -145,38 +223,136 @@ div.back-to-top:hover {
 }
 
 /**************** NAV CUSTOM ****************/
-div.nav-custom{
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+.nav-detail{
     display: flex;
     justify-content: space-between;
     padding: 15px 0;
     user-select: none;
 }
 
-div.nav-custom a.navbar-brand img{
+
+.nav-logo img{
     height: 20px;
     width: auto;
-    margin: 3px;
 }
 
-div.nav-custom div#top-navbar-icons img.navbar-icons{
+.nav-menu{
+    width: 100%;
+}
+
+
+.nav-icon{
     width: 24px;
     height: 24px;
 }
 
-div.navbar-collapse.center,
-div.navbar-collapse.right{
-    flex-grow: unset!important;
-    justify-content: center;
+.nav-center{
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-div.navbar-collapse.right{
-    width: 120px;
-    justify-content: flex-end;
+.nav-right{
+    display: flex;
 }
 
-div#top-navbar li{
-    margin: 0 10px;
+.nav-center .nav-item {
+    margin: 0 20px;
+}
+
+.nav-right .nav-item {
+    margin: 0 5px;
+}
+
+.hamburger {
+    display: none;
+}
+
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+@media only screen and (max-width: 1024px) {
+    .nav-menu {
+        position: fixed;
+        left: 100%;
+        top: 100px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.85);
+        height: calc(100vh - 100px);
+        text-align: center;
+        transition: 0.3s;
+        padding-right: 15%!important;
+        padding-left: 15%!important;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-center{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .nav-right{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .nav-item{
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .nav-center .nav-item {
+        margin: 50px 0px!important; 
+    }
+
+    .nav-right .nav-item {
+        margin: 0 5px;
+    }
+
+    .nav-icon{
+        width: 36px;
+        height: 36px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
 
 /**************** Footer ****************/
@@ -315,6 +491,10 @@ div.home-context span#home-context{
 }
 
 /**************** Home Section ****************/
+div#aida-section{
+    background-color: var(--bg-color);
+}
+
 div#aida-section div.section-wrap{
     display: flex;
     flex-direction: column;
@@ -337,6 +517,10 @@ svg#aida-icon{
     z-index: 3;
 }
 
+svg#aida-icon .cls-3{
+    fill: var(--font-color);
+}
+
 div#aida-section svg#aida-icon{
     width: 200px;
     height: 65px;
@@ -347,7 +531,12 @@ div#aida-section svg#aida-icon{
 }
 
 span.aida-detail{
-    color: #000;
+    color: var(--font-color);
+    text-shadow:
+    -1px -1px 20px var(--bg-rev-2),
+    1px -1px 20px var(--bg-rev-2),
+    -1px 1px 20px var(--bg-rev-2),
+    1px 1px 20px var(--bg-rev-2);  
     font-size: 55px;
     line-height: 95px;
     letter-spacing: -2.65px;
@@ -357,7 +546,7 @@ span.aida-detail{
 }
 
 span.aida-detail b{
-    color: #000;
+    color: var(--font-color);  
     font-size: 55px;
     line-height: 95px;
     letter-spacing: -2.65px;
@@ -412,62 +601,5 @@ img#drop{
     to {
         opacity: 1;
         top: 50%;
-    }
-}
-
-div#aida-section span.gridone-button{
-    color: #000000;
-    padding: 9px 18px;
-    border: 1px solid #000000;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-div#aida-section span.gridone-button:hover{
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-div.language-wrap span{
-    color: #000;
-    font-size: 100px;
-    font-weight: bold;
-    z-index: 99;
-    position: absolute;
-    opacity: 0;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    user-select: none;
-}
-
-span#lang-kor{
-    left: -20%;
-}
-
-span#lang-eng{
-    left: 0%;
-}
-
-span#lang-jap{
-    left: 22%;
-}
-
-@keyframes drop-kor {
-    to {
-        opacity: 0.75;
-        top: 45%;
-    }
-}
-
-@keyframes drop-eng {
-    to {
-        opacity: 0.75;
-        top: 50%;
-    }
-}
-
-@keyframes drop-jap {
-    to {
-        opacity: 0.75;
-        top: 46%;
     }
 }
