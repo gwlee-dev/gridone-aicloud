@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
     <title>up-to-top</title>
-    <path fill="#5D5D5D" d="M16 14L6 24 7.4 25.4 16 16.8 24.6 25.4 26 24zM4 8H28V10H4z"/>
+    <path fill="rgba(255,255,255,0.75)" d="M16 14L6 24 7.4 25.4 16 16.8 24.6 25.4 26 24zM4 8H28V10H4z"/>
     <path fill="none" d="M0 0H32V32H0z"/>
 </svg>

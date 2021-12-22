@@ -1,7 +1,7 @@
 var menuOpenStatus = 0;
 var currentPage = 1;
 
-$(document).ready(function() {
+$(function(){
     document.documentElement.setAttribute('color-theme', 'light');
 
     console.log("              _      _                     \n" +
