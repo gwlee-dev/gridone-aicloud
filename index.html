@@ -5,14 +5,15 @@
     <title>AI CLOUD</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="css/master.css">
 </head>
-<body>
+<body  data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
     <div class="btn-function" data-anchor="home">
         <div class="btn-group dropup">
             <button class="me-2 dropdown-toggle" data-bs-toggle="dropdown" >
-                <img src="svg/earth-filled.svg" alt="language">
+                <img id="language" src="svg/earth-filled.svg" alt="language">
             </button>
             <ul class="dropdown-menu">
                 <li>
@@ -33,34 +34,34 @@
             </ul>
         </div>
         <button>
-            <a href="#home">
+            <a href="#">
                 <img src="svg/back-to-top.svg" alt="onTop">
             </a>
         </button>
     </div>
-    <nav class="navbar navbar-expand navbar-dark fixed-top">
+    <nav class="navbar navbar-expand navbar-dark fixed-top" id="navbar">
         <div class="container">
             <a class="navbar-logo" href="#home">
                 <img src="svg/logo.svg" alt="logo">
             </a>
             <ul class="navbar-nav nav-menu">
                 <li class="nav-item" data-anchor="aida">
-                    <a class="nav-link" href="#aida">AIDA</a>
+                    <a class="nav-link" href="#aida-section">AIDA</a>
                 </li>
                 <li class="nav-item" data-anchor="thirdeye">
-                    <a class="nav-link" href="#thirdeye">ThirdEye</a>
+                    <a class="nav-link" href="#thirdeye-section">ThirdEye</a>
                 </li>
                 <li class="nav-item" data-anchor="umean">
-                    <a class="nav-link" href="#umean">UMean</a>
+                    <a class="nav-link" href="#umean-section">UMean</a>
                 </li>
                 <li class="nav-item" data-anchor="aiportal">
-                    <a class="nav-link" href="#aiportal">AI Portal</a>
+                    <a class="nav-link" href="#aiportal-section">AI Portal</a>
                 </li>
                 <li class="nav-item" data-anchor="devcenter">
-                    <a class="nav-link" href="#devcenter">DEV Center</a>
+                    <a class="nav-link" href="#devcenter-section">DEV Center</a>
                 </li>
                 <li class="nav-item" data-anchor="recruit">
-                    <a class="nav-link" href="#recruit">문의</a>
+                    <a class="nav-link" href="#recruit-section">문의</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -70,211 +71,194 @@
             </div>
         </div>
     </nav>
-      
-    <div id="fullpage">
-        <div class="section fp-auto-height" id="home-section">
-            <div class="section-wrap">
-                <video muted data-autoplay loop preload="none" playsinline>
-                    <source src="video/bg.mp4" type="video/mp4">
-                </video>
-                <div class="home-context">
-                    <svg class="logo" id="main-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 203.67 38.33">
-                        <defs>
-                            <style>
-                                .cls-1 {
-                                    fill: rgba(255,255,255,0);
-                                    stroke: #ffffff;
-                                    stroke-width: 0.5;
-                                }
-                    
-                                .cls-2 {
-                                    fill: none;
-                                }
-                            </style>
-                        </defs>
-                            <path class="cls-1" d="M25,27.24H14.4L11.92,32.5H6.17L19.76,5.84h0L33.36,32.5H27.47Zm-2.1-4.44-3.17-6.68L16.54,22.8Z"/>
-                            <path class="cls-1" d="M36.72,5.84h6.17V32.5H36.72Z"/>
-                            <path class="cls-1" d="M49.24,18H60v4.76H49.24Z"/>
-                            <path class="cls-1" d="M91.55,5.84H98V27.22l13.12,0V32.5H91.55Z"/>
-                            <path class="cls-1" d="M172.69,5.84H182.8c8.72,0,14.7,5.25,14.7,13.33s-6,13.33-14.7,13.33H172.69Zm9.81,21.4c5.29,0,8.75-3.13,8.75-8.18s-3.46-8.18-8.75-8.18h-3.39V27.24Z"/>
-                            <path class="cls-1" d="M126.62,5.84a13.22,13.22,0,1,0,13.22,13.22A13.22,13.22,0,0,0,126.62,5.84Zm0,21.4a8.18,8.18,0,1,1,8.18-8.18A8.18,8.18,0,0,1,126.62,27.24Z"/>
-                            <path class="cls-1" d="M77.7,27.24A8.18,8.18,0,1,1,84,13.83l3.71-3.42a13.22,13.22,0,1,0,0,17.29L84,24.29A8.17,8.17,0,0,1,77.7,27.24Z"/>
-                            <path class="cls-1" d="M87.7,10.41h0s0,0,0,0Z"/>
-                            <path class="cls-1" d="M87.7,27.7Z"/>
-                            <path class="cls-1" d="M161.6,21.62c0,3.62-2.11,5.62-5.66,5.62s-5.65-2-5.65-5.62V5.84h-6.42V20.51c0,7.72,4.5,12,12.07,12S168,28.23,168,20.51V5.84H161.6Z"/>
-                            <rect class="cls-2" width="380" height="80"/>
-                    </svg>
-                    <span id="home-title">
-                        문서 이미지 내 필요한 문자를 인식하여<br>업무 처리 속도를 높여보세요.
-                    </span>
-                    <span id="home-context">
-                        OCR, 캡차(CAPTCHA), NLP, RL, VISION 분야의 독자적인 인공지능 기술을<br>
-                        바탕으로 인간 행동을 토대로 학습하고 성장하는 인지자동화 솔루션
-                    </span>
-                </div>
-                <a class="scrollNext" href="#aida/aida-main"><span>아래로 스크롤</span><i class="bi bi-chevron-down"></i></a>
+    <section>
+        <article id="home-section" class="d-flex flex-column align-items-center justify-content-center">
+            <div data-aos="fade-down">
+                <svg class="logo mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 203.67 38.33">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: rgba(255,255,255,0);
+                                stroke: #ffffff;
+                                stroke-width: 0.5;
+                            }
+                
+                            .cls-2 {
+                                fill: none;
+                            }
+                        </style>
+                    </defs>
+                        <path class="cls-1" d="M25,27.24H14.4L11.92,32.5H6.17L19.76,5.84h0L33.36,32.5H27.47Zm-2.1-4.44-3.17-6.68L16.54,22.8Z"/>
+                        <path class="cls-1" d="M36.72,5.84h6.17V32.5H36.72Z"/>
+                        <path class="cls-1" d="M49.24,18H60v4.76H49.24Z"/>
+                        <path class="cls-1" d="M91.55,5.84H98V27.22l13.12,0V32.5H91.55Z"/>
+                        <path class="cls-1" d="M172.69,5.84H182.8c8.72,0,14.7,5.25,14.7,13.33s-6,13.33-14.7,13.33H172.69Zm9.81,21.4c5.29,0,8.75-3.13,8.75-8.18s-3.46-8.18-8.75-8.18h-3.39V27.24Z"/>
+                        <path class="cls-1" d="M126.62,5.84a13.22,13.22,0,1,0,13.22,13.22A13.22,13.22,0,0,0,126.62,5.84Zm0,21.4a8.18,8.18,0,1,1,8.18-8.18A8.18,8.18,0,0,1,126.62,27.24Z"/>
+                        <path class="cls-1" d="M77.7,27.24A8.18,8.18,0,1,1,84,13.83l3.71-3.42a13.22,13.22,0,1,0,0,17.29L84,24.29A8.17,8.17,0,0,1,77.7,27.24Z"/>
+                        <path class="cls-1" d="M87.7,10.41h0s0,0,0,0Z"/>
+                        <path class="cls-1" d="M87.7,27.7Z"/>
+                        <path class="cls-1" d="M161.6,21.62c0,3.62-2.11,5.62-5.66,5.62s-5.65-2-5.65-5.62V5.84h-6.42V20.51c0,7.72,4.5,12,12.07,12S168,28.23,168,20.51V5.84H161.6Z"/>
+                        <rect class="cls-2" width="380" height="80"/>
+                </svg>
             </div>
-        </div>
-        <div class="section" id="aida-section">
-            <div class="slide" data-anchor="aida-main">
-                <div class="section-wrap container">
-                    <div class="d-flex flex-column justify-content-start align-items-start">
+            <div class="text-center" data-aos="fade-up">
+                <h4 class="mb-3">
+                    문서 이미지 내 필요한 문자를 인식하여<br>업무 처리 속도를 높여보세요.
+                </h4>
+                <span class="text-muted">
+                    OCR, 캡차(CAPTCHA), NLP, RL, VISION 분야의 독자적인 인공지능 기술을<br>
+                    바탕으로 인간 행동을 토대로 학습하고 성장하는 인지자동화 솔루션
+                </span>
+            </div>
+            <a class="scrollNext" href="#aida-section"><span>아래로 스크롤</span><i class="bi bi-chevron-down"></i></a>
+        </article>
+        <article id="aida-section">
+            <div class="container">
+                <div class="d-flex flex-column justify-content-center align-items-center pt-5">
+                    <div data-aos="fade-down" class="mb-3">
                         <img class="aida-logo" src="svg/aida-logo.svg" alt="aida">
-                        <span class="aida-detail mt-4">
+                    </div>
+                    <div data-aos="fade-up" class="d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="text-center mt-4">
                             문서 이미지 내 필요한 문자를<br>
-                            <b>인식</b>하여 <b class="highlight position-relative">업무 처리 속도</b>를<br>
+                            <strong>인식</strong>하여 <strong class="highlight position-relative">업무 처리 속도</strong>를<br>
                             높여 보세요.
-                        </span>
-                        <div class="button-area mt-4">
-                            <button class="btn btn-outline-light" onclick="location.href='#aida/aida-detail'">
-                                자세히 보기
-                            </button>
-                        </div>
+                        </h1>
                     </div>
                 </div>
-            </div>
-	        <div class="slide" data-anchor="aida-detail">
-                <div class="section-wrap container">
-                    <button class="go-main" onclick="location.href='#aida/aida-main'">
-                        <i class="bi bi-arrow-left"></i>
-                    </button>
-                    <div class="d-flex flex-column justify-content-center align-items-center">
-                        <img class="aida-logo-sm" src="svg/aida-logo.svg" alt="aida">
-                        <span class="text-white mt-3">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
-                        <div class="card w-100 mt-3">
-                            <div class="card-header w-100 d-flex justify-content-between">
-                                <span class="text-primary fw-bold">기본정보 설정</span>
-                                <small class="text-muted">(<sup><small><i class="bi bi-asterisk text-danger"></i></small></sup> 필수 입력 사항입니다)</small>
-                            </div>
-                            <div class="card-body">
-                                <div class="row align-items-center mb-3">
-                                    <div class="col-2">
-                                        <span class="text-dark">이미지 파일</span>
-                                        <sup><small><i class="bi bi-asterisk text-danger"></i></small></i></sup>
-                                    </div>
-                                    <div class="col-10">
-                                        <input type="file" class="form-control d-none" id="file-upload" accept="image/*">
-                                        <div class="input-group">
-                                            <input type="text" id="file-text" class="form-control" readonly>
-                                            <button id="button-attach" class="btn btn-outline-dark">이미지 업로드</button>
-                                        </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
+                    <div class="card w-100 mt-3">
+                        <div class="card-header w-100 d-flex justify-content-between">
+                            <span class="text-primary fw-bold">기본정보 설정</span>
+                            <small class="text-muted">(<sup><small><i class="bi bi-asterisk text-danger"></i></small></sup> 필수 입력 사항입니다)</small>
+                        </div>
+                        <div class="card-body">
+                            <div class="row align-items-center mb-3">
+                                <div class="col-2">
+                                    <span class="text-dark">이미지 파일</span>
+                                    <sup><small><i class="bi bi-asterisk text-danger"></i></small></i></sup>
+                                </div>
+                                <div class="col-10">
+                                    <input type="file" class="form-control d-none" id="file-upload" accept="image/*">
+                                    <div class="input-group">
+                                        <input type="text" id="file-text" class="form-control" readonly>
+                                        <button id="button-attach" class="btn btn-outline-dark">이미지 업로드</button>
                                     </div>
                                 </div>
-                                <div class="row g-0 align-items-center">
-                                    <div class="col-2">
-                                        <span class="text-dark">모델 선택</span>
-                                        <sup><small><i class="bi bi-asterisk text-danger"></i></small></sup>
-                                    </div>
-                                    <div class="col-9">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio1" value="option1">
-                                            <label class="form-check-label text-dark" for="inlineRadio1">사업자등록증</label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio2" value="option2">
-                                            <label class="form-check-label text-dark" for="inlineRadio2">신분증</label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio3" value="option3">
-                                            <label class="form-check-label text-dark" for="inlineRadio3">영수증</label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio4" value="option3">
-                                            <label class="form-check-label text-dark" for="inlineRadio4">정형화 문서</label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio5" value="option3" disabled>
-                                            <label class="form-check-label text-dark" for="inlineRadio5">타자체 문서</label>
-                                          </div>
-                                    </div>
-                                    <div class="col d-flex justify-content-end">
-                                        <button id="button-test" class="btn btn-primary">테스트</button>
-                                    </div>
+                            </div>
+                            <div class="row g-0 align-items-center">
+                                <div class="col-2">
+                                    <span class="text-dark">모델 선택</span>
+                                    <sup><small><i class="bi bi-asterisk text-danger"></i></small></sup>
+                                </div>
+                                <div class="col-9">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="models" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label text-dark" for="inlineRadio1">사업자등록증</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="models" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label text-dark" for="inlineRadio2">신분증</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="models" id="inlineRadio3" value="option3">
+                                        <label class="form-check-label text-dark" for="inlineRadio3">영수증</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="models" id="inlineRadio4" value="option3">
+                                        <label class="form-check-label text-dark" for="inlineRadio4">정형화 문서</label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="models" id="inlineRadio5" value="option3" disabled>
+                                        <label class="form-check-label text-dark" for="inlineRadio5">타자체 문서</label>
+                                      </div>
+                                </div>
+                                <div class="col d-flex justify-content-end">
+                                    <button id="button-test" class="btn btn-primary">테스트</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="card w-100 mt-3">
-                            <div class="card-header">
-                                <span class="text-primary fw-bold">상세 설정</span>
-                            </div>
-                            <div class="card-body">
-                                <div class="row h-100">
-                                    <div class="col-9 p-3" id="img-area">
-                                        <img id="img-source" class="w-100" src="img/sample-docs.png" alt="sample">
-                                    </div>
-                                    <div class="col-3">
-                                        <textarea id="img-explain" class="form-control w-100 h-100" disabled></textarea>
-                                    </div>
+                    </div>
+                    <div class="card w-100 mt-3">
+                        <div class="card-header">
+                            <span class="text-primary fw-bold">상세 설정</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="row h-100">
+                                <div class="col-9 p-3" id="img-area">
+                                    <img id="img-source" class="w-100" alt="sample">
+                                </div>
+                                <div class="col-3">
+                                    <textarea id="img-explain" class="form-control w-100 h-100" disabled></textarea>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section fp-auto-height" id="footer-section">
-            <footer class="bg-black">
-                <div class="container py-5">
-                    <div class="d-flex">
-                        <div class="me-auto">
-                            <img src="img/logo.png" alt="그리드원">
-                            <span class="ms-4">주식회사 그리드원</span>
-                        </div>
-                        <small>
-                            <ul class="list-unstyled d-flex text-muted">
-                                <li class="me-4"><span class="badge bg-dark me-2">대표</span>김계관</li>
-                                <li class="me-4"><span class="badge bg-dark me-2">주소</span>서울시 서초구 남부순환로 347길 23(서초동) 유진빌딩 4층</li>
-                                <li class="me-4"><span class="badge bg-dark me-2">TEL</span>02-2058-2220</li>
-                                <li class="me-4"><span class="badge bg-dark me-2">FAX</span>02-2058-2221</li>
-                            </ul>
-                        </small>
-                    </div>
-                    <hr class="w-100 text-dark">
-                    <div class="row w-100 mt-5">
-                        <div class="col">
-                            <span class="fw-bold">홈</span>
-                            <ul class="list-unstyled mt-3 text-secondary">
-                                <li>회사소개</li>
-                                <li>문화</li>
-                                <li>인재채용</li>
-                                <li>문의</li>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <span class="fw-bold">솔루션</span>
-                            <ul class="list-unstyled mt-3 text-secondary">
-                                <li>AutomateOne</li>
-                                <li>AIDA</li>
-                                <li>TestOne</li>
-                                <li>PerfOne</li>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <span class="fw-bold">뉴스</span>
-                            <ul class="list-unstyled mt-3 text-secondary">
-                                <li>공지사항</li>
-                                <li>뉴스</li>
-                            </ul>
-                        </div>
-                        <div class="col">
-                            <span class="fw-bold">관련 사이트</span>
-                            <ul class="list-unstyled mt-3 linkage text-secondary">
-                                <li><a href="#">AI CLOUD</a></li>
-                                <li><a href="#">RPA Portal</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <small>
-                        <ul class="list-unstyled d-flex text-muted mt-3">
-                            <li class="me-4">개인정보처리방침</li>
-                            <li class="me-4">이메일무단수집거부</li>
-                            <li class="ms-auto">© girdone Co., Ltd. All rights reserved.</li>
-                        </ul>
-                    </small>
+        </article>
+    </section>
+    <footer class="bg-black" id="footer-section">
+        <div class="container py-5">
+            <div class="d-flex">
+                <div class="me-auto">
+                    <img src="img/logo.png" alt="그리드원">
+                    <span class="ms-4">주식회사 그리드원</span>
                 </div>
-            </footer>
+                <small>
+                    <ul class="list-unstyled d-flex text-muted">
+                        <li class="me-4"><span class="badge bg-dark me-2">대표</span>김계관</li>
+                        <li class="me-4"><span class="badge bg-dark me-2">주소</span>서울시 서초구 남부순환로 347길 23(서초동) 유진빌딩 4층</li>
+                        <li class="me-4"><span class="badge bg-dark me-2">TEL</span>02-2058-2220</li>
+                        <li class="me-4"><span class="badge bg-dark me-2">FAX</span>02-2058-2221</li>
+                    </ul>
+                </small>
+            </div>
+            <hr class="w-100 text-dark">
+            <div class="row w-100 mt-5">
+                <div class="col">
+                    <span class="fw-bold">홈</span>
+                    <ul class="list-unstyled mt-3 text-secondary">
+                        <li>회사소개</li>
+                        <li>문화</li>
+                        <li>인재채용</li>
+                        <li>문의</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <span class="fw-bold">솔루션</span>
+                    <ul class="list-unstyled mt-3 text-secondary">
+                        <li>AutomateOne</li>
+                        <li>AIDA</li>
+                        <li>TestOne</li>
+                        <li>PerfOne</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <span class="fw-bold">뉴스</span>
+                    <ul class="list-unstyled mt-3 text-secondary">
+                        <li>공지사항</li>
+                        <li>뉴스</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <span class="fw-bold">관련 사이트</span>
+                    <ul class="list-unstyled mt-3 linkage text-secondary">
+                        <li><a href="#">AI CLOUD</a></li>
+                        <li><a href="#">RPA Portal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <small>
+                <ul class="list-unstyled d-flex text-muted mt-3">
+                    <li class="me-4">개인정보처리방침</li>
+                    <li class="me-4">이메일무단수집거부</li>
+                    <li class="ms-auto">© girdone Co., Ltd. All rights reserved.</li>
+                </ul>
+            </small>
         </div>
-    </div>
+    </footer>
     <div class="modal fade" id="loadingmodal" tabindex="-1" aria-labelledby="loadingmodalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" style="width: 15rem;">
             <div class="modal-content" style="height: 15rem;">
@@ -291,7 +275,8 @@
     </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.js"></script> -->
     <script src="js/master.js"></script>
     <script>
         $(function () {
@@ -314,37 +299,25 @@
                 $('#file-upload').click();
             });
 
-            $("#file-upload").on("change", function () {
+            $("#file-upload").on("change", function (event) {
                 $("#file-text").val($("#file-upload")[0].files[0].name);
-            });
+                processFile(event.target.files[0]);
+            });  
+            
+            AOS.init();
+        });
 
-            var numToggle = 0;
+        function processFile(file){
+            var reader = new FileReader();
+            var output;
 
-            $('.nav-item').click(function(){
-                $('.nav-item').removeClass('active');
-                $(this).addClass('active');
-            });
+            reader.onload = function () {
+                var result = reader.result;
+                document.getElementById('img-source').setAttribute('src',result);               
+            };
+            reader.readAsDataURL(file);
+        }
 
-            $('#fullpage').fullpage({
-                autoScrolling: true,
-                scrollHorizontally: true,
-                keyboardScrolling: false,
-                slidesNavigation: false,
-                controlArrows: false,
-                anchors:['home','aida','footer'],
-                afterLoad: function(anchorLink, index){
-                    $('.nav-item').removeClass('active');
-                    if(anchorLink == "aida"){
-                        $('.nav-item').eq(0).addClass('active');
-                        $('.aida-detail .highlight').addClass('active');
-                    }
-                },
-                afterSlideLoad: function(section, origin, destination, direction){
-                    if(direction == 1)  $.fn.fullpage.setAllowScrolling(false);
-                    else $.fn.fullpage.setAllowScrolling(true);
-                }
-            });
-        })
     </script>
 </body>
 </html>

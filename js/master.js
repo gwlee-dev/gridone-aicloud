@@ -1,9 +1,4 @@
-var menuOpenStatus = 0;
-var currentPage = 1;
-
 $(function(){
-    document.documentElement.setAttribute('color-theme', 'light');
-
     console.log("              _      _                     \n" +
                 "             (_)    | |                    \n" +
                 "  __ _  _ __  _   __| |%c  ___   _ __    ___ \n" +
@@ -42,17 +37,3 @@ $(function(){
     }
     /* Navbar End */
 });
-
-var theme = "light";
-function themeChange() {
-    if(theme == "light"){
-        theme = "dark";
-        document.documentElement.setAttribute('color-theme', 'dark');
-        $("img#theme-icon").attr("src","svg/moon-regular.svg");
-    }
-    else{
-        theme = "light";
-        document.documentElement.setAttribute('color-theme', 'light');
-        $("img#theme-icon").attr("src","svg/sun-regular.svg");
-    }
-}
