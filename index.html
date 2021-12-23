@@ -135,65 +135,75 @@
             </div>
 	        <div class="slide" data-anchor="aida-detail">
                 <div class="section-wrap container">
-                    <div class="d-flex w-100 flex-column justify-content-center align-items-center">
-                        <img class="aida-logo" src="svg/aida-logo.svg" alt="aida">
-                        <span class="text-muted mt-3">그리드원의 AI 문서인식 솔루션 AIDA 체험해보기</span>
-                        <div class="card card-detail mt-3">
+                    <button class="go-main" onclick="location.href='#aida/aida-main'">
+                        <i class="bi bi-arrow-left"></i>
+                    </button>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <img class="aida-logo-sm" src="svg/aida-logo.svg" alt="aida">
+                        <span class="text-white mt-3">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
+                        <div class="card w-100 mt-3">
+                            <div class="card-header w-100 d-flex justify-content-between">
+                                <span class="text-primary fw-bold">기본정보 설정</span>
+                                <small class="text-muted">(<sup><small><i class="bi bi-asterisk text-danger"></i></small></sup> 필수 입력 사항입니다)</small>
+                            </div>
                             <div class="card-body">
-                                <div class="d-flex flex-column justify-content-center h-100">
-                                    <h3 class="text-center">AIDA는 AI 솔루션입니다.</h3>
-                                    <h5 class="text-center">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</h5>
-                                    <div class="card mt-2">
-                                        <div class="card-body">
-                                            <div class="d-flex flex-column justify-content-center">
-                                                <span class="text-dark text-center fw-bold">인식가능한 문서</span>
-                                                <div class="row row-cols-5 mt-2">
-                                                    <div class="col text-muted text-center">사업자등록증</div>
-                                                    <div class="col text-muted text-center">통장사본</div>
-                                                    <div class="col text-muted text-center">처방전</div>
-                                                    <div class="col text-muted text-center">신분증</div>
-                                                    <div class="col text-muted text-center">타자체 문서</div>
-                                                </div>
-                                            </div>
+                                <div class="row align-items-center mb-3">
+                                    <div class="col-2">
+                                        <span class="text-dark">이미지 파일</span>
+                                        <sup><small><i class="bi bi-asterisk text-danger"></i></small></i></sup>
+                                    </div>
+                                    <div class="col-10">
+                                        <input type="file" class="form-control d-none" id="file-upload" accept="image/*">
+                                        <div class="input-group">
+                                            <input type="text" id="file-text" class="form-control" readonly>
+                                            <button id="button-attach" class="btn btn-outline-dark">이미지 업로드</button>
                                         </div>
                                     </div>
-                                     <!-- Nav tabs -->
-                                     <nav class="nav nav-tabs mt-2" id="nav-tab" role="tablist">
-                                        <button role="tab" data-bs-toggle="tab"  data-bs-target="#tabs1" class="nav-link active">사업자등록증</button>
-                                        <button role="tab" data-bs-toggle="tab"  data-bs-target="#tabs2" class="nav-link">통장사본</button>
-                                        <button role="tab" data-bs-toggle="tab"  data-bs-target="#tabs3" class="nav-link">처방전</button>
-                                        <button role="tab" data-bs-toggle="tab"  data-bs-target="#tabs4" class="nav-link">신분증</button>
-                                        <button role="tab" data-bs-toggle="tab"  data-bs-target="#tabs5" class="nav-link">타자체 문서</button>
-                                    </nav>
-                                    <!-- Tab panes -->
-                                    <div class="tab-content h-100">
-                                        <div role="tabpanel" class="tab-pane show active" id="tabs1">
-                                            <span class="d-flex justify-content-center mb-2">사업자등록증에서 필요한 정보를 추출합니다.</span>
-                                            <div class="row row-cols-2 g-0" style="height: calc(100% - 30px);">
-                                                <div class="col">
-                                                    <div class="h-75 pb-2 pe-2">
-                                                        <div class="bg-secondary w-100 h-100"></div>
-                                                    </div>
-                                                    <div class="h-25 pt-2 pe-2">
-                                                        <div class="bg-secondary w-100 h-100"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="h-75 pb-2 ps-2">
-                                                        <div class="bg-light w-100 h-100" style="overflow-y: scroll;"></div>
-                                                    </div>
-                                                    <div class="h-25 pt-2 ps-2">
-                                                        <button class="btn btn-warning rounded-0 w-100 h-100">
-                                                            <h5 class="mb-0">이미지 업로드</h5>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane fade" id="tabs2">Tab 2 content...</div>
-                                        <div role="tabpanel" class="tab-pane fade" id="tabs3">Tab 3 content...</div>
-                                        <div role="tabpanel" class="tab-pane fade" id="tabs4">Tab 4 content...</div>
-                                        <div role="tabpanel" class="tab-pane fade" id="tabs5">Tab 5 content...</div>
+                                </div>
+                                <div class="row g-0 align-items-center">
+                                    <div class="col-2">
+                                        <span class="text-dark">모델 선택</span>
+                                        <sup><small><i class="bi bi-asterisk text-danger"></i></small></sup>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio1" value="option1">
+                                            <label class="form-check-label text-dark" for="inlineRadio1">사업자등록증</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio2" value="option2">
+                                            <label class="form-check-label text-dark" for="inlineRadio2">신분증</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio3" value="option3">
+                                            <label class="form-check-label text-dark" for="inlineRadio3">영수증</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio4" value="option3">
+                                            <label class="form-check-label text-dark" for="inlineRadio4">정형화 문서</label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio5" value="option3" disabled>
+                                            <label class="form-check-label text-dark" for="inlineRadio5">타자체 문서</label>
+                                          </div>
+                                    </div>
+                                    <div class="col d-flex justify-content-end">
+                                        <button id="button-test" class="btn btn-primary">테스트</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card w-100 mt-3">
+                            <div class="card-header">
+                                <span class="text-primary fw-bold">상세 설정</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="row h-100">
+                                    <div class="col-9 p-3" id="img-area">
+                                        <img id="img-source" class="w-100" src="img/sample-docs.png" alt="sample">
+                                    </div>
+                                    <div class="col-3">
+                                        <textarea id="img-explain" class="form-control w-100 h-100" disabled></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -264,13 +274,50 @@
                 </div>
             </footer>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.js"></script>
-        <script src="js/master.js"></script>
     </div>
+    <div class="modal fade" id="loadingmodal" tabindex="-1" aria-labelledby="loadingmodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="width: 15rem;">
+            <div class="modal-content" style="height: 15rem;">
+                <div class="modal-body">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                        <div class="spinner-grow text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <span class="text-dark mt-3">처리 중...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.js"></script>
+    <script src="js/master.js"></script>
     <script>
-        $(document).ready(function(){
+        $(function () {
+            $('#button-test').click(function (e) {
+                e.preventDefault();
+
+                var myModal = new bootstrap.Modal(document.getElementById('loadingmodal'));                
+                myModal.show();
+
+                setTimeout(function() {
+                    myModal.hide();
+                    $("div#img-area").css("overflow-y", "auto");
+                    $("img#img-source").css("visibility","visible");
+                }, 3000);
+                
+            });
+
+            $('#button-attach').click(function (e) {
+                e.preventDefault();
+                $('#file-upload').click();
+            });
+
+            $("#file-upload").on("change", function () {
+                $("#file-text").val($("#file-upload")[0].files[0].name);
+            });
+
             var numToggle = 0;
 
             $('.nav-item').click(function(){
@@ -281,6 +328,7 @@
             $('#fullpage').fullpage({
                 autoScrolling: true,
                 scrollHorizontally: true,
+                keyboardScrolling: false,
                 slidesNavigation: false,
                 controlArrows: false,
                 anchors:['home','aida','footer'],
@@ -290,6 +338,10 @@
                         $('.nav-item').eq(0).addClass('active');
                         $('.aida-detail .highlight').addClass('active');
                     }
+                },
+                afterSlideLoad: function(section, origin, destination, direction){
+                    if(direction == 1)  $.fn.fullpage.setAllowScrolling(false);
+                    else $.fn.fullpage.setAllowScrolling(true);
                 }
             });
         })
