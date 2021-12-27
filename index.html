@@ -10,34 +10,11 @@
     <link rel="stylesheet" href="css/master.css">
 </head>
 <body  data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
-    <div class="btn-function" data-anchor="home">
-        <div class="btn-group dropup">
-            <button class="dropdown-toggle" data-bs-toggle="dropdown" >
-                <img id="language" src="svg/earth-filled.svg" alt="language">
-            </button>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="#" class="dropdown-item"><img src="img/flag-kor.png" alt="KO" class="me-2">한국어</a>
-                </li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li>
-                    <a href="#" class="dropdown-item"><img src="img/flag-eng.png" alt="KO" class="me-2">English</a>
-                </li>
-                <li>
-                    <hr class="dropdown-divider">
-                </li>
-                <li>
-                    <a href="#" class="dropdown-item"><img src="img/flag-jap.png" alt="KO" class="me-2">日本語</a>
-                </li>
-            </ul>
-        </div>
-        <button>
-            <a href="#">
-                <img src="svg/back-to-top.svg" alt="onTop">
-            </a>
-        </button>
+    <div data-aos="fade-up" class="fixed-bottom p-4 opacity-50 d-flex" id="back-to-top">
+        <a href="#" class="ms-auto d-flex align-items-center">
+            <span class="me-2 opacity-0">처음으로</span>
+            <i class="bi bi-arrow-up-circle fs-1"></i>
+        </a>
     </div>
     <nav class="navbar navbar-expand navbar-dark fixed-top" id="navbar">
         <div class="container">
@@ -56,6 +33,24 @@
                 </li>
                 <li class="nav-item" data-anchor="recruit">
                     <a class="nav-link" href="#contact-section">문의</a>
+                </li>
+                <li class="nav-item ms-xl-2">
+                    <div class="btn-group" role="group">
+                        <button class="btn btn-outline-light btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+                            Language
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" class="dropdown-item">한국어</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">English</a>
+                            </li>
+                            <li>
+                                <a href="#" class="dropdown-item">日本語</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
             </ul>
             <div class="hamburger">
@@ -120,6 +115,11 @@
                             <div class="card">
                                 <div class="card-header w-100 d-flex align-items-center bg-dark">
                                     <h4 class="solution-name fw-bold mb-0 ms-4 flex-grow-1">AIDA</h4>
+                                    <div class="hamburger">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
                                     <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist">
                                         <li class="nav-item">
                                         <a class="nav-link active" data-bs-toggle="tab" href="#ai-ocr" role="tab">AI-OCR (TextExtractor)</a>
@@ -147,7 +147,7 @@
                                             </h4>
                                             <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
                                         </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                                        <div class="pic-wrap w-100">
                                             <img class="solution-pic" src="img/dummy.png" alt="dummy">
                                         </div>
                                     </div>
@@ -158,7 +158,7 @@
                                             </h4>
                                             <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
                                         </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                                        <div class="pic-wrap w-100">
                                             <img class="solution-pic" src="img/dummy.png" alt="dummy">
                                         </div>
                                     </div>
@@ -169,7 +169,7 @@
                                             </h4>
                                             <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
                                         </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                                        <div class="pic-wrap w-100">
                                             <img class="solution-pic" src="img/dummy.png" alt="dummy">
                                         </div>
                                     </div>
@@ -180,7 +180,7 @@
                                             </h4>
                                             <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
                                         </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                                        <div class="pic-wrap w-100">
                                             <img class="solution-pic" src="img/dummy.png" alt="dummy">
                                         </div>
                                     </div>
@@ -191,7 +191,7 @@
                                             </h4>
                                             <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
                                         </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                                        <div class="pic-wrap w-100">
                                             <img class="solution-pic" src="img/dummy.png" alt="dummy">
                                         </div>
                                     </div>
@@ -203,6 +203,11 @@
                             <div class="card">
                                 <div class="card-header w-100 d-flex align-items-center bg-dark">
                                     <h4 class="solution-name fw-bold mb-0 ms-4 flex-grow-1">ThirdEye</h4>
+                                    <div class="hamburger">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
                                     <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist">
                                         <li class="nav-item">
                                             <a class="nav-link active" data-bs-toggle="tab" href="#visitor-checker" role="tab">Visitor Checker</a>
@@ -224,7 +229,7 @@
                                             </h4>
                                             <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
                                         </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                                        <div class="pic-wrap w-100">
                                             <img class="solution-pic" src="img/dummy.png" alt="dummy">
                                         </div>
                                     </div>
@@ -235,7 +240,7 @@
                                             </h4>
                                             <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
                                         </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                                        <div class="pic-wrap w-100">
                                             <img class="solution-pic" src="img/dummy.png" alt="dummy">
                                         </div>
                                     </div>
@@ -246,7 +251,7 @@
                                             </h4>
                                             <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
                                         </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                                        <div class="pic-wrap w-100">
                                             <img class="solution-pic" src="img/dummy.png" alt="dummy">
                                         </div>
                                     </div>
@@ -258,6 +263,11 @@
                             <div class="card">
                                 <div class="card-header w-100 d-flex align-items-center bg-dark">
                                     <h4 class="solution-name fw-bold mb-0 ms-4 flex-grow-1">UMean</h4>
+                                    <div class="hamburger">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
                                     <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist">
                                         <li class="nav-item">
                                             <a class="nav-link active" data-bs-toggle="tab" href="#chatbot" role="tab">Chatbot</a>
@@ -276,7 +286,7 @@
                                             </h4>
                                             <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
                                         </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                                        <div class="pic-wrap w-100">
                                             <img class="solution-pic" src="img/dummy.png" alt="dummy">
                                         </div>
                                     </div>
@@ -287,7 +297,7 @@
                                             </h4>
                                             <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
                                         </div>
-                                        <div class="d-flex flex-column justify-content-center align-items-center p-3">
+                                        <div class="pic-wrap w-100">
                                             <img class="solution-pic" src="img/dummy.png" alt="dummy">
                                         </div>
                                     </div>
@@ -323,48 +333,48 @@
                         <div class="card-body">
                             <div class="row align-items-center mb-3">
                                 <div class="col-2">
-                                    <span class="text-dark">이미지 파일</span>
+                                    <span class="text-white">이미지 파일</span>
                                     <sup><small><i class="bi bi-asterisk text-danger"></i></small></i></sup>
                                 </div>
                                 <div class="col-10">
                                     <input type="file" class="form-control d-none" id="file-upload" accept="image/*">
                                     <div class="input-group">
                                         <input type="text" id="file-text" class="form-control" readonly>
-                                        <button id="button-attach" class="btn btn-dark">이미지 업로드</button>
+                                        <button id="button-attach" class="btn btn-light">이미지 업로드</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="row g-0 align-items-center">
                                 <div class="col-2">
-                                    <span class="text-dark">모델 선택</span>
+                                    <span class="text-white">모델 선택</span>
                                     <sup><small><i class="bi bi-asterisk text-danger"></i></small></sup>
                                 </div>
                                 <div class="col-9">
                                     <form>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="models" id="inlineRadio1" value="option1">
-                                            <label class="form-check-label text-dark" for="inlineRadio1">사업자등록증</label>
+                                            <label class="form-check-label text-white" for="inlineRadio1">사업자등록증</label>
                                           </div>
                                           <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="models" id="inlineRadio2" value="option2">
-                                            <label class="form-check-label text-dark" for="inlineRadio2">신분증</label>
+                                            <label class="form-check-label text-white" for="inlineRadio2">신분증</label>
                                           </div>
                                           <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="models" id="inlineRadio3" value="option3">
-                                            <label class="form-check-label text-dark" for="inlineRadio3">영수증</label>
+                                            <label class="form-check-label text-white" for="inlineRadio3">영수증</label>
                                           </div>
                                           <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="models" id="inlineRadio4" value="option3">
-                                            <label class="form-check-label text-dark" for="inlineRadio4">정형화 문서</label>
+                                            <label class="form-check-label text-white" for="inlineRadio4">정형화 문서</label>
                                           </div>
                                           <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="models" id="inlineRadio5" value="option3" disabled>
-                                            <label class="form-check-label text-dark" for="inlineRadio5">타자체 문서</label>
+                                            <label class="form-check-label text-white" for="inlineRadio5">타자체 문서</label>
                                           </div>
                                     </form>
                                 </div>
                                 <div class="col d-flex justify-content-end">
-                                    <button id="button-test" class="btn btn-dark">테스트</button>
+                                    <button id="button-test" class="btn btn-light">테스트</button>
                                 </div>
                             </div>
                         </div>
@@ -393,7 +403,7 @@
         <article data-aos="fade-down" id="contact">
             <div class="container">
                 <div class="row mt-3">
-                    <div class="col">
+                    <div class="col mb-3 mb-xl-0">
                         <div class="card blury h-100">
                             <div class="card-body p-5">
                                 <h3 class="mb-4">라이센스 요청</h3>
@@ -408,7 +418,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mb-3 mb-xl-0">
                         <div class="card blury h-100">
                             <div class="card-body p-5">
                                 <h3 class="mb-4">기술 및 교육 문의</h3>
