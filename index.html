@@ -5,399 +5,91 @@
     <title>AI CLOUD</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js@2.9.7/dist/jquery.fullpage.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
-    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
     <link rel="stylesheet" href="css/master.css">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
+<body class="loading" data-bs-spy="scroll" data-bs-target="#top-nav">
+    <div class="loader d-flex justify-content-center align-items-center position-fixed">
+        <svg id="anim-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 203.67 38.33">
+            <defs>
+                <style>
+                    path {
+                        fill: rgba(255,255,255,0);
+                        stroke: #ffffff;
+                        stroke-width: 0.5;
+                    }
+                </style>
+            </defs>
+                <path class="anim-line" d="M25,27.24H14.4L11.92,32.5H6.17L19.76,5.84h0L33.36,32.5H27.47Zm-2.1-4.44-3.17-6.68L16.54,22.8Z"/>
+                <path class="anim-line" d="M36.72,5.84h6.17V32.5H36.72Z"/>
+                <path class="anim-line" d="M49.24,18H60v4.76H49.24Z"/>
+                <path class="anim-line" d="M91.55,5.84H98V27.22l13.12,0V32.5H91.55Z"/>
+                <path class="anim-line" d="M172.69,5.84H182.8c8.72,0,14.7,5.25,14.7,13.33s-6,13.33-14.7,13.33H172.69Zm9.81,21.4c5.29,0,8.75-3.13,8.75-8.18s-3.46-8.18-8.75-8.18h-3.39V27.24Z"/>
+                <path class="anim-line" d="M126.62,5.84a13.22,13.22,0,1,0,13.22,13.22A13.22,13.22,0,0,0,126.62,5.84Zm0,21.4a8.18,8.18,0,1,1,8.18-8.18A8.18,8.18,0,0,1,126.62,27.24Z"/>
+                <path class="anim-line" d="M77.7,27.24A8.18,8.18,0,1,1,84,13.83l3.71-3.42a13.22,13.22,0,1,0,0,17.29L84,24.29A8.17,8.17,0,0,1,77.7,27.24Z"/>
+                <path class="anim-line" d="M87.7,10.41h0s0,0,0,0Z"/>
+                <path class="anim-line" d="M87.7,27.7Z"/>
+                <path class="anim-line" d="M161.6,21.62c0,3.62-2.11,5.62-5.66,5.62s-5.65-2-5.65-5.62V5.84h-6.42V20.51c0,7.72,4.5,12,12.07,12S168,28.23,168,20.51V5.84H161.6Z"/>
+                <rect width="380" height="80" style="fill: none;"/>
+        </svg>
+    </div>
     <div data-aos="fade-up" class="fixed-bottom p-4 opacity-50 d-flex" id="back-to-top">
         <a href="#" class="ms-auto d-flex align-items-center">
             <span class="me-2 opacity-0">처음으로</span>
             <i class="bi bi-arrow-up-circle fs-1"></i>
         </a>
     </div>
-    <nav class="navbar navbar-expand navbar-dark fixed-top" id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent navbar-dark fixed-top" id="top-nav">
         <div class="container">
-            <a class="navbar-logo" href="#">
-                <img src="svg/logo.svg" alt="logo">
+            <a class="navbar-brand" href="#home">
+                <img src="assets/logo-ai.png" alt="그리드원">
             </a>
-            <ul class="navbar-nav nav-menu">
-                <li class="nav-item" data-anchor="aida">
-                    <a class="nav-link" href="#solution-section">솔루션</a>
-                </li>
-                <li class="nav-item" data-anchor="aiportal">
-                    <a class="nav-link" href="#aiportal-section">AI Portal</a>
-                </li>
-                <li class="nav-item" data-anchor="devcenter">
-                    <a class="nav-link" href="#devcenter-section">개발센터</a>
-                </li>
-                <li class="nav-item" data-anchor="recruit">
-                    <a class="nav-link" href="#contact-section">문의</a>
-                </li>
-                <li class="nav-item ms-xl-2">
-                    <div class="btn-group" role="group">
-                        <button class="btn btn-outline-light btn-sm dropdown-toggle" data-bs-toggle="dropdown">
-                            Language
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#" class="dropdown-item">한국어</a>
-                            </li>
-                            <li>
-                                <a href="#" class="dropdown-item">English</a>
-                            </li>
-                            <li>
-                                <a href="#" class="dropdown-item">日本語</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav align-items-center justify-content-end w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro">Intro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#solution">Solution</a>
+                    </li>
+                    <li class="nav-item ms-xl-2">
+                        <div class="btn-group" role="group">
+                            <button class="btn btn-outline-light btn-sm dropdown-toggle" data-bs-toggle="dropdown">
+                                Language
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#" class="dropdown-item">한국어</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">English</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item">日本語</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
     <section>
-        <article id="home-section" class="d-flex flex-column align-items-center justify-content-center">
-            <div id="particles-js"></div>
-            <div class="count-particles">
-                <span class="js-count-particles"></span>
-            </div>
-            <div data-aos="fade-down">
-                <svg class="logo mb-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 203.67 38.33">
-                    <defs>
-                        <style>
-                            .cls-1 {
-                                fill: rgba(255,255,255,0);
-                                stroke: #ffffff;
-                                stroke-width: 0.5;
-                            }
-                
-                            .cls-2 {
-                                fill: none;
-                            }
-                        </style>
-                    </defs>
-                        <path class="cls-1" d="M25,27.24H14.4L11.92,32.5H6.17L19.76,5.84h0L33.36,32.5H27.47Zm-2.1-4.44-3.17-6.68L16.54,22.8Z"/>
-                        <path class="cls-1" d="M36.72,5.84h6.17V32.5H36.72Z"/>
-                        <path class="cls-1" d="M49.24,18H60v4.76H49.24Z"/>
-                        <path class="cls-1" d="M91.55,5.84H98V27.22l13.12,0V32.5H91.55Z"/>
-                        <path class="cls-1" d="M172.69,5.84H182.8c8.72,0,14.7,5.25,14.7,13.33s-6,13.33-14.7,13.33H172.69Zm9.81,21.4c5.29,0,8.75-3.13,8.75-8.18s-3.46-8.18-8.75-8.18h-3.39V27.24Z"/>
-                        <path class="cls-1" d="M126.62,5.84a13.22,13.22,0,1,0,13.22,13.22A13.22,13.22,0,0,0,126.62,5.84Zm0,21.4a8.18,8.18,0,1,1,8.18-8.18A8.18,8.18,0,0,1,126.62,27.24Z"/>
-                        <path class="cls-1" d="M77.7,27.24A8.18,8.18,0,1,1,84,13.83l3.71-3.42a13.22,13.22,0,1,0,0,17.29L84,24.29A8.17,8.17,0,0,1,77.7,27.24Z"/>
-                        <path class="cls-1" d="M87.7,10.41h0s0,0,0,0Z"/>
-                        <path class="cls-1" d="M87.7,27.7Z"/>
-                        <path class="cls-1" d="M161.6,21.62c0,3.62-2.11,5.62-5.66,5.62s-5.65-2-5.65-5.62V5.84h-6.42V20.51c0,7.72,4.5,12,12.07,12S168,28.23,168,20.51V5.84H161.6Z"/>
-                        <rect class="cls-2" width="380" height="80"/>
-                </svg>
-            </div>
-            <div class="text-center" data-aos="fade-up">
-                <h5 class="mb-2">
-                    문서 이미지 내 필요한 문자를 인식하여<br>업무 처리 속도를 높여보세요.
-                </h5>
-                <span style="color: rgba(255,255,255,0.5)">
-                    OCR, CAPTCHA, NLP, VISION 분야의 독자적인 인공지능 기술을<br>
-                    바탕으로 인간 행동을 토대로 학습하고 성장하는 인지자동화 솔루션
-                </span>
-            </div>
-            <a class="scrollNext" href="#solution-section"><span>아래로 스크롤</span><i class="bi bi-chevron-down"></i></a>
-        </article>
-        <div class="blank" id="solution-section"></div>
-        <!-- solution-section start -->
-        <article id="solution-article" class="position-relative">
+        <article class="d-flex vh-100 align-items-center justify-content-center position-relative" id="home">
             <div class="container">
-                <div id="solutions" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" id="aida-section">
-                            <div class="card">
-                                <div class="card-header w-100 d-flex align-items-center bg-dark">
-                                    <h5 class="solution-name fw-bold mb-0 ms-4">AIDA</h5>
-                                    <div class="scroll-wrap">
-                                        <ul class="nav nav-tabs justify-content-center" id="aida-tabs" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" data-bs-toggle="tab" href="#ai-ocr" role="tab">AI-OCR (TextExtractor)</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#keyword-checker" role="tab">Keyword Checker</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#table-detector" role="tab">Table Detector</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#doc-understand" role="tab">Document Understanding</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#aida-web" role="tab">AIDA Designer Web</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                  <div class="tab-content text-center">
-                                    <div class="tab-pane active" id="ai-ocr" role="tabpanel">
-                                        <div class="d-flex flex-column justify-content-center align-items-center mt-2">
-                                            <h4 class="text-center text-white mb-2">
-                                                문서 이미지 내 필요한 문자를 <strong>인식</strong>하여 <strong class="highlight position-relative">업무 처리 속도</strong>를 높여 보세요.1
-                                            </h4>
-                                            <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
-                                        </div>
-                                        <div class="pic-wrap w-100">
-                                            <img class="solution-pic" src="img/dummy.png" alt="dummy">
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="keyword-checker" role="tabpanel">
-                                        <div class="d-flex flex-column justify-content-center align-items-center mt-2">
-                                            <h4 class="text-center text-white mb-2">
-                                                문서 이미지 내 필요한 문자를 <strong>인식</strong>하여 <strong class="highlight position-relative">업무 처리 속도</strong>를 높여 보세요.1
-                                            </h4>
-                                            <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
-                                        </div>
-                                        <div class="pic-wrap w-100">
-                                            <img class="solution-pic" src="img/dummy.png" alt="dummy">
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="table-detector" role="tabpanel">
-                                        <div class="d-flex flex-column justify-content-center align-items-center mt-2">
-                                            <h4 class="text-center text-white mb-2">
-                                                문서 이미지 내 필요한 문자를 <strong>인식</strong>하여 <strong class="highlight position-relative">업무 처리 속도</strong>를 높여 보세요.1
-                                            </h4>
-                                            <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
-                                        </div>
-                                        <div class="pic-wrap w-100">
-                                            <img class="solution-pic" src="img/dummy.png" alt="dummy">
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="doc-understand" role="tabpanel">
-                                        <div class="d-flex flex-column justify-content-center align-items-center mt-2">
-                                            <h4 class="text-center text-white mb-2">
-                                                문서 이미지 내 필요한 문자를 <strong>인식</strong>하여 <strong class="highlight position-relative">업무 처리 속도</strong>를 높여 보세요.1
-                                            </h4>
-                                            <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
-                                        </div>
-                                        <div class="pic-wrap w-100">
-                                            <img class="solution-pic" src="img/dummy.png" alt="dummy">
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="aida-web" role="tabpanel">
-                                        <div class="d-flex flex-column justify-content-center align-items-center mt-2">
-                                            <h4 class="text-center text-white mb-2">
-                                                문서 이미지 내 필요한 문자를 <strong>인식</strong>하여 <strong class="highlight position-relative">업무 처리 속도</strong>를 높여 보세요.1
-                                            </h4>
-                                            <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
-                                        </div>
-                                        <div class="pic-wrap w-100">
-                                            <img class="solution-pic" src="img/dummy.png" alt="dummy">
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item" id="thirdeye-section">
-                            <div class="card">
-                                <div class="card-header w-100 d-flex align-items-center bg-dark">
-                                    <h5 class="solution-name fw-bold mb-0 ms-4">ThirdEye</h5>
-                                    <div class="scroll-wrap">
-                                        <ul class="nav nav-tabs justify-content-center" id="third-tabs" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" data-bs-toggle="tab" href="#visitor-checker" role="tab">Visitor Checker</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#face-detector" role="tab">Face Detector</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#movie-analyzer" role="tab">Movie Analyzer</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                  <div class="tab-content text-center">
-                                    <div class="tab-pane active" id="visitor-checker" role="tabpanel">
-                                        <div class="d-flex flex-column justify-content-center align-items-center mt-2">
-                                            <h4 class="text-center text-white mb-2">
-                                                문서 이미지 내 필요한 문자를 <strong>인식</strong>하여 <strong class="highlight position-relative">업무 처리 속도</strong>를 높여 보세요.1
-                                            </h4>
-                                            <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
-                                        </div>
-                                        <div class="pic-wrap w-100">
-                                            <img class="solution-pic" src="img/dummy.png" alt="dummy">
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="face-detector" role="tabpanel">
-                                        <div class="d-flex flex-column justify-content-center align-items-center mt-2">
-                                            <h4 class="text-center text-white mb-2">
-                                                문서 이미지 내 필요한 문자를 <strong>인식</strong>하여 <strong class="highlight position-relative">업무 처리 속도</strong>를 높여 보세요.1
-                                            </h4>
-                                            <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
-                                        </div>
-                                        <div class="pic-wrap w-100">
-                                            <img class="solution-pic" src="img/dummy.png" alt="dummy">
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="movie-analyzer" role="tabpanel">
-                                        <div class="d-flex flex-column justify-content-center align-items-center mt-2">
-                                            <h4 class="text-center text-white mb-2">
-                                                문서 이미지 내 필요한 문자를 <strong>인식</strong>하여 <strong class="highlight position-relative">업무 처리 속도</strong>를 높여 보세요.1
-                                            </h4>
-                                            <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
-                                        </div>
-                                        <div class="pic-wrap w-100">
-                                            <img class="solution-pic" src="img/dummy.png" alt="dummy">
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item" id="umean-section">
-                            <div class="card">
-                                <div class="card-header w-100 d-flex align-items-center bg-dark">
-                                    <h5 class="solution-name fw-bold mb-0 ms-4">UMean</h5>
-                                    <div class="scroll-wrap">
-                                        <ul class="nav nav-tabs justify-content-center" id="umean-tabs" role="tablist">
-                                            <li class="nav-item">
-                                                <a class="nav-link active" data-bs-toggle="tab" href="#chatbot" role="tab">Chatbot</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#ai-ars" role="tab">AI-ARS</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                  <div class="tab-content text-center">
-                                    <div class="tab-pane active" id="chatbot" role="tabpanel">
-                                        <div class="d-flex flex-column justify-content-center align-items-center mt-2">
-                                            <h4 class="text-center text-white mb-2">
-                                                문서 이미지 내 필요한 문자를 <strong>인식</strong>하여 <strong class="highlight position-relative">업무 처리 속도</strong>를 높여 보세요.1
-                                            </h4>
-                                            <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
-                                        </div>
-                                        <div class="pic-wrap w-100">
-                                            <img class="solution-pic" src="img/dummy.png" alt="dummy">
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="ai-ars" role="tabpanel">
-                                        <div class="d-flex flex-column justify-content-center align-items-center mt-2">
-                                            <h4 class="text-center text-white mb-2">
-                                                문서 이미지 내 필요한 문자를 <strong>인식</strong>하여 <strong class="highlight position-relative">업무 처리 속도</strong>를 높여 보세요.1
-                                            </h4>
-                                            <span class="text-muted">다양한 문서 이미지에서 한글과 영문, 숫자를 빠르고 정확하게 인식합니다.</span>
-                                        </div>
-                                        <div class="pic-wrap w-100">
-                                            <img class="solution-pic" src="img/dummy.png" alt="dummy">
-                                        </div>
-                                    </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#solutions" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#solutions" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>           
-        </article>
-        <article>
-            <div class="container">
-                <div class="d-flex align-items-center w-100" id="aida-collapse" data-bs-toggle="collapse" href="#aida-test" aria-expanded="false" aria-controls="aida-test">
-                    <h3 class="solution-name fw-bold me-2 mb-0">AIDA 사용해보기</h3>
-                    <span class="bg-light flex-grow-1 opacity-25" style="height: 1px;"></span>
-                    <span class="ms-2"><i class="bi bi-caret-down-fill"></i></span>
-                </div>
-                <div class="collapse" id="aida-test">
-                    <div class="card w-100 mt-3" id="basic-info">
-                        <div class="card-header w-100 d-flex justify-content-between bg-dark">
-                            <span class="text-primary text-white fw-bold">기본정보 설정</span>
-                            <small class="text-white">(<sup><small><i class="bi bi-asterisk text-danger"></i></small></sup> 필수 입력 사항입니다)</small>
-                        </div>
-                        <div class="card-body">
-                            <div class="row align-items-center mb-3">
-                                <div class="col-sm-12 col-lg-2 mb-sm-2">
-                                    <span class="text-white">이미지 파일</span>
-                                    <sup><small><i class="bi bi-asterisk text-danger"></i></small></i></sup>
-                                </div>
-                                <div class="col-sm-12 col-lg-10">
-                                    <input type="file" class="form-control d-none" id="file-upload" accept="image/*">
-                                    <div class="input-group">
-                                        <input type="text" id="file-text" class="form-control" readonly>
-                                        <button id="button-attach" class="btn btn-light">이미지 업로드</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row g-0 align-items-center">
-                                <div class="col-sm-12 col-lg-2 mb-sm-2">
-                                    <span class="text-white">모델 선택</span>
-                                    <sup><small><i class="bi bi-asterisk text-danger"></i></small></sup>
-                                </div>
-                                <div class="col-sm-12 col-lg-10">
-                                    <form class="d-flex align-items-center">
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio1" value="option1">
-                                            <label class="form-check-label text-white" for="inlineRadio1">사업자등록증</label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio2" value="option2">
-                                            <label class="form-check-label text-white" for="inlineRadio2">신분증</label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio3" value="option3">
-                                            <label class="form-check-label text-white" for="inlineRadio3">영수증</label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio4" value="option3">
-                                            <label class="form-check-label text-white" for="inlineRadio4">정형화 문서</label>
-                                          </div>
-                                          <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="models" id="inlineRadio5" value="option3" disabled>
-                                            <label class="form-check-label text-white" for="inlineRadio5">타자체 문서</label>
-                                          </div>
-                                          <button id="button-test" class="btn btn-light ms-auto me-2">테스트</button>
-                                          <button id="button-reset" class="btn btn-light">초기화</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card w-100 mt-3" id="result-info">
-                        <div class="card-header bg-dark">
-                            <span class="text-primary text-white fw-bold">결과 확인</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="row h-100">
-                                <div class="col-sm-12 col-lg-9 p-lg-3" id="img-area">
-                                    <img id="img-source" src="#" class="w-100" alt="sample">
-                                </div>
-                                <div class="col-sm-12 col-lg-3">
-                                    <textarea id="img-explain" class="form-control w-100 h-100" disabled></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <!-- solution-section end -->
-        <div id="contact-section"></div>
-        <!-- contact-section start -->
-        <article data-aos="fade-down" id="contact">
-            <div class="container">
-                <div class="row mt-3">
-                    <div class="col mb-3 mb-xl-0">
-                        <div class="card blury h-100">
+                <div class="row" data-aos="fade-down">
+                    <div class="col">
+                        <div class="card blury text-center h-100">
                             <div class="card-body p-5">
-                                <h3 class="mb-4">라이센스 요청</h3>
+                                <h3 class="mb-2 fw-bold">AIDA</h3>
+                                <h5 class="mb-2">아이다</h5>
                                 <ul class="list-unstyled">
                                     <li class="mt-2">license-req@gridone.co.kr</li>
                                     <li class="mt-2">
@@ -409,31 +101,26 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-3 mb-xl-0">
-                        <div class="card blury h-100">
+                    <div class="col">
+                        <div class="card blury text-center h-100">
                             <div class="card-body p-5">
-                                <h3 class="mb-4">기술 및 교육 문의</h3>
-                                <ul class="list-unstyled">
-                                    <li class="mt-2">
-                                        <span class="badge rounded-pill border border-white me-1">기술 문의</span>
-                                        support@gridone.co.kr
-                                    </li>
-                                    <li class="mt-2">
-                                        <span class="badge rounded-pill border border-white me-1">교육 문의</span>
-                                        edu@gridone.co.kr
-                                    </li>
-                                    <li class="mt-2">
-                                        <i class="bi bi-telephone me-1"></i>
-                                        02-830-8850
-                                    </li>
+                                <h3 class="mb-2 fw-bold">ThirdEye</h3>
+                                <h5 class="mb-2">삼눈이</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">AI-OCR (TextExtrctor)</li>
+                                    <li class="list-group-item">Keyword Checker</li>
+                                    <li class="list-group-item">Table Detector</li>
+                                    <li class="list-group-item">Document Understanding</li>
+                                    <li class="list-group-item">AIDA Designer Web</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="card blury h-100">
+                        <div class="card blury text-center h-100">
                             <div class="card-body p-5">
-                                <h3 class="mb-4">제휴/제품 문의</h3>
+                                <h3 class="mb-2 fw-bold">UMean</h3>
+                                <h5 class="mb-2">유민이</h5>
                                 <ul class="list-unstyled">
                                     <li class="mt-2">business@gridone.co.kr</li>
                                     <li class="mt-2">
@@ -446,14 +133,14 @@
                     </div>
                 </div>
             </div>
+            <div id="particles-js" class="vh-100 w-100"></div>
         </article>
-        <!-- contact-section end -->
     </section>
     <footer class="bg-black">
         <div class="container py-5">
             <div class="row justify-content-between">
                 <div class="col-12 col-md-auto d-flex align-items-center footer-logo">
-                    <img src="svg/logo.svg" alt="그리드원">
+                    <img src="assets/logo-gridone.png" alt="그리드원">
                     <span class="ms-4 text-nowrap">주식회사 그리드원</span>
                 </div>
                 <div class="col-auto mt-3 mt-xl-0 d-flex align-items-center">
@@ -512,98 +199,21 @@
             </small>
         </div>
     </footer>
-    <div class="modal fade" id="loadingmodal" tabindex="-1" aria-labelledby="loadingmodalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="width: 15rem;">
-            <div class="modal-content" style="height: 15rem;">
-                <div class="modal-body">
-                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
-                        <div class="spinner-grow text-primary" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-                        <span class="text-dark mt-3">처리 중...</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
-    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/master.js"></script>
     <script>
-        $(window).on("load",function(){
-            $(".scroll-wrap").mCustomScrollbar({
-                    axis: "x",
-                    advanced:{autoExpandHorizontalScroll:true}
-            });
-        });
+        $(window).ready(function(){
+            setTimeout(function() {
+                $('body').removeClass('loading');
+                AOS.init();
+                console.log("loaded");
+            }, 5000);
 
-        $(function () {
-            $('#solutions').carousel('pause');
-            $("#button-reset").attr("disabled", true);
-
-
-            $('#button-test').click(function (e) {
-                e.preventDefault();
-
-                if ($("input:radio[name='models']").is(":checked") == true){
-                    var myModal = new bootstrap.Modal(document.getElementById('loadingmodal'));                
-                    myModal.show();
-
-                    setTimeout(function() {
-                        myModal.hide();
-                        $("div#img-area").css("overflow-y", "auto");
-                        $("img#img-source").css("visibility","visible");
-                    }, 3000);
-
-                    $("#button-attach").attr("disabled", true);
-                    $("#button-reset").attr("disabled", false);
-
-                    return true;
-                }else{
-                    alert("모델이 선택되지 않았습니다.");
-                    return false;
-                }              
-            });
-
-            $('#button-attach').click(function (e) {
-                e.preventDefault();
-                $('#file-upload').click();
-            });
-
-            $('#button-reset').click(function (e) {
-                e.preventDefault();
-
-                $("#button-reset").attr("disabled", true);
-                $("#button-attach").attr("disabled", false);
-
-                $("div#img-area").css("overflow-y", "hidden");
-                $("img#img-source").css("visibility","hidden");
-                $("#file-text").val('');
-            });
-
-            $("#file-upload").on("change", function (event) {
-                $("#file-text").val($("#file-upload")[0].files[0].name);
-                processFile(event.target.files[0]);
-            });  
-            
             particlesJS.load('particles-js', 'js/particles.json');
-            AOS.init();
         });
-
-        function processFile(file){
-            var reader = new FileReader();
-            var output;
-
-            reader.onload = function () {
-                var result = reader.result;
-                document.getElementById('img-source').setAttribute('src',result);               
-            };
-            reader.readAsDataURL(file);
-        }
-
     </script>
 </body>
 </html>

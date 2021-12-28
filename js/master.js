@@ -9,31 +9,5 @@ $(function(){
                 " |___/                     (C) 2021 grid%cone",
                 'color: #E68011;', 'color: #000;', 'color: #E68011;',
                 'color: #000;', 'color: #E68011;', 'color: #000;',
-                'color: #E68011;', 'color: #000;', 'color: #E68011;');
-
-    var agent = navigator.userAgent.toLowerCase();
-    if ( (navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
-        window.location.href='./browser.html';
-    }
-    
-    /* Navbar Start */
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-    const navLink = document.querySelectorAll(".nav-link");
-
-    hamburger.addEventListener("click", mobileMenu);
-    for(var i = 0; i < navLink.length; i++){
-        navLink[i].addEventListener("click", closeMenu);
-    }
-
-    function mobileMenu() {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    }
-    
-    function closeMenu() {
-        hamburger.classList.remove("active");
-        navMenu.classList.remove("active");
-    }
-    /* Navbar End */
+                'color: #E68011;', 'color: #000;', 'color: #E68011;');    
 });

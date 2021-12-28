@@ -7,8 +7,34 @@ body {
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     background-color: #000;
     color: #fff;
-    overflow-x: hidden;
-    padding-top: 80px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body.loading {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+body div.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10011;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease;
+}
+
+body.loading div.loader {
+    opacity: 1;
+    visibility: visible;
 }
 
 a,
@@ -18,243 +44,41 @@ a:active {
     color: inherit;
 }
 
-textarea {
-    resize: none;
-}
-
-/* * {
-    user-select: none;
-} */
-
 *::selection {
     background: rgba(255, 153, 0, 0.7);
     color: #ffffff;
 }
 
-div.blank{
-    height: 80px;
-}
-
-.carousel-control-next,
-.carousel-control-prev {
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    transform: translateY(-50%);
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15%;
-    height: 15%;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    background: 0 0;
-    border: 0;
-    opacity: .5;
-    transition: opacity .15s ease;
-}
-
-button[class *= 'carousel-control'] span[class *= '-control']{
-    background: rgba(0, 0, 0, 0.13);
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-}
-
-span[class*='carousel-control']::after{
-    font-family: bootstrap-icons !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-}
-
-span.carousel-control-prev-icon::after{
-    content: '\f284'; 
-    padding-right: 2px; 
-}
-
-span.carousel-control-next-icon::after{
-    content: '\f285';
-    padding-left: 2px; 
-}
+/**************** Glassmorphism ****************/
 
 .card {
-    background-color: rgba(255,255,255,0.13);
-    box-shadow:  0 8 16px 0 rgba(111, 112, 121, 0.37), inset 0 -8px -16px 0 rgba(111, 112, 121, 0.37);
-    backdrop-filter: blur(15px);
+    background-color: rgba( 255, 255, 255, 0.1 );
+    box-shadow: 0 0.5rem 2rem 0 rgba(111, 112, 121, 0.37);
     border-radius: 1rem!important;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     transition: background-color 0.25s;
 }
 
 .card:hover {
-    background-color: rgba( 255, 255, 255, 0.2 );
+    background-color: rgba(255, 255, 255, 0.14);
 }
 
-
-/**************** NAV CUSTOM ****************/
-
-.navbar {
-    background-color: rgba(0, 0, 0, 0.85);
-    height: 5rem;
+.blury {
+    -webkit-backdrop-filter: blur(1rem);
+            backdrop-filter: blur(1rem);
 }
 
-.navbar-logo img,
-.footer-logo img {
-    height: 1rem;
-}
+/**************** Logo Animation ****************/
 
-.nav-item.active {
-    font-weight: bold;
-}
-
-.nav-icon {
-    width: 24px;
-    height: 24px;
-}
-
-.hamburger {
-    display: none;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: #ffffff;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-@media only screen and (max-width: 1024px) {
-    .nav-menu {
-        position: fixed;
-        left: 100%;
-        top: 80px;
-        flex-direction: column !important;
-        justify-content: space-between !important;
-        background-color: rgba(0, 0, 0, 0.85);
-        height: calc(100% - 80px);
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        padding: 35% 0 !important;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        font-size: 24px;
-        font-weight: 700;
-    }
-
-    #nav-buttons {
-        margin-left: auto;
-    }
-
-    .nav-icon {
-        width: 36px;
-        height: 36px;
-    }
-
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        -webkit-transform: translateY(8px) rotate(45deg);
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        -webkit-transform: translateY(-8px) rotate(-45deg);
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
-
-/**************** MORE FUNCTION ****************/
-
-#back-to-top span {
-    transition: opacity .5s;
-}
-
-#back-to-top:hover,
-#back-to-top:hover span{
-    opacity: 1!important;
-}
-
-/**************** Footer ****************/
-.linkage>*:hover::after {
-    content: '\f470';
-    font-family: 'bootstrap-icons';
-    position: absolute;
-    margin-left: 0.5rem;
-    opacity: .8;
-}
-
-/* Particle Effects */
-#particles-js {
-    position: absolute;
-    width: 100vw;
-    height: calc(100vh - 80px);
-    background: rgba(73, 25, 66, 0.5);
-}
-
-.particles-js-canvas-el{
-    width: 100vw!important;
-    height: calc(100vh - 80px)!important;
-}
-
-/**************** Home Section ****************/
-article#home-section {
-    width: 100vw;
-    height: calc(100vh - 80px);
-}
-
-article#home-section::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-image: url("../img/page-grid.png");
-    background-repeat: no-repeat;
-    background-size: 150%;
-    background-position: center;
-    opacity: 0.15;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-
-.logo {
+#anim-logo {
     width: 70vw;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: dasher 10s linear infinite;
+    animation: dasher 10s linear forwards;
     animation-delay: 1s;
 }
 
-.logo .cls-1 {
+#anim-logo .anim-line {
     animation: filler 0.5s linear forwards;
     animation-delay: 3s;
 }
@@ -271,220 +95,9 @@ article#home-section::after {
     }
 }
 
-a.scrollNext {
+/**************** Particle Effects ****************/
+#particles-js {
     position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    bottom: 5rem;
-    left: 50%;
-    transform: translate(-50%, 0.5rem);
-    opacity: .2;
-    animation: elevate .7s infinite alternate;
-}
-
-@keyframes elevate {
-    to {
-        transform: translate(-50%, 0);
-        opacity: 1;
-    }
-}
-
-/**************** solution Section ****************/
-strong.highlight::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 15px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: rgba(240, 131, 0, 0.5);
+    background: rgba(73, 25, 66, 0.5);
     z-index: -1;
-    opacity: 0;
-    animation: shine 1s forwards;
-}
-
-.slick-prev:before,
-.slick-next:before {
-    font-family: bootstrap-icons !important;
-    font-size: 20px;
-    line-height: 1;
-    opacity: .75;
-    color: white;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev:before {
-    content: '\f284';
-}
-
-.slick-next:before {
-    content: '\f285';
-}
-
-@keyframes shine {
-    to {
-        opacity: 1;
-    }
-}
-
-div#basic-info{
-    border: none;
-    border-radius: 10px;
-}  
-
-div#result-info{
-    height: 48rem;
-    max-height: 48rem;
-    border: none;
-    border-radius: 15px;
-}
-
-div#basic-info div.card-header,
-div#result-info div.card-header{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-div#img-area {
-    overflow-y: hidden;
-}
-
-img#img-source {
-    visibility: hidden;
-    height: 41.5rem;
-}
-
-.tab-content{
-    border: none;
-}
-
-.category {
-    text-transform: capitalize;
-    font-weight: 700;
-    color: #9A9A9A;
-}
-
-.nav-item .nav-link,
-.nav-tabs .nav-link {
-    -webkit-transition: all 300ms ease 0s;
-    -moz-transition: all 300ms ease 0s;
-    -o-transition: all 300ms ease 0s;
-    -ms-transition: all 300ms ease 0s;
-    transition: all 300ms ease 0s;
-}
-
-ul.nav-tabs-neutral{
-    display: flex;
-    flex-direction: row;
-}
-
-.nav-tabs:not(.nav-tabs-neutral)>.nav-item>.nav-link.active {
-    box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.3);
-}
-
-.card .nav-tabs {
-    border: 0;
-    padding: 15px 0.7rem;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-}
-
-.nav-tabs>.nav-item>.nav-link {
-    color: #888888;
-    margin: 0;
-    margin-right: 5px;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: 30px;
-    font-size: 14px;
-    padding: 11px 23px;
-    line-height: 1.5;
-}
-
-.nav-tabs>.nav-item>.nav-link:hover {
-    background-color: transparent;
-}
-
-.nav-tabs>.nav-item>.nav-link.active {
-    background-color: #444;
-    border-radius: 30px;
-    color: #FFFFFF;
-}
-
-.nav-tabs>.nav-item>.nav-link i.now-ui-icons {
-    font-size: 14px;
-    position: relative;
-    top: 1px;
-    margin-right: 3px;
-}
-
-.nav-tabs.nav-tabs-neutral>.nav-item>.nav-link {
-    color: #FFFFFF;
-}
-
-.nav-tabs.nav-tabs-neutral>.nav-item>.nav-link.active {
-    background-color: rgba(255, 255, 255, 0.2);
-    color: #FFFFFF;
-}
-
-#aida-section .card,
-#thirdeye-section .card,
-#umean-section .card {
-    border: 0;
-    border-radius: 15px!important;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-#aida-section .card .card-header,
-#thirdeye-section .card .card-header,
-#umean-section .card .card-header {
-    background-color: transparent;
-    border-bottom: 0;
-    padding: 0;
-    border-top-left-radius: 10px!important;
-    border-top-right-radius: 10px!important;
-}
-
-#aida-section .card .card-body,
-#thirdeye-section .card .card-body,
-#umean-section .card .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-div.pic-wrap{
-    overflow: hidden;
-    padding-bottom: 56.25%; /* For 16:9 */
-    position: relative;
-    height: 0;
-}
-
-img.solution-pic{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-}
-
-div#aida-collapse[aria-expanded='true'] i::before{
-    transform: rotate(-180deg);
-}
-
-div.carousel-item div.card-header{
-    justify-content: space-between;
-}
-
-div.scroll-wrap{
-    width: 75%;
-    display: flex;
-    justify-content: flex-end;
 }
