@@ -22,16 +22,9 @@ textarea {
     resize: none;
 }
 
-* {
+/* * {
     user-select: none;
-    animation: rotate_all 1s infinite;
-}
-
-@keyframes rotate_all {
-    to {
-        transform: rotate(360deg);
-    }
-}
+} */
 
 *::selection {
     background: rgba(255, 153, 0, 0.7);
@@ -40,6 +33,27 @@ textarea {
 
 div.blank{
     height: 80px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 15%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
 }
 
 button[class *= 'carousel-control'] span[class *= '-control']{
@@ -81,6 +95,7 @@ span.carousel-control-next-icon::after{
 .card:hover {
     background-color: rgba( 255, 255, 255, 0.2 );
 }
+
 
 /**************** NAV CUSTOM ****************/
 
@@ -199,9 +214,14 @@ span.carousel-control-next-icon::after{
 /* Particle Effects */
 #particles-js {
     position: absolute;
-    width: 100%;
-    height: calc(100% - 80px);
+    width: 100vw;
+    height: calc(100vh - 80px);
     background: rgba(73, 25, 66, 0.5);
+}
+
+.particles-js-canvas-el{
+    width: 100vw!important;
+    height: calc(100vh - 80px)!important;
 }
 
 /**************** Home Section ****************/
@@ -457,4 +477,14 @@ img.solution-pic{
 
 div#aida-collapse[aria-expanded='true'] i::before{
     transform: rotate(-180deg);
+}
+
+div.carousel-item div.card-header{
+    justify-content: space-between;
+}
+
+div.scroll-wrap{
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
 }
