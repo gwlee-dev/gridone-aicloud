@@ -51,6 +51,13 @@ a:active {
 
 /**************** Glassmorphism ****************/
 
+.navbar .container{
+    box-shadow: 0 0.5rem 2rem 0 rgba(111, 112, 121, 0.37);
+    border-radius: 1rem!important;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: background-color 0.25s;
+}
+
 .card {
     background-color: rgba( 255, 255, 255, 0.1 );
     box-shadow: 0 0.5rem 2rem 0 rgba(111, 112, 121, 0.37);
@@ -66,6 +73,13 @@ a:active {
 .blury {
     -webkit-backdrop-filter: blur(1rem);
             backdrop-filter: blur(1rem);
+}
+
+.blury li.list-group-item{
+    background-color: rgba( 255, 255, 255, 0.1 );
+    border-color: white;
+    color: #ffffff;
+    padding: 1rem 0;
 }
 
 /**************** Logo Animation ****************/
@@ -98,6 +112,6 @@ a:active {
 /**************** Particle Effects ****************/
 #particles-js {
     position: absolute;
-    background: rgba(73, 25, 66, 0.5);
+    background: linear-gradient(-45deg, rgba(18,214,223,0.5), rgba(247,15,255,0.5));
     z-index: -1;
 }
