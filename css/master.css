@@ -51,16 +51,19 @@ a:active {
 
 /**************** Glassmorphism ****************/
 
+.navbar {
+}
+
 .navbar .container{
     box-shadow: 0 0.5rem 2rem 0 rgba(111, 112, 121, 0.37);
-    border-radius: 1rem!important;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     transition: background-color 0.25s;
 }
 
 .card {
     background-color: rgba( 255, 255, 255, 0.1 );
-    box-shadow: 0 0.5rem 2rem 0 rgba(111, 112, 121, 0.37);
     border-radius: 1rem!important;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     transition: background-color 0.25s;
@@ -68,6 +71,20 @@ a:active {
 
 .card:hover {
     background-color: rgba(255, 255, 255, 0.14);
+}
+
+.card-group > .card {
+    border-radius: 0!important;
+    border: none;
+}
+
+.card-group > .card:first-child {
+    border-bottom-left-radius: 1rem!important;
+}
+
+
+.card-group > .card:last-child {
+    border-bottom-right-radius: 1rem!important;
 }
 
 .blury {
