@@ -72,20 +72,74 @@ a:active {
 
 /**************** Glassmorphism ****************/
 #wrapper{
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    padding: 3.75rem 8.5rem;
+}
+
+#inner{
+    border-radius: 1rem;
+    border: 1px solid rgba( 255, 255, 255, 0.13 );
+    -webkit-backdrop-filter: blur(1.5rem);
+            backdrop-filter: blur(1.5rem);
 }
 
 .blury {
     background-color: rgba( 255, 255, 255, 0.1 );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba( 255, 255, 255, 0.13 );
     transition: background-color 0.25s;
-    -webkit-backdrop-filter: blur(1rem);
-            backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1.5rem);
+            backdrop-filter: blur(1.5rem);
 }
 
-.blury:hover{
-    background-color: rgba(255, 255, 255, 0.14);
+#navbar{
+    background-color: rgba( 0, 0, 0, 0.13 );
+    border-bottom: 1px solid rgba( 255, 255, 255, 0.13 );
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+#sidebar{
+    background-color: rgba( 0, 0, 0, 0.13 );
+    border-bottom-left-radius: 1rem;
+}
+
+#sidebar li.list-group-item{
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    opacity: 0.5;
+}
+
+#sidebar li.list-group-item.active{
+    position: relative;
+    font-weight: bold;
+    background-color: rgba( 255, 255, 255, 0.13 );
+    overflow: hidden;
+    opacity: 1;
+}
+
+#sidebar li.list-group-item.active::after{
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: -0.5rem;
+    transform: translateY(-50%);
+    background-color: rgba( 255, 255, 255, 1 );
+    filter: blur(0.5rem);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.linkage:hover::after {
+    content: '\f470';
+    font-family: 'bootstrap-icons';
+    font-weight: normal !important;
+    position: absolute;
+    margin-left: 0.5rem;
+    opacity: .8;
 }
 
 /**************** Logo Animation ****************/
