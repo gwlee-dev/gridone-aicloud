@@ -271,3 +271,45 @@ div.footer{
     line-height: 0;
     white-space: nowrap;
 }
+
+/**************** main-graphic ****************/
+
+div.tab-header {
+    position: relative;
+}
+
+#main-graphic {
+    top: 0;
+    right: 0;
+    position: absolute;
+    height: 100%;
+}
+
+#graphic-inner {
+    position: relative;
+}
+
+#main-graphic .card {
+    width: 16rem;
+    height: 16rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+#main-graphic .card:first-child {
+    transform: rotate(15deg);
+    margin-right: 2rem;
+    margin-top: 5rem;
+    -webkit-backdrop-filter: blur(1rem);
+    backdrop-filter: blur(1rem);
+    z-index: 2;
+}
+
+
+#main-graphic .card:last-child {
+    transform: rotate(-15deg);
+    margin-right: 10rem;
+    z-index: 1;
+}
