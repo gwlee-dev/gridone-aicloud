@@ -51,20 +51,36 @@
             <div data-aos="zoom-in" class="vh-100 vw-100" id="wrapper">
                 <div class="h-100 d-flex flex-column" id="inner">
                     <nav class="navbar navbar-expand-lg navbar-light p-0" id="navbar">
-                        <div class="d-flex px-4 py-3">
-                            <a class="navbar-brand" href="#home">
-                                <img src="assets/logo-ai.png" alt="그리드원">
-                            </a>
+                        <div class="row g-0 w-100">
+                            <div class="col-2 text-center py-3">
+                                <a class="navbar-brand m-0" href="#home">
+                                    <img src="assets/logo-ai.png" alt="그리드원">
+                                </a>
+                            </div>
+                            <div class="col-10">
+                                <div class="collapse navbar-collapse h-100">
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item">
+                                          <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" data-bs-toggle="tab" href="#home-solution">솔루션</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </nav>
                     <div class="row flex-grow-1 g-0">
-                        <div class="col-2" id="sidebar">
+                        <div class="col-2 d-flex flex-column" id="sidebar">
                             <ul class="list-group list-group-flush my-2">
                                 <li class="list-group-item">홈</li>
                                 <li class="list-group-item active">Quick Start</li>
                             </ul>
-                            <hr class="w-100 m-0">
-                            <ul class="list-group list-group-flush my-2">
+                            <ul class="list-group list-group-flush my-2 border-top border-white">
                                 <li class="list-group-item">솔루션</li>
                                 <li class="list-group-item opacity-100 fw-bold">AIDA</li>
                                 <li class="list-group-item ms-4">AI-OCR</li>
@@ -79,8 +95,7 @@
                                 <li class="list-group-item ms-4">Chatbot</li>
                                 <li class="list-group-item ms-4">AI-ARS</li>
                             </ul>
-                            <hr class="w-100 m-0">
-                            <ul class="list-group list-group-flush my-2">
+                            <ul class="list-group list-group-flush mt-auto pt-2 border-top border-white">
                                 <li class="list-group-item">관련 사이트</li>
                                 <li class="list-group-item opacity-100 fw-bold linkage">
                                     <a href="http://gridone.gwlee.dev/" target="_blank">gridone</a>
@@ -90,8 +105,111 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-10">
-2
+                        <div class="tab-content col-10">
+                            <div class="tab-pane fade show active h-100" id="home-tab">
+                                <div class="d-flex flex-column h-100">
+                                    <div class="tab-header">
+                                        <div id="inner-carousel" class="carousel slide" data-bs-ride="carousel">
+                                            <div class="carousel-indicators">
+                                                <button type="button" data-bs-target="#inner-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide1"></button>
+                                                <button type="button" data-bs-target="#inner-carousel" data-bs-slide-to="1" aria-label="Slide2"></button>
+                                                <button type="button" data-bs-target="#inner-carousel" data-bs-slide-to="2" aria-label="Slide3"></button>
+                                            </div>
+                                            <div class="carousel-inner pt-5">
+                                                <div class="carousel-item active">
+                                                    <h1 class="fw-bold lh-base">
+                                                        RPA<sup class="fs-4 me-1" style="margin-left: -5px;">*</sup>와 AI의 융합.<br>
+                                                        비용은 줄이고<br>
+                                                        성과는 향상시켜 보세요.
+                                                    </h1>
+                                                    <p class="opacity-50">* Robotic Process Automation : 로보틱 처리 자동화</p>
+                                                </div>
+                                                <!-- <div class="carousel-item">
+                                                    2Page
+                                                </div>
+                                                <div class="carousel-item">
+                                                    3Page
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-body mt-auto px-5 mb-4">
+                                        <div class="row row-cols-4 p-3" style="margin: 0 -1.5rem;">
+                                            <div class="col-12">
+                                                <h5 class="fw-bold">Quick Start</h5>
+                                                <p class="opacity-50">미리 준비된 문서들로 빠르게 체험해보세요.</p>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100" data-tilt>
+                                                    <div class="card-body p-4">
+                                                        <span class="d-flex fs-3">
+                                                            <i class="bi bi-file-medical"></i>
+                                                            <i class="bi bi-arrow-right-short mx-2"></i>
+                                                            <i class="bi bi-type"></i>
+                                                        </span>
+                                                        <h5 class="fw-bold mt-2 mb-1">영수증을 텍스트로 변환</h5>
+                                                        <p class="opacity-50 m-0">AIDA AI-OCR</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100" data-tilt>
+                                                    <div class="card-body p-4">
+                                                        <span class="d-flex fs-3">
+                                                            <i class="bi bi-file-earmark-post"></i>
+                                                            <i class="bi bi-arrow-right-short mx-2"></i>
+                                                            <i class="bi bi-file-earmark-spreadsheet"></i>
+                                                        </span>
+                                                        <h5 class="fw-bold mt-2 mb-1">납품서를 엑셀로 변환</h5>
+                                                        <p class="opacity-50 m-0">AIDA Table-Detector</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100" data-tilt>
+                                                    <div class="card-body p-4">
+                                                        <span class="d-flex fs-3">
+                                                            <i class="bi bi-input-cursor-text"></i>
+                                                        </span>
+                                                        <h5 class="fw-bold mt-2 mb-1">CAPTCHA 자동입력</h5>
+                                                        <p class="opacity-50 m-0">AIDA CAPTCHA</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100" data-tilt>
+                                                    <div class="card-body p-4">
+                                                        <span class="d-flex fs-3">
+                                                            <i class="bi bi-chat-square-dots"></i>
+                                                        </span>
+                                                        <h5 class="fw-bold mt-2 mb-1">AI 챗봇</h5>
+                                                        <p class="opacity-50 m-0">UMean Chatbot</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer border-top border-white px-5">
+                                        <div class="row row-cols-4 p-3 h-100" style="margin: 0 -1.5rem;">
+                                            <div class="col-auto d-flex align-items-center me-auto">
+                                                <p class="opacity-50 m-0">
+                                                    © 2021 gridone Co., Ltd. All rights reserved.
+                                                </p>
+                                            </div>
+                                            <div class="col py-3">
+                                                <button class="btn btn-light border-white bg-white bg-opacity-10 text-white w-100 h-100" id="browse">
+                                                    <h5 class="fw-bold m-0">
+                                                        <i class="bi bi-arrow-up-left-circle me-2"></i> 솔루션 둘러보기
+                                                    </h5>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="home-solution">
+                                <div class="tab-body">2</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -103,6 +221,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
     <script src="js/master.js"></script>
     <script>
         $(window).ready(function () {

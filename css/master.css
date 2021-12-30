@@ -69,6 +69,14 @@ a:active {
     opacity: 1 !important;
 }
 
+.border-white{
+    border-color: rgba( 255, 255, 255, 0.13 )!important;
+}
+
+.card,
+.btn{
+    border-radius: 1rem!important;
+}
 
 /**************** Glassmorphism ****************/
 #wrapper{
@@ -78,14 +86,6 @@ a:active {
 #inner{
     border-radius: 1rem;
     border: 1px solid rgba( 255, 255, 255, 0.13 );
-    -webkit-backdrop-filter: blur(1.5rem);
-            backdrop-filter: blur(1.5rem);
-}
-
-.blury {
-    background-color: rgba( 255, 255, 255, 0.1 );
-    border: 1px solid rgba( 255, 255, 255, 0.13 );
-    transition: background-color 0.25s;
     -webkit-backdrop-filter: blur(1.5rem);
             backdrop-filter: blur(1.5rem);
 }
@@ -100,6 +100,14 @@ a:active {
 #sidebar{
     background-color: rgba( 0, 0, 0, 0.13 );
     border-bottom-left-radius: 1rem;
+}
+
+#sidebar ul:last-child{
+    height: 7.5rem;
+}
+
+#sidebar ul:last-child li.list-group-item{
+    padding: 0.25rem 1.5rem;
 }
 
 #sidebar li.list-group-item{
@@ -176,4 +184,90 @@ a:active {
     z-index: -1;
 }
 
-/**************** Content ****************/
+/**************** Tabs ****************/
+.nav-tabs,
+.nav-tabs > .nav-item,
+.nav-tabs > .nav-item > .nav-link{
+    height: 100%;
+}
+
+.nav-tabs{
+    border: 0;
+}
+
+.nav-tabs > .nav-item{
+    width: 150px;
+}
+
+.nav-tabs > .nav-item > .nav-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    opacity: 0.5;
+    color: #ffffff;
+    transition: opacity .2s;
+}
+
+.nav-tabs > .nav-item > .nav-link:hover{
+    opacity: 1;
+}
+
+.nav-tabs > .nav-item > .nav-link.active{
+    opacity: 1;
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid #fff;
+}
+
+.tab-content{
+    background: url('../assets/content-bg.png') no-repeat;
+    background-size: contain;
+}
+
+.tab-header{
+    padding: 3rem;
+}
+
+div.footer{
+    height: 7.5rem;
+}
+
+/**************** Carousel ****************/
+
+.carousel-indicators {
+    right: auto;
+    bottom: auto;
+    top: 0;
+    left: 0;
+    margin: 0!important;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.carousel-indicators [data-bs-target]:first-child {
+    margin-left: 0!important;
+}
+
+/**************** Button ****************/
+
+#browse{
+    position: relative;
+}
+
+#browse::after{
+    content: '또는';
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    transform: translate(-50%, 0%);
+    line-height: 0;
+    white-space: nowrap;
+}
