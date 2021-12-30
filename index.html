@@ -124,17 +124,23 @@
                                                     </h1>
                                                     <p class="opacity-50">* Robotic Process Automation : 로보틱 처리 자동화</p>
                                                 </div>
-                                                <!-- <div class="carousel-item">
-                                                    2Page
+                                                <div class="carousel-item">
+                                                    <h1 class="fw-bold lh-base">
+                                                        Lorem ipsum dolor sit amet,<br>
+                                                        consectetur adipiscing elit.
+                                                    </h1>
                                                 </div>
                                                 <div class="carousel-item">
-                                                    3Page
-                                                </div> -->
+                                                    <h1 class="fw-bold lh-base">
+                                                        피가 거친 원질이 유소년에게서<br>
+                                                        생명을 열락의 보이는 힘차게 같이 것이다.
+                                                    </h1>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="m-5" id="main-graphic">
                                             <div id="graphic-inner">
-                                                <div class="card">
+                                                <div class="card border-white overflow-hidden" id="ai-box">
                                                     <div class="card-body d-flex flex-column justify-content-center">
                                                         <div class="card-inner px-4">
                                                             <span class="fw-bold display-4">AI</span>
@@ -145,7 +151,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card">
+                                                <span class="graphic-ball display-3 text-center">
+                                                    <i class="bi bi-plus"></i>
+                                                </span>
+                                                <div class="card border-white overflow-hidden active" id="rpa-box">
                                                     <div class="card-body d-flex flex-column justify-content-center">
                                                         <div class="card-inner px-3">
                                                             <span class="fw-bold display-4">RPA</span>
@@ -157,6 +166,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <span class="graphic-ball"></span>
                                             </div>
                                         </div>
                                     </div>
@@ -167,7 +177,7 @@
                                                 <p class="opacity-50">미리 준비된 문서들로 빠르게 체험해보세요.</p>
                                             </div>
                                             <div class="col">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100" data-tilt>
+                                                <div class="card bg-white bg-opacity-10 border-white h-100 overflow-hidden" data-tilt>
                                                     <div class="card-body p-4">
                                                         <span class="d-flex fs-3">
                                                             <i class="bi bi-file-medical"></i>
@@ -180,7 +190,7 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100" data-tilt>
+                                                <div class="card bg-white bg-opacity-10 border-white h-100 overflow-hidden" data-tilt>
                                                     <div class="card-body p-4">
                                                         <span class="d-flex fs-3">
                                                             <i class="bi bi-file-earmark-post"></i>
@@ -193,7 +203,7 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100" data-tilt>
+                                                <div class="card bg-white bg-opacity-10 border-white h-100 overflow-hidden" data-tilt>
                                                     <div class="card-body p-4">
                                                         <span class="d-flex fs-3">
                                                             <i class="bi bi-input-cursor-text"></i>
@@ -204,7 +214,7 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100" data-tilt>
+                                                <div class="card bg-white bg-opacity-10 border-white h-100 overflow-hidden" data-tilt>
                                                     <div class="card-body p-4">
                                                         <span class="d-flex fs-3">
                                                             <i class="bi bi-chat-square-dots"></i>
@@ -258,9 +268,28 @@
                 console.log("loaded");
             }, 0);
 
+            $('.card').tilt({
+                glare: true,
+                maxGlare: .5
+            })
+
             particlesJS.load('particles-js', 'js/particles.json');
+
+            $("#rpa-box").on("mouseenter", function(){
+                $(this).removeClass("active");
+            });
+            $("#rpa-box").on("mouseleave", function(){
+                $(this).addClass("active");
+
+            });
+            $("#ai-box").on("mouseenter", function(){
+                $(this).removeClass("active");
+            });
+            $("#ai-box").on("mouseleave", function(){
+                $(this).addClass("active");
+
+            });
         });
     </script>
 </body>
-
 </html>
