@@ -501,13 +501,12 @@ span.graphic-ball{
     max-width: 28rem;
 }
 
-[class *= "mCustomScrollbar"] #mCSB_1_scrollbar_horizontal{
+[class *= "mCustomScrollbar"] [id *= "scrollbar_horizontal"]{
     opacity: 0;
-    transition: opacity .2s;
 }
 
-[class *= "mCustomScrollbar"]:hover #mCSB_1_scrollbar_horizontal{
-    opacity: 1;
+[class *= "mCustomScrollbar"]:hover [id *= "scrollbar_horizontal"]{
+    opacity: 0;
 }
 
 #home-solution{
