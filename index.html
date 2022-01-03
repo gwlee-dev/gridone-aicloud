@@ -53,56 +53,97 @@
                 <div class="h-100 d-flex flex-column" id="inner">
                     <nav class="navbar navbar-expand-lg navbar-light p-0" id="navbar">
                         <div class="row g-0 w-100">
-                            <div class="col-2 text-center py-3">
+                            <div class="col-2 d-flex align-items-center justify-content-start py-3">
+                                <span id="side-toggle">
+                                    <div class="hamburger">
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                        <span class="bar"></span>
+                                    </div>
+                                </span>
                                 <a class="navbar-brand m-0" href="#home">
-                                    <img src="assets/logo-ai.png" alt="그리드원">
+                                    <img class="ms-2" src="assets/logo-ai.png" alt="그리드원">
                                 </a>
                             </div>
-                            <div class="col-10">
-                                <div class="collapse navbar-collapse h-100">
-                                    <ul class="nav nav-tabs">
-                                        <li class="nav-item">
-                                          <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
-                                        </li>
-                                        <li class="nav-item">
-                                          <a class="nav-link" data-bs-toggle="tab" href="#home-solution">솔루션</a>
-                                        </li>
-                                        <li class="nav-item">
-                                          <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="col-10 d-flex align-items-center justify-content-end py-3">
+                                <form class="me-4">
+                                    <div class="input-group" id="search">
+                                        <input type="text" class="form-control bg-white bg-opacity-10 border-white text-white" placeholder="검색">
+                                        <span class="input-group-text bg-white bg-opacity-10 border-white">
+                                            <i class="bi bi-search text-white"></i>
+                                        </span>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </nav>
                     <div class="row flex-grow-1 g-0">
-                        <div class="col-2 d-flex flex-column h-100" id="sidebar">
+                        <div class="col-2 d-flex flex-column h-100 active" id="sidebar">
                             <ul class="list-group list-group-flush my-2">
-                                <li class="list-group-item">홈</li>
-                                <li class="list-group-item active">Quick Start</li>
+                                <li class="list-group-item toggle-item">홈</li>
+                                <li class="list-group-item active">
+                                    <i class="bi bi-terminal me-2"></i>
+                                    <span class="toggle-item">Quick Start</span>
+                                </li>
                             </ul>
                             <ul class="list-group list-group-flush my-2 border-top border-white">
-                                <li class="list-group-item">솔루션</li>
-                                <li class="list-group-item opacity-100 fw-bold">AIDA</li>
-                                <li class="list-group-item ms-4">AI-OCR</li>
-                                <li class="list-group-item ms-4">Keyword Checker</li>
-                                <li class="list-group-item ms-4">Table Detector</li>
-                                <li class="list-group-item ms-4">Document Understanding</li>
-                                <li class="list-group-item opacity-100 fw-bold">ThirdEye</li>
-                                <li class="list-group-item ms-4">Visitor Checker</li>
-                                <li class="list-group-item ms-4">Auto Facial Blur</li>
-                                <li class="list-group-item ms-4">Video Analyze Engine</li>
-                                <li class="list-group-item opacity-100 fw-bold">UMean</li>
-                                <li class="list-group-item ms-4">Chatbot</li>
-                                <li class="list-group-item ms-4">AI-ARS</li>
+                                <li class="list-group-item toggle-item">솔루션</li>
+                                <li class="list-group-item opacity-100 d-flex justify-content-between" data-bs-toggle="collapse" href="#collpase-aida" aria-expanded="false">
+                                    <span class="fw-bold">
+                                        <i class="bi bi-file-earmark-text me-2"></i>
+                                        <span class="toggle-item">AIDA</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right toggle-item"></i>
+                                </li>
+                                <div class="collapse" id="collpase-aida">
+                                    <li class="list-group-item ms-4">AI-OCR</li>
+                                    <li class="list-group-item ms-4">Keyword Checker</li>
+                                    <li class="list-group-item ms-4">Table Detector</li>
+                                    <li class="list-group-item ms-4">Document Understanding</li>
+                                </div>
+                                <li class="list-group-item opacity-100 d-flex justify-content-between" data-bs-toggle="collapse" href="#collpase-thirdeye" aria-expanded="false">
+                                    <span class="fw-bold">
+                                        <i class="bi bi-eye me-2"></i>
+                                        <span class="toggle-item">ThirdEye</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right toggle-item"></i>
+                                </li>
+                                <div class="collapse" id="collpase-thirdeye">
+                                    <li class="list-group-item ms-4">Visitor Checker</li>
+                                    <li class="list-group-item ms-4">Auto Facial Blur</li>
+                                    <li class="list-group-item ms-4">Video Analyze Engine</li>
+                                </div>
+                                <li class="list-group-item opacity-100 d-flex justify-content-between" data-bs-toggle="collapse" href="#collpase-umean" aria-expanded="false">
+                                    <span class="fw-bold">
+                                        <i class="bi bi-chat-text me-2"></i>
+                                        <span class="toggle-item">UMean</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right toggle-item"></i>
+                                </li>
+                                <div class="collapse" id="collpase-umean">
+                                    <li class="list-group-item ms-4">Chatbot</li>
+                                    <li class="list-group-item ms-4">AI-ARS</li>
+                                </div>
                             </ul>
                             <ul class="list-group list-group-flush mt-auto pt-2 border-top border-white">
-                                <li class="list-group-item">관련 사이트</li>
+                                <li class="list-group-item toggle-item">관련 사이트</li>
                                 <li class="list-group-item opacity-100 fw-bold linkage">
-                                    <a href="http://gridone.gwlee.dev/" target="_blank">gridone</a>
+                                    <a href="http://gridone.gwlee.dev/" target="_blank">
+                                        <i class="bi bi-house me-2"></i>
+                                        <span class="toggle-item">gridone</span>
+                                    </a>
                                 </li>
                                 <li class="list-group-item opacity-100 fw-bold linkage">
-                                    <a href="http://nh.gwlee.dev/" target="_blank">RPA Portal</a>
+                                    <a href="http://nh.gwlee.dev/" target="_blank">
+                                        <i class="bi bi-robot me-2"></i>
+                                        <span class="toggle-item">RPA Portal</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item opacity-100 fw-bold linkage">
+                                    <a href="http://forum.gridone.co.kr/" target="_blank">
+                                        <i class="bi bi-terminal me-2"></i>
+                                        <span class="toggle-item">DEV Center</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -246,7 +287,7 @@
                                 </div>
                             </div>
                             <div class="tab-pane fade h-100" id="home-solution">
-                                <div class="tab-body p-5 mb-4">
+                                <div class="tab-body p-5">
                                     <h1 class="fw-bold">솔루션</h1>
                                     <p class="opacity-50">소프트웨어 2.0을 완성하는 AI & Automation 기술</p>
                                     <h5 class="fw-bold mt-4">AIDA</h5>
@@ -482,6 +523,10 @@
             });
 
             particlesJS.load('particles-js', 'js/particles.json');
+
+            $("#side-toggle").on('click', function(){
+                $('#sidebar').toggleClass("active");
+            });
 
             $("#rpa-box").on({
                 mouseenter : function(){

@@ -79,8 +79,18 @@ a:active {
 }
 
 /**************** Glassmorphism ****************/
+#side-toggle{
+    cursor: pointer;
+    width: 4rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.25rem;
+}
+
 #wrapper{
-    padding: 3.75rem 8.5rem;
+    padding: 1.25rem;
 }
 
 #inner{
@@ -117,16 +127,48 @@ a:active {
     border-top-right-radius: 1rem;
 }
 
+#search input:focus,
+#search input:active{
+    box-shadow: none;
+}
+
 #sidebar{
     background-color: rgba( 0, 0, 0, 0.13 );
     border-bottom-left-radius: 1rem;
+    width: 4rem;
+    transition: width .5s;
+}
+
+#sidebar.active{
+    width: 19.375rem;
+}
+
+#sidebar ~ .tab-content{
+    width: calc(100% - 4rem);
+    transition: width .5s;
+}
+
+#sidebar.active ~ .tab-content{
+    width: calc(100% - 19.375rem);
+}
+
+#sidebar .toggle-item{
+    display: none;
+}
+
+#sidebar.active .toggle-item{
+    display: inline-block;
 }
 
 #sidebar ul:last-child{
-    height: 7.5rem;
+    height: 9.5rem;
 }
 
 #sidebar ul:last-child li.list-group-item{
+    padding: 0.5rem 1.5rem;
+}
+
+#sidebar.active ul:last-child li.list-group-item{
     padding: 0.25rem 1.5rem;
 }
 
@@ -170,7 +212,7 @@ a:active {
     z-index: -1;
 }
 
-.linkage:hover::after {
+#sidebar.active .linkage:hover::after {
     content: '\f470';
     font-family: 'bootstrap-icons';
     font-weight: normal !important;
@@ -213,6 +255,25 @@ a:active {
     z-index: -1;
 }
 
+/**************** Hamburger ****************/
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 4px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+[data-bs-toggle='collapse'] i.bi-chevron-right{
+    transition: transform 0.2s;
+}
+
+[data-bs-toggle='collapse'][aria-expanded='true'] i.bi-chevron-right{
+    transform: rotate(90deg);
+}
+
 /**************** Tabs ****************/
 .nav-tabs,
 .nav-tabs > .nav-item,
@@ -251,7 +312,8 @@ a:active {
 
 .tab-content .tab-pane:first-child{
     background: url('../assets/content-bg.png') no-repeat;
-    background-size: contain;
+    background-size: 100%;
+    background-position: top;
 }
 
 .tab-header{
@@ -259,7 +321,7 @@ a:active {
 }
 
 div.footer{
-    height: 7.5rem;
+    height: 9.5rem;
 }
 
 /**************** Carousel ****************/
