@@ -62,10 +62,21 @@
                                     </div>
                                 </span>
                                 <a class="navbar-brand m-0" href="#home">
-                                    <img class="ms-2" src="assets/logo-ai.png" alt="그리드원">
+                                    <img src="assets/logo-ai.png" alt="그리드원">
                                 </a>
                             </div>
                             <div class="col-10 d-flex align-items-center justify-content-end py-3">
+                                <!-- <ul class="nav nav-tabs my-2">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" data-bs-toggle="tab" href="#home-solution">솔루션</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
+                                    </li>
+                                </ul> -->
                                 <form class="me-4">
                                     <div class="input-group" id="search">
                                         <input type="text" class="form-control bg-white bg-opacity-10 border-white text-white" placeholder="검색">
@@ -80,66 +91,72 @@
                     <div class="row flex-grow-1 g-0">
                         <div class="col-2 d-flex flex-column h-100 active" id="sidebar">
                             <ul class="list-group list-group-flush my-2">
-                                <li class="list-group-item toggle-item">홈</li>
-                                <li class="list-group-item active">
+                                <li class="list-group-item list-group-header toggle-item" data-bs-toggle="tab" href="#home-tab">홈</li>
+                                <li class="list-group-item text-nowrap active" data-bs-toggle="tab" href="#home-tab">
                                     <i class="bi bi-terminal me-2"></i>
                                     <span class="toggle-item">Quick Start</span>
                                 </li>
                             </ul>
                             <ul class="list-group list-group-flush my-2 border-top border-white">
-                                <li class="list-group-item toggle-item">솔루션</li>
+                                <li class="list-group-item list-group-header toggle-item" data-bs-toggle="tab" href="#home-solution">솔루션</li>
                                 <li class="list-group-item opacity-100 d-flex justify-content-between" data-bs-toggle="collapse" href="#collpase-aida" aria-expanded="false">
-                                    <span class="fw-bold">
+                                    <span class="fw-bold text-nowrap">
                                         <i class="bi bi-file-earmark-text me-2"></i>
                                         <span class="toggle-item">AIDA</span>
                                     </span>
                                     <i class="bi bi-chevron-right toggle-item"></i>
                                 </li>
-                                <div class="collapse" id="collpase-aida">
-                                    <li class="list-group-item ms-4">AI-OCR</li>
-                                    <li class="list-group-item ms-4">Keyword Checker</li>
-                                    <li class="list-group-item ms-4">Table Detector</li>
-                                    <li class="list-group-item ms-4">Document Understanding</li>
+                                <div class="collapse position-relative" id="collpase-aida">
+                                    <ul class="list-group list-group-flush second-list">
+                                        <li class="list-group-item ms-4">AI-OCR</li>
+                                        <li class="list-group-item ms-4">Keyword Checker</li>
+                                        <li class="list-group-item ms-4">Table Detector</li>
+                                        <li class="list-group-item ms-4">Document Understanding</li>
+                                    </ul>
                                 </div>
                                 <li class="list-group-item opacity-100 d-flex justify-content-between" data-bs-toggle="collapse" href="#collpase-thirdeye" aria-expanded="false">
-                                    <span class="fw-bold">
+                                    <span class="fw-bold text-nowrap">
                                         <i class="bi bi-eye me-2"></i>
                                         <span class="toggle-item">ThirdEye</span>
                                     </span>
                                     <i class="bi bi-chevron-right toggle-item"></i>
                                 </li>
-                                <div class="collapse" id="collpase-thirdeye">
-                                    <li class="list-group-item ms-4">Visitor Checker</li>
-                                    <li class="list-group-item ms-4">Auto Facial Blur</li>
-                                    <li class="list-group-item ms-4">Video Analyze Engine</li>
+                                <div class="collapse position-relative" id="collpase-thirdeye">
+                                    <ul class="list-group list-group-flush second-list">
+                                        <li class="list-group-item ms-4">Visitor Checker</li>
+                                        <li class="list-group-item ms-4">Auto Facial Blur</li>
+                                        <li class="list-group-item ms-4">Video Analyze Engine</li>
+                                    </ul>
                                 </div>
                                 <li class="list-group-item opacity-100 d-flex justify-content-between" data-bs-toggle="collapse" href="#collpase-umean" aria-expanded="false">
-                                    <span class="fw-bold">
+                                    <span class="fw-bold text-nowrap">
                                         <i class="bi bi-chat-text me-2"></i>
                                         <span class="toggle-item">UMean</span>
                                     </span>
                                     <i class="bi bi-chevron-right toggle-item"></i>
                                 </li>
-                                <div class="collapse" id="collpase-umean">
-                                    <li class="list-group-item ms-4">Chatbot</li>
-                                    <li class="list-group-item ms-4">AI-ARS</li>
+                                <div class="collapse position-relative" id="collpase-umean">
+                                    <ul class="list-group list-group-flush second-list">
+                                        <li class="list-group-item ms-4">Chatbot</li>
+                                        <li class="list-group-item ms-4">AI-ARS</li>
+                                    </ul>
                                 </div>
                             </ul>
-                            <ul class="list-group list-group-flush mt-auto pt-2 border-top border-white">
-                                <li class="list-group-item toggle-item">관련 사이트</li>
-                                <li class="list-group-item opacity-100 fw-bold linkage">
+                            <ul class="list-group list-group-flush mt-auto pt-2 border-top border-white" id="sitemap">
+                                <li class="list-group-item list-group-header toggle-item">관련 사이트</li>
+                                <li class="list-group-item opacity-100 fw-bold linkage text-nowrap">
                                     <a href="http://gridone.gwlee.dev/" target="_blank">
                                         <i class="bi bi-house me-2"></i>
                                         <span class="toggle-item">gridone</span>
                                     </a>
                                 </li>
-                                <li class="list-group-item opacity-100 fw-bold linkage">
+                                <li class="list-group-item opacity-100 fw-bold linkage text-nowrap">
                                     <a href="http://nh.gwlee.dev/" target="_blank">
                                         <i class="bi bi-robot me-2"></i>
                                         <span class="toggle-item">RPA Portal</span>
                                     </a>
                                 </li>
-                                <li class="list-group-item opacity-100 fw-bold linkage">
+                                <li class="list-group-item opacity-100 fw-bold linkage text-nowrap">
                                     <a href="http://forum.gridone.co.kr/" target="_blank">
                                         <i class="bi bi-terminal me-2"></i>
                                         <span class="toggle-item">DEV Center</span>
@@ -523,6 +540,16 @@
             });
 
             particlesJS.load('particles-js', 'js/particles.json');
+
+            $("body").on('click', function(){
+                $(".collapse").collapse("hide");
+            });
+
+            $(".list-group-item").on('click', function(){
+                $(".list-group-item").removeClass("active");
+                $(this).addClass("active");
+            });
+
 
             $("#side-toggle").on('click', function(){
                 $('#sidebar').toggleClass("active");
