@@ -44,7 +44,7 @@ a:active {
     color: inherit;
 }
 
-*{
+* {
     user-select: none;
 }
 
@@ -69,17 +69,17 @@ a:active {
     opacity: 1 !important;
 }
 
-.border-white{
-    border-color: rgba( 255, 255, 255, 0.13 )!important;
+.border-white {
+    border-color: rgba(255, 255, 255, 0.13) !important;
 }
 
 .card,
-.btn{
-    border-radius: 1rem!important;
+.btn {
+    border-radius: 1rem !important;
 }
 
 /**************** Glassmorphism ****************/
-#side-toggle{
+/* #side-toggle {
     cursor: pointer;
     width: 4rem;
     height: 1.5rem;
@@ -87,22 +87,18 @@ a:active {
     justify-content: center;
     align-items: center;
     padding-left: 0.25rem;
-}
+} */
 
-#wrapper{
-    padding: 1.25rem;
-}
-
-#inner{
+section>div {
     max-height: 100%;
     overflow: hidden;
     position: relative;
     padding-top: 4.5rem;
-    border: 1px solid rgba( 255, 255, 255, 0.13 );
+    border: 1px solid rgba(255, 255, 255, 0.13);
     border-radius: 1rem;
 }
 
-#inner::after{
+section>div::after {
     content: '';
     position: absolute;
     display: block;
@@ -110,127 +106,88 @@ a:active {
     height: 100%;
     top: 0;
     -webkit-backdrop-filter: blur(1.5rem);
-            backdrop-filter: blur(1.5rem);
+    backdrop-filter: blur(1.5rem);
     z-index: -1;
 }
 
-#navbar{
-    background-color: rgba( 0, 0, 0, 0.13 );
-    border-bottom: 1px solid rgba( 255, 255, 255, 0.13 );
+#navbar {
+    background-color: rgba(0, 0, 0, 0.13);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
     height: 4.5rem;
     position: absolute;
     width: 100%;
     top: 0;
 }
 
-#sidebar{
-    background-color: rgba( 0, 0, 0, 0.13 );
-    width: 4rem;
+
+/**** Sidebar ****/
+
+/* hover or active*/
+#sidebar {
+    background-color: rgba(0, 0, 0, 0.13);
+    width: 3rem;
     transition: width .5s;
+    overflow-x: hidden;
+    border-right: 1px solid rgba(255, 255, 255, 0.13);
 }
 
-#sidebar.active{
-    width: 19rem;
-}
-
-#sidebar ~ .tab-content{
+.tab-content {
     flex-grow: 1;
-    transition: width .5s;
 }
 
-#sidebar .toggle-item{
-    display: none;
+#sidebar.active,
+#sidebar:hover {
+    width: 16.66666667%;
+}
+
+#sidebar ul {
     white-space: nowrap;
+    margin: 0;
 }
 
-#sidebar.active .toggle-item{
-    display: inline-block;
+#sidebar ul span {
+    opacity: 0;
+    transition: opacity .5s;
 }
 
-#sidebar ul#sitemap{
-    height: 9.5rem;
+#sidebar.active ul span,
+#sidebar:hover ul span {
+    opacity: 1;
 }
 
-#sidebar:not(.active) .collapsing{
-    display: none;
-    transition: none;
-}
-
-#sidebar li.list-group-header{
+#sidebar li.list-group-header {
     font-size: 0.75rem;
+    opacity: 0!important;
+    transition: all .5s;
 }
 
-#sidebar ul#sitemap li.list-group-item{
-    padding: 0.65rem 1.5rem;
+#sidebar.active li.list-group-header,
+#sidebar:hover li.list-group-header {
+    opacity: 1!important;
 }
 
-#sidebar.active ul#sitemap li.list-group-item{
-    padding: 0.25rem 1.5rem;
-}
 
-#sidebar .second-list{
-    position: absolute;
-    top: -4rem;
-    left: 4rem;
-    background-color: rgba( 0, 0, 0, 1 );
-    z-index: 10011;
-    transition: none;
-    margin-top: -1px;
-    width: 15rem;
-}
-
-#sidebar .second-list li{
-    white-space: nowrap;
-    margin-left: 0!important;
-}
-
-#sidebar.active .second-list{
-    position: static;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    width: 100%;
-    overflow: hidden;
-}
-
-#sidebar.active .second-list li{
-    margin-left: 1rem!important;
-}
-
-#sidebar li.list-group-item,
-#sidebar ul.second-list li.list-group-item{
+#sidebar li.list-group-item {
     background-color: transparent;
     color: #ffffff;
     border: none;
-    padding: 1.25rem 1.5rem;
+    padding: 0.5rem 1rem;
     opacity: 0.5;
     transition: opacity .2s, font-weight .2s;
     width: 100%;
 }
 
-#sidebar.active li.list-group-item,
-#sidebar.active ul.second-list li.list-group-item{
-    padding: 0.5rem 1.5rem;
-}
-
-#sidebar li.list-group-item:hover,
-#sidebar ul.second-list li.list-group-item:hover{
+/* 선택된 항목 */
+#sidebar li.list-group-item:not(li.list-group-header):hover,
+#sidebar li.list-group-item.active {
     position: relative;
     font-weight: bold;
-    background-color: rgba( 255, 255, 255, 0.13 );
-    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.13);
     opacity: 1;
 }
 
-#sidebar li.list-group-item.active{
-    position: relative;
-    font-weight: bold;
-    background-color: rgba( 255, 255, 255, 0.13 );
-    overflow: hidden;
-    opacity: 1;
-}
-
-#sidebar li.list-group-item.active::after{
+/* 호버시 좌측 빛 */
+#sidebar li.list-group-item.active::after {
     content: '';
     width: 1rem;
     height: 1rem;
@@ -239,19 +196,10 @@ a:active {
     top: 50%;
     left: -0.5rem;
     transform: translateY(-50%);
-    background-color: rgba( 255, 255, 255, 1 );
+    background-color: rgba(255, 255, 255, 1);
     filter: blur(0.5rem);
     border-radius: 50%;
     z-index: -1;
-}
-
-#sidebar.active .linkage:hover::after {
-    content: '\f470';
-    font-family: 'bootstrap-icons';
-    font-weight: normal !important;
-    position: absolute;
-    margin-left: 0.5rem;
-    opacity: .8;
 }
 
 /**************** Logo Animation ****************/
@@ -284,7 +232,7 @@ a:active {
 /**************** Particle Effects ****************/
 #particles-js {
     position: absolute;
-    background: linear-gradient(-45deg, rgba(18,214,223,0.5), rgba(247,15,255,0.5));
+    background: linear-gradient(-45deg, rgba(18, 214, 223, 0.5), rgba(247, 15, 255, 0.5));
     z-index: -1;
 }
 
@@ -299,30 +247,30 @@ a:active {
     background-color: #ffffff;
 }
 
-[data-bs-toggle='collapse'] i.bi-chevron-right{
+[data-bs-toggle='collapse'] i.bi-chevron-right {
     transition: transform 0.2s;
 }
 
-[data-bs-toggle='collapse'][aria-expanded='true'] i.bi-chevron-right{
+[data-bs-toggle='collapse'][aria-expanded='true'] i.bi-chevron-right {
     transform: rotate(90deg);
 }
 
 /**************** Tabs ****************/
 .nav-tabs,
-.nav-tabs > .nav-item,
-.nav-tabs > .nav-item > .nav-link{
+.nav-tabs>.nav-item,
+.nav-tabs>.nav-item>.nav-link {
     height: 100%;
 }
 
-.nav-tabs{
+.nav-tabs {
     border: 0;
 }
 
-.nav-tabs > .nav-item{
+.nav-tabs>.nav-item {
     width: 150px;
 }
 
-.nav-tabs > .nav-item > .nav-link{
+.nav-tabs>.nav-item>.nav-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -332,28 +280,28 @@ a:active {
     transition: opacity .2s;
 }
 
-.nav-tabs > .nav-item > .nav-link:hover{
+.nav-tabs>.nav-item>.nav-link:hover {
     opacity: 1;
 }
 
-.nav-tabs > .nav-item > .nav-link.active{
+.nav-tabs>.nav-item>.nav-link.active {
     opacity: 1;
     background: transparent;
     border: 0;
     border-bottom: 2px solid #fff;
 }
 
-.tab-content .tab-pane:first-child{
+.tab-content .tab-pane:first-child {
     background: url('../assets/content-bg.png') no-repeat;
     background-size: 100%;
     background-position: top;
 }
 
-.tab-header{
+.tab-header {
     padding: 3rem 3rem 0 3rem;
 }
 
-div.footer{
+div.footer {
     height: 9.5rem;
 }
 
@@ -364,7 +312,7 @@ div.footer{
     bottom: auto;
     top: 0;
     left: 0;
-    margin: 0!important;
+    margin: 0 !important;
 }
 
 .carousel-indicators [data-bs-target] {
@@ -376,16 +324,16 @@ div.footer{
 }
 
 .carousel-indicators [data-bs-target]:first-child {
-    margin-left: 0!important;
+    margin-left: 0 !important;
 }
 
 /**************** Button ****************/
 
-#browse{
+#browse {
     position: relative;
 }
 
-#browse::after{
+#browse::after {
     content: '또는';
     display: block;
     position: absolute;
@@ -423,7 +371,7 @@ div.tab-header {
     backdrop-filter: blur(1rem);
 }
 
-#main-graphic #ai-box{
+#main-graphic #ai-box {
     transform: rotate(15deg);
     margin-right: 2rem;
     margin-top: 5rem;
@@ -432,7 +380,7 @@ div.tab-header {
 }
 
 #main-graphic #ai-box.active {
-    transform: rotate(15deg)!important;
+    transform: rotate(15deg) !important;
 }
 
 #main-graphic #rpa-box {
@@ -443,10 +391,10 @@ div.tab-header {
 }
 
 #main-graphic #rpa-box.active {
-    transform: rotate(-15deg)!important;
+    transform: rotate(-15deg) !important;
 }
 
-span.graphic-ball{
+span.graphic-ball {
     background-image: url('../assets/ball.png');
     position: absolute;
     top: 0;
@@ -454,7 +402,7 @@ span.graphic-ball{
     background-size: contain;
 }
 
-#ai-box + span.graphic-ball{
+#ai-box+span.graphic-ball {
     width: 6.875rem;
     height: 6.875rem;
     z-index: 3;
@@ -465,7 +413,7 @@ span.graphic-ball{
     justify-content: center;
 }
 
-#rpa-box + span.graphic-ball{
+#rpa-box+span.graphic-ball {
     width: 5rem;
     height: 5rem;
     z-index: 1;
@@ -473,38 +421,38 @@ span.graphic-ball{
     margin-right: 8rem;
 }
 
-[class *= "mCustomScrollbar"]{
+[class *="mCustomScrollbar"] {
     overflow: auto;
 }
 
-[class *= "mCustomScrollbar"] .row{
-    flex-wrap: nowrap!important;
+[class *="mCustomScrollbar"] .row {
+    flex-wrap: nowrap !important;
     width: fit-content;
 }
 
-[class *= "mCustomScrollbar"] .col{
+[class *="mCustomScrollbar"] .col {
     width: 28rem;
     max-width: 28rem;
 }
 
-[class *= "mCustomScrollbar"] [id *= "scrollbar_horizontal"]{
+[class *="mCustomScrollbar"] [id *="scrollbar_horizontal"] {
     opacity: 0;
 }
 
-[class *= "mCustomScrollbar"]:hover [id *= "scrollbar_horizontal"]{
+[class *="mCustomScrollbar"]:hover [id *="scrollbar_horizontal"] {
     opacity: 0;
 }
 
-#home-solution{
+#home-solution {
     overflow-y: auto;
 }
 
 /**************** Modal ****************/
 
-.modal-fullscreen{
+.modal-fullscreen {
     padding: 1.25rem;
 }
 
-.modal-fullscreen .modal-content{
+.modal-fullscreen .modal-content {
     border-radius: 1rem;
 }
