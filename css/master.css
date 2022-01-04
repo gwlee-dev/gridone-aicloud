@@ -131,10 +131,6 @@ section>div::after {
     border-right: 1px solid rgba(255, 255, 255, 0.13);
 }
 
-.tab-content {
-    flex-grow: 1;
-}
-
 #sidebar.active,
 #sidebar:hover {
     width: 16.66666667%;
@@ -419,40 +415,4 @@ span.graphic-ball {
     z-index: 1;
     margin-top: 3rem;
     margin-right: 8rem;
-}
-
-[class *="mCustomScrollbar"] {
-    overflow: auto;
-}
-
-[class *="mCustomScrollbar"] .row {
-    flex-wrap: nowrap !important;
-    width: fit-content;
-}
-
-[class *="mCustomScrollbar"] .col {
-    width: 28rem;
-    max-width: 28rem;
-}
-
-[class *="mCustomScrollbar"] [id *="scrollbar_horizontal"] {
-    opacity: 0;
-}
-
-[class *="mCustomScrollbar"]:hover [id *="scrollbar_horizontal"] {
-    opacity: 0;
-}
-
-#home-solution {
-    overflow-y: auto;
-}
-
-/**************** Modal ****************/
-
-.modal-fullscreen {
-    padding: 1.25rem;
-}
-
-.modal-fullscreen .modal-content {
-    border-radius: 1rem;
 }
