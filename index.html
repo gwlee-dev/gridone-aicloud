@@ -65,8 +65,8 @@
                                     <img src="assets/logo-ai.png" alt="그리드원">
                                 </a>
                             </div>
-                            <div class="col-10 d-flex align-items-center justify-content-end py-3">
-                                <!-- <ul class="nav nav-tabs my-2">
+                            <div class="col-10 d-flex align-items-center justify-content-between py-3">
+                                <ul class="nav nav-tabs my-2">
                                     <li class="nav-item">
                                       <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
                                     </li>
@@ -76,15 +76,7 @@
                                     <li class="nav-item">
                                       <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
                                     </li>
-                                </ul> -->
-                                <form class="me-4">
-                                    <div class="input-group" id="search">
-                                        <input type="text" class="form-control bg-white bg-opacity-10 border-white text-white" placeholder="검색">
-                                        <span class="input-group-text bg-white bg-opacity-10 border-white">
-                                            <i class="bi bi-search text-white"></i>
-                                        </span>
-                                    </div>
-                                </form>
+                                </ul>
                             </div>
                         </div>
                     </nav>
@@ -230,13 +222,13 @@
                                         </div>
                                     </div>
                                     <div class="tab-body mt-auto px-5 mb-4">
-                                        <div class="row row-cols-4 p-3" style="margin: 0 -1.5rem;">
+                                        <div class="row row-cols-2 p-3" style="margin: 0 -1.5rem;">
                                             <div class="col-12">
                                                 <h5 class="fw-bold">Quick Start</h5>
                                                 <p class="opacity-50">미리 준비된 문서들로 빠르게 체험해보세요.</p>
                                             </div>
                                             <div class="col">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100 overflow-hidden" data-tilt data-tilt-glare="true">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100 overflow-hidden" data-tilt data-tilt-glare="true" onclick="location.href='detail.html'">
                                                     <div class="card-body p-4">
                                                         <span class="d-flex fs-3">
                                                             <i class="bi bi-file-medical"></i>
@@ -249,7 +241,7 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100 overflow-hidden" data-tilt data-tilt-glare="true">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100 overflow-hidden" data-tilt data-tilt-glare="true" onclick="location.href='detail.html'">
                                                     <div class="card-body p-4">
                                                         <span class="d-flex fs-3">
                                                             <i class="bi bi-file-earmark-post"></i>
@@ -257,29 +249,7 @@
                                                             <i class="bi bi-file-earmark-spreadsheet"></i>
                                                         </span>
                                                         <h5 class="fw-bold mt-2 mb-1">납품서를 엑셀로 변환</h5>
-                                                        <p class="opacity-50 m-0">AIDA Table-Detector</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100 overflow-hidden" data-tilt data-tilt-glare="true">
-                                                    <div class="card-body p-4">
-                                                        <span class="d-flex fs-3">
-                                                            <i class="bi bi-input-cursor-text"></i>
-                                                        </span>
-                                                        <h5 class="fw-bold mt-2 mb-1">CAPTCHA 자동입력</h5>
-                                                        <p class="opacity-50 m-0">AIDA CAPTCHA</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100 overflow-hidden" data-tilt data-tilt-glare="true">
-                                                    <div class="card-body p-4">
-                                                        <span class="d-flex fs-3">
-                                                            <i class="bi bi-chat-square-dots"></i>
-                                                        </span>
-                                                        <h5 class="fw-bold mt-2 mb-1">AI 챗봇</h5>
-                                                        <p class="opacity-50 m-0">UMean Chatbot</p>
+                                                        <p class="opacity-50 m-0">AIDA AI-OCR</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -524,7 +494,7 @@
                 $('body').removeClass('loading');
                 AOS.init();
                 console.log("loaded");
-            }, 5000);
+            }, 0);
 
             $(".mCustomScrollbar-1").mCustomScrollbar({
                 axis:"x",

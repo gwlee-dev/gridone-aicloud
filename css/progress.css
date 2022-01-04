@@ -1,0 +1,69 @@
+.bs-wizard {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-bottom-right-radius: 1rem;
+}
+
+.bs-inner{
+  position: relative;
+  padding: 0.5rem;
+}
+
+.bs-inner::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3rem;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.25);
+  -webkit-backdrop-filter: blur(1.5rem);
+            backdrop-filter: blur(1.5rem);
+}
+
+.bs-wizard .bs-wizard-step {
+  padding: 0 0.25rem;
+  z-index: 10011;
+}
+
+.bs-wizard .bs-wizard-step .bs-wizard-info {
+  font-size: 0.75rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  opacity: .5;
+}
+
+.bs-wizard .progress-bar {
+  border-radius: 0px;
+  height: 0.25rem;
+  width: 100%;
+  box-shadow: 0px 2px 0px rgba(0,0,0,0.03) inset,
+              0px -2px 0px rgba(0,0,0,0.015) inset;
+  background-color: rgba(255,255,255,0.25);
+}
+
+.bs-wizard[data-progress="1"] .bs-wizard-step:nth-child(-n+1) .progress-bar{
+  background-color: rgba(255,255,255,0.75);
+}
+
+.bs-wizard[data-progress="2"] .bs-wizard-step:nth-child(-n+2) .progress-bar{
+  background-color: rgba(255,255,255,0.75);
+}
+
+.bs-wizard[data-progress="3"] .bs-wizard-step:nth-child(-n+3) .progress-bar{
+  background-color: rgba(255,255,255,0.75);
+}
+
+.bs-wizard[data-progress="1"] .bs-wizard-step:nth-child(-n+1) .bs-wizard-info{
+  opacity: 1;
+}
+
+.bs-wizard[data-progress="2"] .bs-wizard-step:nth-child(-n+2) .bs-wizard-info{
+  opacity: 1;
+}
+
+.bs-wizard[data-progress="3"] .bs-wizard-step:nth-child(-n+3) .bs-wizard-info{
+  opacity: 1;
+}
