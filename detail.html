@@ -53,9 +53,6 @@
                 <nav class="navbar navbar-light w-100 p-0" id="navbar">
                     <div class="row g-0 h-100 w-100">
                         <div class="col-2 d-flex align-items-center justify-content-start">
-                            <span id="side-toggle" class="lh-sm" style="margin-left: -5px;">
-                                <i class="bi bi-list fs-3"></i>
-                            </span>
                             <a class="navbar-brand ms-3" href="#home">
                                 <img src="assets/logo-ai.png" alt="그리드원">
                             </a>
@@ -63,10 +60,10 @@
                         <div class="col-10 d-flex align-items-center justify-content-between">
                             <ul class="nav nav-tabs my-2">
                                 <li class="nav-item">
-                                  <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
+                                  <a class="nav-link" href="index.html">홈</a>
                                 </li>
                                 <li class="nav-item">
-                                  <a class="nav-link" data-bs-toggle="tab" href="#home-solution">솔루션</a>
+                                  <a class="nav-link active" href="#">솔루션</a>
                                 </li>
                                 <li class="nav-item">
                                   <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
@@ -76,7 +73,11 @@
                     </div>
                 </nav>
                 <div class="row flex-grow-1 g-0">
-                    <div class="col-auto d-flex flex-column h-100" id="sidebar">
+                    <div class="col-auto d-flex flex-column h-100 position-relative" id="sidebar">
+                        <span id="side-toggle">
+                            <i class="bi bi-pin-angle"></i>
+                            <i class="bi bi-pin-angle-fill"></i>
+                        </span>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item list-group-header toggle-item" data-bs-toggle="tab" href="#home-tab">홈</li>
                             <li class="list-group-item text-nowrap active" data-bs-toggle="tab" href="#home-tab">
@@ -330,34 +331,8 @@
 
             particlesJS.load('particles-js', 'js/particles.json');
 
-            // $("body").on('click', function(){
-            //     $(".collapse").collapse("hide");
-            // });
-
-            // $(".list-group-item").on('click', function(){
-            //     $(".list-group-item").removeClass("active");
-            //     $(this).addClass("active");
-            // });
-
             $("#side-toggle").on('click', function(){
                 $('#sidebar').toggleClass("active");
-            });
-
-            $("#rpa-box").on({
-                mouseenter : function(){
-                    $(this).removeClass("active");
-                },
-                mouseleave : function(){
-                    $(this).addClass("active");
-                }
-            });
-            $("#ai-box").on({
-                mouseenter : function(){
-                    $(this).removeClass("active");
-                },
-                mouseleave : function(){
-                    $(this).addClass("active");
-                }
             });
         });
     </script>
