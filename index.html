@@ -95,7 +95,9 @@
                             </li>
                             <div class="collapse position-relative" id="collpase-aida">
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item ps-5">AI-OCR</li>
+                                    <li class="list-group-item ps-5" onclick="location.href='solution.html'">
+                                        AI-OCR
+                                    </li>
                                     <li class="list-group-item ps-5">Keyword Checker</li>
                                     <li class="list-group-item ps-5">Table Detector</li>
                                     <li class="list-group-item ps-5">Document Understanding</li>
@@ -436,7 +438,7 @@
                 $('body').removeClass('loading');
                 AOS.init();
                 console.log("loaded");
-            }, 0);
+            }, 5000);
 
             particlesJS.load('particles-js', 'js/particles.json');
 

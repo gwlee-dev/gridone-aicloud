@@ -96,7 +96,9 @@
                             </li>
                             <div class="collapse position-relative" id="collpase-aida">
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item ps-5">AI-OCR</li>
+                                    <li class="list-group-item ps-5" onclick="location.href='solution.html'">
+                                        AI-OCR
+                                    </li>
                                     <li class="list-group-item ps-5">Keyword Checker</li>
                                     <li class="list-group-item ps-5">Table Detector</li>
                                     <li class="list-group-item ps-5">Document Understanding</li>
@@ -158,15 +160,25 @@
                                 <div class="d-flex flex-column justify-content-between h-100 pb-5">
                                     <div>
                                         <h1 class="fw-bold">Solution #1</h1>
-                                        <h4 class="opacity-50">모델 선택</h4>
+                                        <h4 class="opacity-50" id="stat-text">추천</h4>
                                     </div>
-                                    <div>
-                                        <button class="btn btn-light border-white bg-white bg-opacity-10 text-white me-2">
+                                    <div class="nav nav-tabs h-auto">
+                                        <button id="tb-self" class="btn btn-light border-white bg-info bg-opacity-10 text-white me-2" data-bs-toggle="tab" href="#step-model">
+                                            <h5 class="fw-bold m-0">
+                                                직접 선택하기
+                                            </h5>
+                                        </button>
+                                        <button id="tb-go" class="btn btn-light border-white bg-white bg-opacity-10 text-white me-2" data-bs-toggle="tab" href="#step-result">
+                                            <h5 class="fw-bold m-0">
+                                                진행하기
+                                            </h5>
+                                        </button>
+                                        <button id="tb-prev" class="btn btn-light border-white bg-white bg-opacity-10 text-white me-2" data-bs-toggle="tab" href="#">
                                             <h5 class="fw-bold m-0">
                                                 이전
                                             </h5>
                                         </button>
-                                        <button class="btn btn-light border-white bg-white bg-opacity-10 text-white">
+                                        <button id="tb-next" class="btn btn-light border-white bg-white bg-opacity-10 text-white" data-bs-toggle="tab" href="#step-model">
                                             <h5 class="fw-bold m-0">
                                                 다음
                                             </h5>
@@ -175,132 +187,145 @@
                                 </div>
                             </div>
                             <div class="col-9 p-5 h-100 overflow-auto">
-                                <div class="row row-cols-3">
-                                    <div class="col mb-3">
-                                        <div class="card bg-white bg-opacity-10 border-white h-100">
-                                            <div class="card-body p-4">
-                                                <span class="d-block fs-3">
-                                                    <i class="bi bi-eye"></i>
-                                                </span>
-                                                <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="step-recommend">
+                                        추천
+                                    </div>
+                                    <div class="tab-pane fade" id="step-model">
+                                        <div class="row row-cols-3">
+                                            <div class="col mb-3">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100">
+                                                    <div class="card-body p-4">
+                                                        <span class="d-block fs-3">
+                                                            <i class="bi bi-eye"></i>
+                                                        </span>
+                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="card-footer">
-                                                <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+                                            <div class="col mb-3">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100">
+                                                    <div class="card-body p-4">
+                                                        <span class="d-block fs-3">
+                                                            <i class="bi bi-eye"></i>
+                                                        </span>
+                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col mb-3">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100">
+                                                    <div class="card-body p-4">
+                                                        <span class="d-block fs-3">
+                                                            <i class="bi bi-eye"></i>
+                                                        </span>
+                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col mb-3">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100">
+                                                    <div class="card-body p-4">
+                                                        <span class="d-block fs-3">
+                                                            <i class="bi bi-eye"></i>
+                                                        </span>
+                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col mb-3">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100">
+                                                    <div class="card-body p-4">
+                                                        <span class="d-block fs-3">
+                                                            <i class="bi bi-eye"></i>
+                                                        </span>
+                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col mb-3">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100">
+                                                    <div class="card-body p-4">
+                                                        <span class="d-block fs-3">
+                                                            <i class="bi bi-eye"></i>
+                                                        </span>
+                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col mb-3">
+                                                <div class="card bg-white bg-opacity-10 border-white h-100">
+                                                    <div class="card-body p-4">
+                                                        <span class="d-block fs-3">
+                                                            <i class="bi bi-eye"></i>
+                                                        </span>
+                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col mb-3">
-                                        <div class="card bg-white bg-opacity-10 border-white h-100">
-                                            <div class="card-body p-4">
-                                                <span class="d-block fs-3">
-                                                    <i class="bi bi-eye"></i>
-                                                </span>
-                                                <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                            </div>
-                                        </div>
+                                    <div class="tab-pane fade" id="step-image">
+                                        이미지 업로드
                                     </div>
-                                    <div class="col mb-3">
-                                        <div class="card bg-white bg-opacity-10 border-white h-100">
-                                            <div class="card-body p-4">
-                                                <span class="d-block fs-3">
-                                                    <i class="bi bi-eye"></i>
-                                                </span>
-                                                <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col mb-3">
-                                        <div class="card bg-white bg-opacity-10 border-white h-100">
-                                            <div class="card-body p-4">
-                                                <span class="d-block fs-3">
-                                                    <i class="bi bi-eye"></i>
-                                                </span>
-                                                <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col mb-3">
-                                        <div class="card bg-white bg-opacity-10 border-white h-100">
-                                            <div class="card-body p-4">
-                                                <span class="d-block fs-3">
-                                                    <i class="bi bi-eye"></i>
-                                                </span>
-                                                <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col mb-3">
-                                        <div class="card bg-white bg-opacity-10 border-white h-100">
-                                            <div class="card-body p-4">
-                                                <span class="d-block fs-3">
-                                                    <i class="bi bi-eye"></i>
-                                                </span>
-                                                <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col mb-3">
-                                        <div class="card bg-white bg-opacity-10 border-white h-100">
-                                            <div class="card-body p-4">
-                                                <span class="d-block fs-3">
-                                                    <i class="bi bi-eye"></i>
-                                                </span>
-                                                <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                            </div>
-                                            <div class="card-footer">
-                                                <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                            </div>
-                                        </div>
+                                    <div class="tab-pane fade" id="step-result">
+                                        결과화면
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="bs-wizard" data-progress="1">
-                            <div class="bs-inner row g-0">
-                                <div class="bs-wizard-step col">
+                        <div class="bs-wizard" data-progress="0">
+                            <div class="bs-inner nav nav-tabs row g-0">
+                                <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-model">
                                     <div class="bs-wizard-info">
                                         <span class="fs-5 me-1">1</span>
                                         <span>모델 선택</span>
                                     </div>
                                     <div class="progress-bar"></div>
                                 </div>
-                                <div class="bs-wizard-step col">
+                                <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-image">
                                     <div class="bs-wizard-info">
                                         <span class="fs-5 me-1">2</span>
                                         <span>이미지 업로드</span>
                                     </div>
                                     <div class="progress-bar"></div>
                                 </div>
-                                <div class="bs-wizard-step col">
+                                <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-result">
                                     <div class="bs-wizard-info">
                                         <span class="fs-5 me-1">3</span>
                                         <span>결과</span>
@@ -323,6 +348,15 @@
     <script src="js/master.js"></script>
     <script>
         $(window).ready(function () {
+            var prevBtn = $("#tb-prev");
+            var nextBtn = $("#tb-next");
+            var selfBtn = $("#tb-self");
+            var goBtn = $("#tb-go");
+            var progress = $(".bs-wizard");
+
+            prevBtn.css("display","none");
+            nextBtn.css("display","none");
+
             setTimeout(function () {
                 $('body').removeClass('loading');
                 AOS.init();
@@ -333,6 +367,50 @@
 
             $("#side-toggle").on('click', function(){
                 $('#sidebar').toggleClass("active");
+            });
+
+            $('[data-bs-toggle="tab"]').on('shown.bs.tab',function(e){
+
+                goBtn.css("display", "none");
+                selfBtn.css("display", "none");
+                
+                var activeTab = $(e.target).attr('href');
+                var stat;
+
+                if(activeTab == "#step-model"){
+                    prevBtn.css("display","none");
+                    nextBtn.css("display", "block");
+                    prevBtn.attr("href","#");
+                    nextBtn.attr("href","#step-image");
+
+                    progress.attr("data-progress","1");
+
+                    stat = "모델 선택";
+                }
+                else if(activeTab == "#step-image"){
+                    prevBtn.css("display","block");
+                    nextBtn.css("display", "block");
+                    prevBtn.attr("href","#step-model");
+                    nextBtn.attr("href","#step-result");
+
+                    progress.attr("data-progress","2");
+
+                    stat = "이미지 선택";
+                }
+                else if(activeTab == "#step-result"){
+                    prevBtn.css("display","block");
+                    nextBtn.css("display", "none");
+                    prevBtn.attr("href","#step-image");
+                    nextBtn.attr("href","#");
+
+                    progress.attr("data-progress","3");
+
+                    stat = "결과 확인";
+                }
+                
+                prevBtn.removeClass("active");
+                nextBtn.removeClass("active");
+                $("#stat-text").html(stat);
             });
         });
     </script>
