@@ -51,25 +51,21 @@
         <section data-aos="zoom-in" class="h-100 w-100 p-4">
             <div class="d-flex position-relative h-100">
                 <nav class="navbar navbar-light w-100 p-0" id="navbar">
-                    <div class="row g-0 h-100 w-100">
-                        <div class="col-2 d-flex align-items-center justify-content-start">
-                            <a class="navbar-brand ms-3" href="#home">
-                                <img src="assets/logo-ai.png" alt="그리드원">
-                            </a>
-                        </div>
-                        <div class="col-10 d-flex align-items-center justify-content-between">
-                            <ul class="nav nav-tabs my-2">
-                                <li class="nav-item">
-                                  <a class="nav-link" href="index.html">홈</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link active" href="#">솔루션</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
+                        <a class="navbar-brand" href="#home">
+                            <img src="assets/logo-ai.png" alt="그리드원">
+                        </a>
+                        <ul class="nav nav-tabs my-2">
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#home-tab">홈</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" data-bs-toggle="tab" href="#home-solution">솔루션</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
                 <div class="row flex-grow-1 g-0">
@@ -160,19 +156,9 @@
                                 <div class="d-flex flex-column justify-content-between h-100 pb-5">
                                     <div>
                                         <h1 class="fw-bold">Solution #1</h1>
-                                        <h4 class="opacity-50" id="stat-text">추천</h4>
+                                        <h4 class="opacity-50" id="stat-text">모델 선택</h4>
                                     </div>
                                     <div class="nav nav-tabs h-auto">
-                                        <button id="tb-self" class="btn btn-light border-white bg-info bg-opacity-10 text-white me-2" data-bs-toggle="tab" href="#step-model">
-                                            <h5 class="fw-bold m-0">
-                                                직접 선택하기
-                                            </h5>
-                                        </button>
-                                        <button id="tb-go" class="btn btn-light border-white bg-white bg-opacity-10 text-white me-2" data-bs-toggle="tab" href="#step-result">
-                                            <h5 class="fw-bold m-0">
-                                                진행하기
-                                            </h5>
-                                        </button>
                                         <button id="tb-prev" class="btn btn-light border-white bg-white bg-opacity-10 text-white me-2" data-bs-toggle="tab" href="#">
                                             <h5 class="fw-bold m-0">
                                                 이전
@@ -188,7 +174,7 @@
                             </div>
                             <div class="col-9 p-5 h-100 overflow-auto">
                                 <div class="tab-content">
-                                    <div class="tab-pane fade" id="step-model">
+                                    <div class="tab-pane fade show active" id="step-model">
                                         <div class="row row-cols-3">
                                             <div class="col mb-3">
                                                 <div class="card bg-white bg-opacity-10 border-white h-100">
@@ -345,17 +331,16 @@
     <script src="js/master.js"></script>
     <script>
         $(window).ready(function () {
-            $('body').materializeInputs();
-
             var prevBtn = $("#tb-prev");
             var nextBtn = $("#tb-next");
-            var selfBtn = $("#tb-self");
-            var goBtn = $("#tb-go");
             var progress = $(".bs-wizard");
 
             prevBtn.css("display","none");
-            nextBtn.css("display","none");
-            progress.css("display", "none");
+            nextBtn.css("display", "block");
+            prevBtn.attr("href","#");
+            nextBtn.attr("href","#step-image");
+
+            progress.attr("data-progress","1");
 
             setTimeout(function () {
                 $('body').removeClass('loading');
@@ -370,25 +355,10 @@
             });
 
             $('[data-bs-toggle="tab"]').on('shown.bs.tab',function(e){
-
-                goBtn.css("display", "none");
-                selfBtn.css("display", "none");
-                progress.css("display", "block");
-                
-                var activeTab = $(e.target).attr('href');
                 var stat;
+                var activeTab = $(e.target).attr('href');
 
-                if(activeTab == "#step-model"){
-                    prevBtn.css("display","none");
-                    nextBtn.css("display", "block");
-                    prevBtn.attr("href","#");
-                    nextBtn.attr("href","#step-image");
-
-                    progress.attr("data-progress","1");
-
-                    stat = "모델 선택";
-                }
-                else if(activeTab == "#step-image"){
+                if(activeTab == "#step-image"){
                     prevBtn.css("display","block");
                     nextBtn.css("display", "block");
                     prevBtn.attr("href","#step-model");

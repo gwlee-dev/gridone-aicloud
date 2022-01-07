@@ -50,25 +50,21 @@
         <section data-aos="zoom-in" class="h-100 w-100 p-4">
             <div class="d-flex position-relative h-100">
                 <nav class="navbar navbar-light w-100 p-0" id="navbar">
-                    <div class="row g-0 h-100 w-100">
-                        <div class="col-2 d-flex align-items-center justify-content-start">
-                            <a class="navbar-brand ms-3" href="#home">
-                                <img src="assets/logo-ai.png" alt="그리드원">
-                            </a>
-                        </div>
-                        <div class="col-10 d-flex align-items-center justify-content-between">
-                            <ul class="nav nav-tabs my-2">
-                                <li class="nav-item">
-                                  <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" data-bs-toggle="tab" href="#home-solution">솔루션</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
+                        <a class="navbar-brand" href="#home">
+                            <img src="assets/logo-ai.png" alt="그리드원">
+                        </a>
+                        <ul class="nav nav-tabs my-2">
+                            <li class="nav-item">
+                              <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#home-solution">솔루션</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
                 <div class="row flex-grow-1 g-0">
@@ -157,35 +153,11 @@
                         <div class="tab-pane fade show active h-100" id="home-tab">
                             <div class="d-flex flex-column h-100">
                                 <div class="tab-header">
-                                    <div id="inner-carousel" class="carousel slide" data-bs-ride="carousel">
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#inner-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide1"></button>
-                                            <button type="button" data-bs-target="#inner-carousel" data-bs-slide-to="1" aria-label="Slide2"></button>
-                                            <button type="button" data-bs-target="#inner-carousel" data-bs-slide-to="2" aria-label="Slide3"></button>
-                                        </div>
-                                        <div class="carousel-inner pt-5">
-                                            <div class="carousel-item active">
-                                                <h1 class="fw-bold lh-base">
-                                                    RPA<sup class="fs-4 me-1" style="margin-left: -5px;">*</sup>와 AI의 융합.<br>
-                                                    비용은 줄이고<br>
-                                                    성과는 향상시켜 보세요.
-                                                </h1>
-                                                <p class="opacity-50">* Robotic Process Automation : 로보틱 처리 자동화</p>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <h1 class="fw-bold lh-base">
-                                                    Lorem ipsum dolor sit amet,<br>
-                                                    consectetur adipiscing elit.
-                                                </h1>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <h1 class="fw-bold lh-base">
-                                                    피가 거친 원질이 유소년에게서<br>
-                                                    생명을 열락의 보이는 힘차게 같이 것이다.
-                                                </h1>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <h1 class="fw-bold lh-base display-2">
+                                        RPA<sup class="fs-1 me-1" style="margin-left: -0.5rem;">*</sup>와 AI의 융합.<br>
+                                        비용은 줄이고<br>
+                                        성과는 향상시켜 보세요.
+                                    </h1>
                                     <div class="m-5" id="main-graphic">
                                         <div id="graphic-inner">
                                             <div class="card border-white overflow-hidden" id="ai-box" data-tilt data-tilt-glare="true">
@@ -438,7 +410,7 @@
                 $('body').removeClass('loading');
                 AOS.init();
                 console.log("loaded");
-            }, 5000);
+            }, 0);
 
             particlesJS.load('particles-js', 'js/particles.json');
 

@@ -52,25 +52,21 @@
         <section data-aos="zoom-in" class="h-100 w-100 p-4">
             <div class="d-flex position-relative h-100">
                 <nav class="navbar navbar-light w-100 p-0" id="navbar">
-                    <div class="row g-0 h-100 w-100">
-                        <div class="col-2 d-flex align-items-center justify-content-start">
-                            <a class="navbar-brand ms-3" href="#home">
-                                <img src="assets/logo-ai.png" alt="그리드원">
-                            </a>
-                        </div>
-                        <div class="col-10 d-flex align-items-center justify-content-between">
-                            <ul class="nav nav-tabs my-2">
-                                <li class="nav-item">
-                                  <a class="nav-link" href="index.html">홈</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link active" href="#">솔루션</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
+                        <a class="navbar-brand" href="#home">
+                            <img src="assets/logo-ai.png" alt="그리드원">
+                        </a>
+                        <ul class="nav nav-tabs my-2">
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#home-tab">홈</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" data-bs-toggle="tab" href="#home-solution">솔루션</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
                 <div class="row flex-grow-1 g-0">
@@ -156,7 +152,7 @@
                     <div class="col h-100 position-relative">
                         <div class="row g-0 w-100 h-100">
                             <div class="col-3 p-5 h-100">
-                                <div class="d-flex flex-column justify-content-between h-100 pb-5">
+                                <div class="d-flex flex-column justify-content-between h-100">
                                     <div>
                                         <h1 class="fw-bold">AI-OCR</h1>
                                         <h4 class="opacity-50">AI InspectorOne OCR/ICR</h4>
@@ -168,6 +164,18 @@
                                             그리드원의 핵심기술인 실환경 문자인식 기술을 적용하여 비교적 높은 정확성과 빠른 처리 속도를 자랑합니다. 
                                         </h6>
                                     </div>
+                                    <video
+                                        id="my-player"
+                                        class="video-js vjs-theme-fantasy vjs-16-9 mt-auto"
+                                        controls
+                                        preload="auto"
+                                        poster="/assets/thumbnail.png"
+                                        data-setup='{}'>
+                                        <source src="/assets/ai-ocr.mp4" type="video/mp4"></source>
+                                        <p class="vjs-no-js">
+                                        영상 재생을 위해 브라우저의 스크립트 활성화가 필요합니다.
+                                        </p>
+                                    </video>
                                     <!-- <div>
                                         <button class="btn btn-light border-white bg-white bg-opacity-10 text-white me-2">
                                             <h5 class="fw-bold m-0">
@@ -183,124 +191,112 @@
                                 </div>
                             </div>
                             <div class="col-9 p-5 h-100 overflow-auto">
-                                <video
-                                    id="my-player"
-                                    class="video-js vjs-theme-fantasy vjs-16-9 mb-3"
-                                    controls
-                                    preload="auto"
-                                    poster="/assets/thumbnail.png"
-                                    data-setup='{}'>
-                                    <source src="/assets/ai-ocr.mp4" type="video/mp4"></source>
-                                    <p class="vjs-no-js">
-                                    영상 재생을 위해 브라우저의 스크립트 활성화가 필요합니다.
-                                    </p>
-                                </video>
-                                <h5 class="fw-bold mb-0 text-center">기능과 특징</h5>
-                                <span class="divider mx-auto my-3"></span>
-                                <div class="row row-cols-3 row-cols-lg-3 align-items-stretch justify-content-center text-center">
-                                    <div class="col mb-3">
+                                <span class="divider my-2"></span>
+                                <h5 class="fw-bold mb-3">기능과 특징</h5>
+                                <div class="row row-cols-5 row-cols-lg-5 align-items-stretch justify-content-center text-center mb-5">
+                                    <div class="col">
                                         <div class="card bg-white bg-opacity-10 border-white h-100">
                                             <div class="card-body p-4">
-                                                <h5 class="fw-bold mt-2 mb-1 spec-title">촬영 이미지 및 팩스 문서 인식</h5>
-                                                <div class="fs-3">
-                                                    <img class="w-50" src="assets/spec1.png" alt="spec1">
-                                                </div>
-                                                <p class="opacity-50 m-0">스마트폰으로 어둡거나 흔들리게 촬영된 이미지와 팩스로 전송되어 노이즈가 심한 문서 이미지에서도 높은 인식률을 자랑합니다.</p>
+                                                <span class="d-block fs-2 my-2">
+                                                    <i class="bi bi-camera"></i>
+                                                </span>
+                                                <h5 class="fw-bold my-2">촬영 이미지 및<br>팩스 문서 인식</h5>
+                                                <p class="opacity-50 m-0"><strong>노이즈가 심한</strong> 문서 이미지에서의<br>높은 인식률</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col mb-3">
+                                    <div class="col">
                                         <div class="card bg-white bg-opacity-10 border-white h-100">
                                             <div class="card-body p-4">
-                                                <h5 class="fw-bold mt-2 mb-1 spec-title">다양한 각도의 문서 인식</h5>
-                                                <div class="fs-3">
-                                                    <img class="w-50" src="assets/spec2.png" alt="spec2">
-                                                </div>
-                                                <p class="opacity-50 m-0">다양한 각도를 지닌 문서 이미지도 그 상태에서 바로 문자를 인식하고 문서를 회전하여 자동 정렬할 수 있습니다.</p>
+                                                <span class="d-block fs-2 my-2">
+                                                    <i class="bi bi-arrow-clockwise"></i>
+                                                </span>
+                                                <h5 class="fw-bold my-2">다양한 각도의<br>문서 인식</h5>
+                                                <p class="opacity-50 m-0">다양한 각도를 지닌 문서 이미지의 <strong>자동 정렬</strong></p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col mb-3">
+                                    <div class="col">
                                         <div class="card bg-white bg-opacity-10 border-white h-100">
                                             <div class="card-body p-4">
-                                                <h5 class="fw-bold mt-2 mb-1 spec-title">문서 종류 자동 분류</h5>
-                                                <div class="fs-3">
-                                                    <img class="w-50" src="assets/spec3.png" alt="spec3">
-                                                </div>
-                                                <p class="opacity-50 m-0">인식된 키워드와 이미지 형태를 이용한 딥러닝 기반의 인공지능 모델로 문서 종류를 자동으로 분류할 수 있습니다.</p>
+                                                <span class="d-block fs-2 my-2">
+                                                    <i class="bi bi-files"></i>
+                                                </span>
+                                                <h5 class="fw-bold my-2">문서 종류<br>자동 분류</h5>
+                                                <p class="opacity-50 m-0"><strong>딥러닝 기반</strong>의 인공지능 모델로<br>문서 종류를 자동 분류</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col mb-3">
+                                    <div class="col">
                                         <div class="card bg-white bg-opacity-10 border-white h-100">
                                             <div class="card-body p-4">
-                                                <h5 class="fw-bold mt-2 mb-1 spec-title">비정형 문서 인식</h5>
-                                                <div class="fs-3">
-                                                    <img class="w-50" src="assets/spec4.png" alt="spec4">
-                                                </div>
-                                                <p class="opacity-50 m-0">통장사본과 처방전 등 정해진 양식이 없거나 양식이 매우 다양한 경우 원하는 필드값을 추출하여 인식합니다.</p>
+                                                <span class="d-block fs-2 my-2">
+                                                    <i class="bi bi-file-earmark-x"></i>
+                                                </span>
+                                                <h5 class="fw-bold my-2">비정형<br>문서 인식</h5>
+                                                <p class="opacity-50 m-0"><strong>다양한 양식</strong>의 필드값을<br>추출 및 인식</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col mb-3">
+                                    <div class="col">
                                         <div class="card bg-white bg-opacity-10 border-white h-100">
                                             <div class="card-body p-4">
-                                                <h5 class="fw-bold mt-2 mb-1 spec-title">빠른 인식 속도</h5>
-                                                <div class="fs-3">
-                                                    <img class="w-50" src="assets/spec5.png" alt="spec5">
-                                                </div>
-                                                <p class="opacity-50 m-0">대규모 이미지를 인식할 수 있으며, 시간 당 최대 28,000장까지 처리가 가능합니다.</p>
+                                                <span class="d-block fs-2 my-2">
+                                                    <i class="bi bi-lightning-fill"></i>
+                                                </span>
+                                                <h5 class="fw-bold my-2">빠른<br>인식 속도</h5>
+                                                <p class="opacity-50 m-0">대규모 이미지의<br><strong>일괄 처리</strong></p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="fw-bold mb-0 text-center">특장점</h5>
-                                <span class="divider mx-auto my-3"></span>
-                                <div class="row row-cols-3 row-cols-lg-3 align-items-stretch justify-content-center text-center">
+                                <span class="divider my-2"></span>
+                                <h5 class="fw-bold mb-3">특장점</h5>
+                                <div class="row row-cols-5 row-cols-lg-5 align-items-stretch justify-content-start text-center mb-5">
                                     <div class="col mb-3">
                                         <div class="card bg-white bg-opacity-10 border-white h-100">
                                             <div class="card-body p-4">
-                                                <h5 class="fw-bold mt-2 mb-1 spec-title">노이즈에 강한 문자 인식 엔진</h5>
-                                                <div class="fs-3">
-                                                    <img class="w-50" src="assets/adv1.png" alt="adv1">
-                                                </div>
-                                                <p class="opacity-50 m-0">음영, 기울어짐, 흐릿함 등 노이즈가 심하거나 저화질 이미지 데이터를 다량으로 학습하여 높은 인식율을 자랑합니다.</p>
+                                                <span class="d-block fs-2 my-2">
+                                                    <i class="bi bi-type"></i>
+                                                </span>
+                                                <h5 class="fw-bold my-2">노이즈에 강한<br>문자 인식 엔진</h5>
+                                                <p class="opacity-50 m-0">노이즈가 심한<br><strong>저화질 이미지 데이터</strong> 학습</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col mb-3">
                                         <div class="card bg-white bg-opacity-10 border-white h-100">
                                             <div class="card-body p-4">
-                                                <h5 class="fw-bold mt-2 mb-1 spec-title">클라우드형 및 서버 설치형 제공</h5>
-                                                <div class="fs-3">
-                                                    <img class="w-50" src="assets/adv2.png" alt="adv2">
-                                                </div>
-                                                <p class="opacity-50 m-0">클라우드 방식을 기본으로 하며, 보험사와 금융사를 위해 서버 설치형(on-premise)으로 제공 가능합니다.</p>
+                                                <span class="d-block fs-2 my-2">
+                                                    <i class="bi bi-cloud-arrow-up"></i>
+                                                </span>
+                                                <h5 class="fw-bold my-2">클라우드형 및<br>서버 설치형 제공</h5>
+                                                <p class="opacity-50 m-0"><strong>클라우드 방식</strong>을 기본으로 한<br>서버 설치형 제공</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col mb-3">
                                         <div class="card bg-white bg-opacity-10 border-white h-100">
                                             <div class="card-body p-4">
-                                                <h5 class="fw-bold mt-2 mb-1 spec-title">비즈니스별 최적화 인식엔진 제공</h5>
-                                                <div class="fs-3">
-                                                    <img class="w-50" src="assets/adv3.png" alt="adv3">
-                                                </div>
-                                                <p class="opacity-50 m-0">보험사, 금융사 등을 위해 관련 문서 및 용어를 중심으로 학습된 문자 인식 엔진을 제공합니다.</p>
+                                                <span class="d-block fs-2 my-2">
+                                                    <i class="bi bi-briefcase"></i>
+                                                </span>
+                                                <h5 class="fw-bold my-2">비즈니스별 최적화<br>인식엔진 제공</h5>
+                                                <p class="opacity-50 m-0"><strong>보험사, 금융사</strong> 등을 위한<br>관련 문서가 학습된 엔진 제공</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <h5 class="fw-bold mb-0 text-center">활용사례</h5>
-                                <span class="divider mx-auto my-3"></span>
-                                <div class="row row-cols-5 row-cols-lg-5 align-items-stretch justify-content-center text-center mb-3">
+                                <span class="divider my-2"></span>
+                                <h5 class="fw-bold mb-3">활용사례</h5>
+                                <div class="row row-cols-5 row-cols-lg-5 align-items-stretch justify-content-center text-center">
                                     <div class="col square mb-3">
                                         <div class="card bg-white bg-opacity-10 border-white h-100">
                                             <div class="card-body position-relative p-0">
                                                 <img class="w-100 h-100" src="assets/exam1.jpg" alt="exam1">
                                                 <div class="hover-box">
-                                                    <h5 class="fw-bold mb-2">통장사본</h5>
-                                                    <p class="m-0">보험금 청구 증빙서류 인식</p>
+                                                    <h6 class="fw-bold mb-0">통장사본</h6>
+                                                    <p class="m-0"><small>보험금 청구 증빙서류 인식</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -310,8 +306,8 @@
                                             <div class="card-body position-relative p-0">
                                                 <img class="w-100 h-100" src="assets/exam2.jpg" alt="exam1">
                                                 <div class="hover-box">
-                                                    <h5 class="fw-bold mb-2">사업자등록증</h5>
-                                                    <p class="m-0">증빙 서류 인식</p>
+                                                    <h6 class="fw-bold mb-0">사업자등록증</h6>
+                                                    <p class="m-0"><small>증빙 서류 인식</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -321,8 +317,8 @@
                                             <div class="card-body position-relative p-0">
                                                 <img class="w-100 h-100" src="assets/exam3.jpg" alt="exam1">
                                                 <div class="hover-box">
-                                                    <h5 class="fw-bold mb-2">팩스문서</h5>
-                                                    <p class="m-0">팩스 문서 이미지 인식</p>
+                                                    <h6 class="fw-bold mb-0">팩스문서</h6>
+                                                    <p class="m-0"><small>팩스 문서 이미지</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -332,8 +328,8 @@
                                             <div class="card-body position-relative p-0">
                                                 <img class="w-100 h-100" src="assets/exam4.jpg" alt="exam1">
                                                 <div class="hover-box">
-                                                    <h5 class="fw-bold mb-2">신분증 3종</h5>
-                                                    <p class="m-0">주민등록증, 운전면허증, 외국인등록증</p>
+                                                    <h6 class="fw-bold mb-0">신분증 3종</h6>
+                                                    <p class="m-0"><small>주민등록증, 운전면허증, 외국인등록증</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -343,8 +339,8 @@
                                             <div class="card-body position-relative p-0">
                                                 <img class="w-100 h-100" src="assets/exam5.png" alt="exam1">
                                                 <div class="hover-box">
-                                                    <h5 class="fw-bold mb-2">타자체 문서</h5>
-                                                    <p class="m-0">타자기로 작성된 문서, 저해상도/조화질 문서 처리</p>
+                                                    <h6 class="fw-bold mb-0">타자체 문서</h6>
+                                                    <p class="m-0"><small>타자기로 작성된 문서, 저해상도 문서</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -352,31 +348,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="bs-wizard" data-progress="1">
-                            <div class="bs-inner row g-0">
-                                <div class="bs-wizard-step col">
-                                    <div class="bs-wizard-info">
-                                        <span class="fs-5 me-1">1</span>
-                                        <span>모델 선택</span>
-                                    </div>
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="bs-wizard-step col">
-                                    <div class="bs-wizard-info">
-                                        <span class="fs-5 me-1">2</span>
-                                        <span>이미지 업로드</span>
-                                    </div>
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="bs-wizard-step col">
-                                    <div class="bs-wizard-info">
-                                        <span class="fs-5 me-1">3</span>
-                                        <span>결과</span>
-                                    </div>
-                                    <div class="progress-bar"></div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>

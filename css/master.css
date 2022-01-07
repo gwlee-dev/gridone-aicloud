@@ -116,6 +116,13 @@ section>div::after {
     top: 0;
 }
 
+.navbar-brand{
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
 
 /**** Sidebar ****/
 /* toggle action */
@@ -267,7 +274,7 @@ section>div::after {
 /**************** Particle Effects ****************/
 #particles-js {
     position: absolute;
-    background: linear-gradient(-45deg, rgba(100, 149, 237, 0.5), rgba(75, 84, 220, 0.5));
+    background: linear-gradient(-45deg, rgba(18,214,223,0.5), rgba(247,15,255,0.5));
     z-index: -1;
 }
 
@@ -326,11 +333,11 @@ section>div::after {
     border-bottom: 2px solid #fff;
 }
 
-/* .tab-content .tab-pane:first-child {
+.tab-content .tab-pane:first-child {
     background: url('../assets/content-bg.png') no-repeat;
     background-size: 100%;
     background-position: top;
-} */
+}
 
 .tab-header {
     padding: 3rem 3rem 0 3rem;
@@ -464,10 +471,6 @@ span.graphic-ball {
     background-color: #ffffff;
 }
 
-.spec-title{
-    min-height: 2.75rem;
-}
-
 .square .card{
     max-height: 15rem;
 }
@@ -475,6 +478,7 @@ span.graphic-ball {
 .square .card,
 .square .card-body{
     overflow: hidden;
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); /* this fixes the overflow:hidden in Chrome/Opera */
 }
 
 .card .hover-box{
@@ -482,13 +486,13 @@ span.graphic-ball {
     flex-direction: column;
     position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
+    height: 30%;
+    bottom: 0;
     left: 0;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 1rem;
+    backdrop-filter: blur(1rem);
     opacity: 1;
     transition: opacity .5s;
 }
