@@ -5,8 +5,8 @@
 /**************** Basic Settings ****************/
 body {
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-    background-color: #000;
-    color: #fff;
+    background-color: rgb;
+    color: #000;
     word-break: keep-all;
     word-wrap: break-word;
 }
@@ -272,11 +272,11 @@ section>div::after {
 }
 
 /**************** Particle Effects ****************/
-#particles-js {
+/* #particles-js {
     position: absolute;
     background: linear-gradient(-45deg, rgba(18,214,223,0.5), rgba(247,15,255,0.5));
     z-index: -1;
-}
+} */
 
 /**************** Hamburger ****************/
 .bar {
@@ -334,7 +334,7 @@ section>div::after {
 }
 
 .tab-content .tab-pane:first-child {
-    background: url('../assets/content-bg.png') no-repeat;
+    /* background: url('../assets/content-bg.png') no-repeat; */
     background-size: 100%;
     background-position: top;
 }
