@@ -1,13 +1,14 @@
 .bs-wizard {
   position: absolute;
-  width: 100%;
-  bottom: 0;
+  width: calc(100% - 1.5rem);
+  bottom: 1.5rem;
   border-bottom-right-radius: 1rem;
 }
 
 .bs-inner{
   position: relative;
   padding: 0.5rem;
+  border: 1px solid #fff;
 }
 
 .bs-inner::after {
@@ -18,7 +19,8 @@
   height: 3rem;
   left: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.13);
+  border-radius: 1rem;
+  background-color: rgba(255,255,255,0.13);
   -webkit-backdrop-filter: blur(1.5rem);
             backdrop-filter: blur(1.5rem);
 }
@@ -41,19 +43,19 @@
   width: 100%;
   box-shadow: 0px 2px 0px rgba(0,0,0,0.03) inset,
               0px -2px 0px rgba(0,0,0,0.015) inset;
-  background-color: rgba(255,255,255,0.25);
+  background-color: rgba(0,0,0,0.25);
 }
 
 .bs-wizard[data-progress="1"] .bs-wizard-step:nth-child(-n+1) .progress-bar{
-  background-color: rgba(255,255,255,0.75);
+  background-color: rgba(0,0,0,0.75);
 }
 
 .bs-wizard[data-progress="2"] .bs-wizard-step:nth-child(-n+2) .progress-bar{
-  background-color: rgba(255,255,255,0.75);
+  background-color: rgba(0,0,0,0.75);
 }
 
 .bs-wizard[data-progress="3"] .bs-wizard-step:nth-child(-n+3) .progress-bar{
-  background-color: rgba(255,255,255,0.75);
+  background-color: rgba(0,0,0,0.75);
 }
 
 .bs-wizard[data-progress="1"] .bs-wizard-step:nth-child(-n+1) .bs-wizard-info{

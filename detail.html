@@ -48,107 +48,118 @@
         </a>
     </div>
     <main class="vh-100 vw-100 d-flex align-items-center justify-content-center">
-        <section data-aos="zoom-in" class="h-100 w-100 p-4">
+        <section data-aos="zoom-in" class="h-100 w-100">
             <div class="d-flex position-relative h-100">
-                <nav class="navbar navbar-light w-100 p-0" id="navbar">
-                    <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
-                        <a class="navbar-brand" href="#home">
-                            <img src="assets/logo-ai.png" alt="그리드원">
-                        </a>
-                        <ul class="nav nav-tabs my-2">
-                            <li class="nav-item">
-                              <a class="nav-link" data-bs-toggle="tab" href="#home-tab">홈</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link active" data-bs-toggle="tab" href="#home-solution">솔루션</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
-                            </li>
-                        </ul>
+                <nav class="navbar navbar-light w-100 px-4 py-0" id="navbar">
+                    <div class="inner w-100 pe-4">
+                        <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
+                            <div class="col-2 d-flex justify-content-center align-items-center">
+                                <a class="navbar-brand" href="#home">
+                                    <img src="assets/logo-ai.png" style="filter: invert(1);" alt="그리드원">
+                                </a>
+                            </div>
+                            <div class="col-10 d-flex justify-content-between align-items-center">
+                                <ul class="nav nav-tabs my-2">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" data-bs-toggle="tab" href="#home-solution">솔루션</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
+                                    </li>
+                                </ul>
+                                <p class="text-muted mb-0">
+                                    © 2021 gridone Co., Ltd. All rights reserved.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </nav>
                 <div class="row flex-grow-1 g-0">
-                    <div class="col-auto d-flex flex-column h-100 position-relative" id="sidebar">
-                        <span id="side-toggle">
-                            <i class="bi bi-pin-angle"></i>
-                            <i class="bi bi-pin-angle-fill"></i>
-                        </span>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item list-group-header toggle-item">홈</li>
-                            <li class="list-group-item text-nowrap active" data-bs-toggle="tab" href="#home-tab">
-                                <i class="bi bi-terminal me-3"></i>
-                                <span class="toggle-item">Quick Start</span>
-                            </li>
-                        </ul>
-                        <ul class="list-group list-group-flush border-top border-white">
-                            <li class="list-group-item list-group-header toggle-item">솔루션</li>
-                            <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-aida" aria-expanded="false">
-                                <i class="bi bi-file-earmark-text me-3"></i>
-                                <span class="fw-bold text-nowrap">
-                                    <span class="toggle-item">AIDA</span>
-                                </span>
-                                <i class="bi bi-chevron-right toggle-item ms-auto"></i>
-                            </li>
-                            <div class="collapse position-relative" id="collpase-aida">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item ps-5" onclick="location.href='solution.html'">
-                                        AI-OCR
-                                    </li>
-                                    <li class="list-group-item ps-5">Keyword Checker</li>
-                                    <li class="list-group-item ps-5">Table Detector</li>
-                                    <li class="list-group-item ps-5">Document Understanding</li>
-                                </ul>
-                            </div>
-                            <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-thirdeye" aria-expanded="false">
-                                <i class="bi bi-eye me-3"></i>
-                                <span class="fw-bold text-nowrap">
-                                    <span class="toggle-item">ThirdEye</span>
-                                </span>
-                                <i class="bi bi-chevron-right toggle-item ms-auto"></i>
-                            </li>
-                            <div class="collapse position-relative" id="collpase-thirdeye">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item ps-5">Visitor Checker</li>
-                                    <li class="list-group-item ps-5">Auto Facial Blur</li>
-                                    <li class="list-group-item ps-5">Video Analyze Engine</li>
-                                </ul>
-                            </div>
-                            <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-umean" aria-expanded="false">
-                                <i class="bi bi-chat-text me-3"></i>
-                                <span class="fw-bold text-nowrap">
-                                    <span class="toggle-item">UMean</span>
-                                </span>
-                                <i class="bi bi-chevron-right toggle-item ms-auto"></i>
-                            </li>
-                            <div class="collapse position-relative" id="collpase-umean">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item ps-5">Chatbot</li>
-                                    <li class="list-group-item ps-5">AI-ARS</li>
-                                </ul>
-                            </div>
-                        </ul>
-                        <ul class="list-group list-group-flush mt-auto" id="sitemap">
-                            <li class="list-group-item list-group-header toggle-item">관련 사이트</li>
-                            <li class="list-group-item linkage text-nowrap">
-                                <a href="http://gridone.gwlee.dev/" target="_blank">
-                                    <i class="bi bi-house me-3"></i>
-                                    <span class="toggle-item">gridone</span>
-                                </a>
-                            </li>
-                            <li class="list-group-item linkage text-nowrap">
-                                <a href="http://nh.gwlee.dev/" target="_blank">
-                                    <i class="bi bi-robot me-3"></i>
-                                    <span class="toggle-item">RPA Portal</span>
-                                </a>
-                            </li>
-                            <li class="list-group-item linkage text-nowrap">
-                                <a href="http://forum.gridone.co.kr/" target="_blank">
+                    <div class="col-auto h-100" id="sidebar">
+                        <div class="inner d-flex flex-column h-100">
+                            <span id="side-toggle">
+                                <i class="bi bi-pin-angle"></i>
+                                <i class="bi bi-pin-angle-fill"></i>
+                            </span>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-header toggle-item">홈</li>
+                                <li class="list-group-item text-nowrap active" data-bs-toggle="tab" href="#home-tab">
                                     <i class="bi bi-terminal me-3"></i>
-                                    <span class="toggle-item">DEV Center</span>
-                                </a>
-                            </li>
-                        </ul>
+                                    <span class="toggle-item">Quick Start</span>
+                                </li>
+                            </ul>
+                            <ul class="list-group list-group-flush border-top border-white">
+                                <li class="list-group-item list-group-header toggle-item">솔루션</li>
+                                <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-aida" aria-expanded="false">
+                                    <i class="bi bi-file-earmark-text me-3"></i>
+                                    <span class="fw-bold text-nowrap">
+                                        <span class="toggle-item">AIDA</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right toggle-item ms-auto"></i>
+                                </li>
+                                <div class="collapse position-relative" id="collpase-aida">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item ps-5" onclick="location.href='solution.html'">
+                                            AI-OCR
+                                        </li>
+                                        <li class="list-group-item ps-5">Keyword Checker</li>
+                                        <li class="list-group-item ps-5">Table Detector</li>
+                                        <li class="list-group-item ps-5">Document Understanding</li>
+                                    </ul>
+                                </div>
+                                <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-thirdeye" aria-expanded="false">
+                                    <i class="bi bi-eye me-3"></i>
+                                    <span class="fw-bold text-nowrap">
+                                        <span class="toggle-item">ThirdEye</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right toggle-item ms-auto"></i>
+                                </li>
+                                <div class="collapse position-relative" id="collpase-thirdeye">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item ps-5">Visitor Checker</li>
+                                        <li class="list-group-item ps-5">Auto Facial Blur</li>
+                                        <li class="list-group-item ps-5">Video Analyze Engine</li>
+                                    </ul>
+                                </div>
+                                <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-umean" aria-expanded="false">
+                                    <i class="bi bi-chat-text me-3"></i>
+                                    <span class="fw-bold text-nowrap">
+                                        <span class="toggle-item">UMean</span>
+                                    </span>
+                                    <i class="bi bi-chevron-right toggle-item ms-auto"></i>
+                                </li>
+                                <div class="collapse position-relative" id="collpase-umean">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item ps-5">Chatbot</li>
+                                        <li class="list-group-item ps-5">AI-ARS</li>
+                                    </ul>
+                                </div>
+                            </ul>
+                            <ul class="list-group list-group-flush mt-auto" id="sitemap">
+                                <li class="list-group-item list-group-header toggle-item">관련 사이트</li>
+                                <li class="list-group-item linkage text-nowrap">
+                                    <a href="http://gridone.gwlee.dev/" target="_blank">
+                                        <i class="bi bi-house me-3"></i>
+                                        <span class="toggle-item">gridone</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item linkage text-nowrap">
+                                    <a href="http://nh.gwlee.dev/" target="_blank">
+                                        <i class="bi bi-robot me-3"></i>
+                                        <span class="toggle-item">RPA Portal</span>
+                                    </a>
+                                </li>
+                                <li class="list-group-item linkage text-nowrap">
+                                    <a href="http://forum.gridone.co.kr/" target="_blank">
+                                        <i class="bi bi-terminal me-3"></i>
+                                        <span class="toggle-item">DEV Center</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="col h-100 position-relative">
                         <div class="row g-0 w-100 h-100">
