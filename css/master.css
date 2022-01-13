@@ -5,7 +5,7 @@
 /**************** Basic Settings ****************/
 body {
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-    background-color: #e3ebf6;
+    background-color: #e0e0e0;
     color: #000;
     word-break: keep-all;
     word-wrap: break-word;
@@ -76,7 +76,7 @@ a:active {
 }
 
 .bg-background {
-    background-color: #e3ebf6 !important;
+    background-color: #e0e0e0 !important;
 }
 
 .card,
@@ -84,50 +84,29 @@ a:active {
     border-radius: 1rem !important;
 }
 
-/**************** Glassmorphism ****************/
-
-main::after{
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: url('../assets/content-bg.png') no-repeat;
-    background-size: 100%;
-    background-position: top;
-    -webkit-filter: blur(2.5rem);
-    filter: blur(2.5rem);
-    z-index: -1;
+.card-footer:last-child{
+    border-bottom-left-radius: 1rem !important;
+    border-bottom-right-radius: 1rem !important;
 }
 
+/**** Navbar ****/
 #navbar{
     height: 4rem;
-    padding: 0;
-}
-
-#navbar .inner {
-    width: 100%;
-    height: 100%;
-    background: rgba( 227, 235, 246, 0.25 );
-    box-shadow: 0 4px 10px 0 rgba( 31, 38, 135, 0.08 );
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
     border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /**** Sidebar ****/
 #sidebar {
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe;
+    border-radius: 1rem;
     position: relative;
     width: 3rem;
     transition: width .5s;
     overflow-x: hidden;
-}
-
-#sidebar .inner{
-    background: rgba( 227, 235, 246, 0.25 );
-    box-shadow: 0 4px 10px 0 rgba( 31, 38, 135, 0.08 );
-    border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    position: relative;
 }
 
 #sidebar.active,
@@ -220,24 +199,10 @@ main::after{
 #sidebar li.list-group-item.active {
     position: relative;
     font-weight: bold;
-    background-color: rgba(255, 255, 255, 0.13);
+    background: #e0e0e0;
+    box-shadow:  inset 20px 20px 60px #bebebe,
+                 inset -20px -20px 60px #ffffff;
     opacity: 1;
-}
-
-/* 호버시 좌측 빛 */
-#sidebar li.list-group-item.active::after {
-    content: '';
-    width: 1rem;
-    height: 1rem;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: -0.5rem;
-    transform: translateY(-50%);
-    background-color: rgba(255, 255, 255, 1);
-    filter: blur(0.5rem);
-    border-radius: 50%;
-    z-index: -1;
 }
 
 /**************** Logo Animation ****************/
@@ -303,23 +268,15 @@ main::after{
 }
 
 /**************** Tab Layout ****************/
-.tab-header .inner{
-    background: rgba( 255, 255, 255, 0.3 );
-    box-shadow: 0 4px 10px 0 rgba( 31, 38, 135, 0.08 );
+.tab-header{
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe;
     border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.tab-header .inner::after{
-    content: '';
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur( 5px );
-    -webkit-backdrop-filter: blur( 5px );
-}
-
-.tab-header .inner > img {
+.tab-header > img {
     position: absolute;
+    border-radius: 1rem;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -331,44 +288,37 @@ main::after{
     z-index: 10011;
 }
 
-.tab-content .card,
-.tab-detail .card{
-    background: rgba( 255, 255, 255, 0.3 );
-    box-shadow: 0 4px 10px 0 rgba( 31, 38, 135, 0.08 );
-    backdrop-filter: blur( 5px );
-    -webkit-backdrop-filter: blur( 5px );
-    transition: transform 0.2s;
-}
-
 .tab-content .card{
     min-height: 15rem;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe;
+    border-radius: 1rem;
+    border: none;
+    transition: transform .2s;
 }
 
-.tab-body .card:hover{
+.tab-content .card:hover{
     transform: translateY(-1rem);
 }
 
-.tab-body .card-down{
+.card-up{
+    position: absolute;
+    right: 0;
+    z-index: 10011;
+    width: 65%;
+    border-radius: 1rem;
+    box-shadow:  -10px -10px 30px #bebebe;
+    background: #e0e0e0;
+}
+
+.card-down{
     position: absolute;
     left: 0;
     z-index: 10011;
     width: 40%;
 }
 
-.tab-body .card-up{
-    position: absolute;
-    right: 0;
-    z-index: 10011;
-    width: 65%;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    box-shadow: 0 4px 10px 0 rgba( 31, 38, 135, 0.08 );
-    border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    background: #f1f5fb;
-}
-
-.tab-body .card-down > img{
+.card-down > img{
     position: absolute;
     left: 0;
     width: 100%;
@@ -377,73 +327,27 @@ main::after{
     transform: translateY(-50%);
 }
 
-/**************** main-graphic ****************/
-#main-graphic {
-    top: 0;
-    right: 0;
-    position: absolute;
-    height: 100%;
+.square .card{
+    max-height: 15rem;
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
-#main-graphic .card {
-    width: 15rem;
-    height: 15rem;
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: 1px solid #fff;
-    -webkit-backdrop-filter: blur(1rem);
-    backdrop-filter: blur(1rem);
-}
-
-#main-graphic #ai-box {
-    transform: rotate(15deg);
-    margin-right: 2rem;
-    margin-top: 5rem;
-    z-index: 20014;
-    background-color: rgba(255, 255, 255, .1);
-}
-
-#main-graphic #ai-box.active {
-    transform: rotate(15deg) !important;
-}
-
-#main-graphic #rpa-box {
-    margin-top: 1rem;
-    margin-right: 9rem;
-    z-index: 20012;
-    background-color: rgba(255, 255, 255, .1);
-}
-
-#main-graphic #rpa-box.active {
-    transform: rotate(-15deg) !important;
-}
-
-span.graphic-ball {
-    background-image: url('../assets/ball.png');
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-size: contain;
-}
-
-#ai-box+span.graphic-ball {
-    width: 6.875rem;
-    height: 6.875rem;
-    z-index: 20013;
-    margin-top: 14rem;
-    margin-right: 16.5rem;
+.card .hover-box{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    left: 0;
     justify-content: center;
-}
-
-#rpa-box+span.graphic-ball {
-    width: 5rem;
-    height: 5rem;
-    z-index: 20011;
-    margin-top: 3rem;
-    margin-right: 8rem;
+    align-items: center;
+    background-color: #e0e0e0;
+    border-radius: 1rem;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+    transition: opacity .5s;
 }
 
 .divider{
@@ -454,47 +358,19 @@ span.graphic-ball {
     background-color: #000000;
 }
 
-.square .card{
-    max-height: 15rem;
+#tb-prev,
+#tb-next{
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+    border: none;
+    border-radius: 1rem; 
 }
 
-.square .card,
-.square .card-body{
-    overflow: hidden;
-    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); /* this fixes the overflow:hidden in Chrome/Opera */
-}
-
-.card .hover-box{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    height: 40%;
-    bottom: 0;
-    left: 0;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    -webkit-backdrop-filter: blur(1rem);
-    backdrop-filter: blur(1rem);
-    opacity: 1;
-    transition: opacity .5s;
-}
-
-.card:hover .hover-box{
-    opacity: 0;
-}
-
-.inner::after{
-    content:'';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backdrop-filter: blur( 5px );
-    -webkit-backdrop-filter: blur( 5px );
-    z-index: -1;
+#result-box:focus,
+#result-box:active{
+    box-shadow: none;
+    border: none;
 }
 
 .text-graident{

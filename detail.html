@@ -47,292 +47,314 @@
             <i class="bi bi-arrow-up-circle fs-1"></i>
         </a>
     </div>
-    <main class="vh-100 vw-100 d-flex align-items-center justify-content-center">
-        <section data-aos="zoom-in" class="h-100 w-100">
-            <div class="d-flex position-relative h-100">
-                <nav class="navbar navbar-light w-100 px-4 py-0" id="navbar">
-                    <div class="inner w-100 pe-4">
-                        <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
-                            <div class="col-2 d-flex justify-content-center align-items-center">
-                                <a class="navbar-brand" href="#home">
-                                    <img src="assets/logo-ai.png" style="filter: invert(1);" alt="그리드원">
-                                </a>
-                            </div>
-                            <div class="col-10 d-flex justify-content-between align-items-center">
-                                <ul class="nav nav-tabs my-2">
-                                    <li class="nav-item">
-                                      <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
+    <main class="vh-100 vw-100 d-flex align-items-center justify-content-center position-relative">
+        <section data-aos="zoom-in" class="d-flex flex-column h-100 w-100">
+            <nav class="navbar navbar-light mx-5 mt-5 px-5" id="navbar">
+                <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <a class="navbar-brand" href="#home">
+                            <img src="assets/logo-ai.png" style="filter: invert(1);" alt="그리드원">
+                        </a>
+                    </div>
+                    <div class="col-10 d-flex justify-content-between align-items-center">
+                        <ul class="nav nav-tabs my-2">
+                            <li class="nav-item">
+                              <a class="nav-link" href="index.html">홈</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#">솔루션</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
+                            </li>
+                        </ul>
+                        <p class="text-muted mb-0">
+                            © 2021 gridone Co., Ltd. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+            </nav>
+            <div class="row g-0 flex-grow-1 position-relative overflow-auto">
+                <div class="col-auto m-5 active" id="sidebar">
+                    <div class="d-flex flex-column h-100">
+                        <span id="side-toggle">
+                            <i class="bi bi-pin-angle"></i>
+                            <i class="bi bi-pin-angle-fill"></i>
+                        </span>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item list-group-header toggle-item">홈</li>
+                            <li class="list-group-item text-nowrap active" data-bs-toggle="tab" href="#home-tab">
+                                <i class="bi bi-terminal me-3"></i>
+                                <span class="toggle-item">Quick Start</span>
+                            </li>
+                        </ul>
+                        <ul class="list-group list-group-flush border-top border-white">
+                            <li class="list-group-item list-group-header toggle-item">솔루션</li>
+                            <li class="list-group-item opacity-100 d-flex " data-bs-toggle="collapse" href="#collpase-aida" aria-expanded="false">
+                                <i class="bi bi-file-earmark-text me-3"></i>
+                                <span class="fw-bold text-nowrap">
+                                    <span class="toggle-item">AIDA</span>
+                                </span>
+                                <i class="bi bi-chevron-right toggle-item ms-auto"></i>
+                            </li>
+                            <div class="collapse position-relative show" id="collpase-aida">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item ps-5" onclick="location.href='solution.html'">
+                                        AI-OCR
                                     </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" data-bs-toggle="tab" href="#home-solution">솔루션</a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
-                                    </li>
+                                    <li class="list-group-item ps-5">Keyword Checker</li>
+                                    <li class="list-group-item ps-5">Table Detector</li>
+                                    <li class="list-group-item ps-5">Document Understanding</li>
                                 </ul>
-                                <p class="text-muted mb-0">
-                                    © 2021 gridone Co., Ltd. All rights reserved.
-                                </p>
                             </div>
-                        </div>
-                    </div>
-                </nav>
-                <div class="row flex-grow-1 g-0">
-                    <div class="col-auto h-100" id="sidebar">
-                        <div class="inner d-flex flex-column h-100">
-                            <span id="side-toggle">
-                                <i class="bi bi-pin-angle"></i>
-                                <i class="bi bi-pin-angle-fill"></i>
-                            </span>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item list-group-header toggle-item">홈</li>
-                                <li class="list-group-item text-nowrap active" data-bs-toggle="tab" href="#home-tab">
+                            <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-thirdeye" aria-expanded="false">
+                                <i class="bi bi-eye me-3"></i>
+                                <span class="fw-bold text-nowrap">
+                                    <span class="toggle-item">ThirdEye</span>
+                                </span>
+                                <i class="bi bi-chevron-right toggle-item ms-auto"></i>
+                            </li>
+                            <div class="collapse position-relative show" id="collpase-thirdeye">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item ps-5">Visitor Checker</li>
+                                    <li class="list-group-item ps-5">Auto Facial Blur</li>
+                                    <li class="list-group-item ps-5">Video Analyze Engine</li>
+                                </ul>
+                            </div>
+                            <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-umean" aria-expanded="false">
+                                <i class="bi bi-chat-text me-3"></i>
+                                <span class="fw-bold text-nowrap">
+                                    <span class="toggle-item">UMean</span>
+                                </span>
+                                <i class="bi bi-chevron-right toggle-item ms-auto"></i>
+                            </li>
+                            <div class="collapse position-relative show" id="collpase-umean">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item ps-5">Chatbot</li>
+                                    <li class="list-group-item ps-5">AI-ARS</li>
+                                </ul>
+                            </div>
+                        </ul>
+                        <ul class="list-group list-group-flush mt-auto" id="sitemap">
+                            <li class="list-group-item list-group-header toggle-item">관련 사이트</li>
+                            <li class="list-group-item linkage text-nowrap">
+                                <a href="http://gridone.gwlee.dev/" target="_blank">
+                                    <i class="bi bi-house me-3"></i>
+                                    <span class="toggle-item">gridone</span>
+                                </a>
+                            </li>
+                            <li class="list-group-item linkage text-nowrap">
+                                <a href="http://nh.gwlee.dev/" target="_blank">
+                                    <i class="bi bi-robot me-3"></i>
+                                    <span class="toggle-item">RPA Portal</span>
+                                </a>
+                            </li>
+                            <li class="list-group-item linkage text-nowrap">
+                                <a href="http://forum.gridone.co.kr/" target="_blank">
                                     <i class="bi bi-terminal me-3"></i>
-                                    <span class="toggle-item">Quick Start</span>
-                                </li>
-                            </ul>
-                            <ul class="list-group list-group-flush border-top border-white">
-                                <li class="list-group-item list-group-header toggle-item">솔루션</li>
-                                <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-aida" aria-expanded="false">
-                                    <i class="bi bi-file-earmark-text me-3"></i>
-                                    <span class="fw-bold text-nowrap">
-                                        <span class="toggle-item">AIDA</span>
-                                    </span>
-                                    <i class="bi bi-chevron-right toggle-item ms-auto"></i>
-                                </li>
-                                <div class="collapse position-relative" id="collpase-aida">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item ps-5" onclick="location.href='solution.html'">
-                                            AI-OCR
-                                        </li>
-                                        <li class="list-group-item ps-5">Keyword Checker</li>
-                                        <li class="list-group-item ps-5">Table Detector</li>
-                                        <li class="list-group-item ps-5">Document Understanding</li>
-                                    </ul>
+                                    <span class="toggle-item">DEV Center</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col tab-content h-100 py-5 pe-5 position-relative">
+                    <div class="bs-wizard" data-progress="0">
+                        <div class="bs-inner nav nav-tabs row g-0">
+                            <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-model">
+                                <div class="bs-wizard-info">
+                                    <span class="fs-5 me-1">1</span>
+                                    <span>모델 선택</span>
                                 </div>
-                                <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-thirdeye" aria-expanded="false">
-                                    <i class="bi bi-eye me-3"></i>
-                                    <span class="fw-bold text-nowrap">
-                                        <span class="toggle-item">ThirdEye</span>
-                                    </span>
-                                    <i class="bi bi-chevron-right toggle-item ms-auto"></i>
-                                </li>
-                                <div class="collapse position-relative" id="collpase-thirdeye">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item ps-5">Visitor Checker</li>
-                                        <li class="list-group-item ps-5">Auto Facial Blur</li>
-                                        <li class="list-group-item ps-5">Video Analyze Engine</li>
-                                    </ul>
+                                <div class="progress-bar"></div>
+                            </div>
+                            <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-image">
+                                <div class="bs-wizard-info">
+                                    <span class="fs-5 me-1">2</span>
+                                    <span>이미지 업로드</span>
                                 </div>
-                                <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-umean" aria-expanded="false">
-                                    <i class="bi bi-chat-text me-3"></i>
-                                    <span class="fw-bold text-nowrap">
-                                        <span class="toggle-item">UMean</span>
-                                    </span>
-                                    <i class="bi bi-chevron-right toggle-item ms-auto"></i>
-                                </li>
-                                <div class="collapse position-relative" id="collpase-umean">
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item ps-5">Chatbot</li>
-                                        <li class="list-group-item ps-5">AI-ARS</li>
-                                    </ul>
+                                <div class="progress-bar"></div>
+                            </div>
+                            <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-result">
+                                <div class="bs-wizard-info">
+                                    <span class="fs-5 me-1">3</span>
+                                    <span>결과</span>
                                 </div>
-                            </ul>
-                            <ul class="list-group list-group-flush mt-auto" id="sitemap">
-                                <li class="list-group-item list-group-header toggle-item">관련 사이트</li>
-                                <li class="list-group-item linkage text-nowrap">
-                                    <a href="http://gridone.gwlee.dev/" target="_blank">
-                                        <i class="bi bi-house me-3"></i>
-                                        <span class="toggle-item">gridone</span>
-                                    </a>
-                                </li>
-                                <li class="list-group-item linkage text-nowrap">
-                                    <a href="http://nh.gwlee.dev/" target="_blank">
-                                        <i class="bi bi-robot me-3"></i>
-                                        <span class="toggle-item">RPA Portal</span>
-                                    </a>
-                                </li>
-                                <li class="list-group-item linkage text-nowrap">
-                                    <a href="http://forum.gridone.co.kr/" target="_blank">
-                                        <i class="bi bi-terminal me-3"></i>
-                                        <span class="toggle-item">DEV Center</span>
-                                    </a>
-                                </li>
-                            </ul>
+                                <div class="progress-bar"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col h-100 position-relative">
-                        <div class="row g-0 w-100 h-100">
-                            <div class="col-3 p-5 h-100">
-                                <div class="d-flex flex-column justify-content-between h-100 pb-5">
-                                    <div>
-                                        <h1 class="fw-bold">Solution #1</h1>
-                                        <h4 class="opacity-50" id="stat-text">모델 선택</h4>
-                                    </div>
-                                    <div class="nav nav-tabs h-auto">
-                                        <button id="tb-prev" class="btn btn-light border-white bg-white bg-opacity-10 text-white me-2" data-bs-toggle="tab" href="#">
-                                            <h5 class="fw-bold m-0">
-                                                이전
-                                            </h5>
-                                        </button>
-                                        <button id="tb-next" class="btn btn-light border-white bg-white bg-opacity-10 text-white" data-bs-toggle="tab" href="#step-model">
-                                            <h5 class="fw-bold m-0">
-                                                다음
-                                            </h5>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-9 p-5 h-100 overflow-auto">
-                                <div class="tab-content">
-                                    <div class="tab-pane fade show active" id="step-model">
-                                        <div class="row row-cols-3">
-                                            <div class="col mb-3">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100">
-                                                    <div class="card-body p-4">
-                                                        <span class="d-block fs-3">
-                                                            <i class="bi bi-eye"></i>
-                                                        </span>
-                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col mb-3">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100">
-                                                    <div class="card-body p-4">
-                                                        <span class="d-block fs-3">
-                                                            <i class="bi bi-eye"></i>
-                                                        </span>
-                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col mb-3">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100">
-                                                    <div class="card-body p-4">
-                                                        <span class="d-block fs-3">
-                                                            <i class="bi bi-eye"></i>
-                                                        </span>
-                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col mb-3">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100">
-                                                    <div class="card-body p-4">
-                                                        <span class="d-block fs-3">
-                                                            <i class="bi bi-eye"></i>
-                                                        </span>
-                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col mb-3">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100">
-                                                    <div class="card-body p-4">
-                                                        <span class="d-block fs-3">
-                                                            <i class="bi bi-eye"></i>
-                                                        </span>
-                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col mb-3">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100">
-                                                    <div class="card-body p-4">
-                                                        <span class="d-block fs-3">
-                                                            <i class="bi bi-eye"></i>
-                                                        </span>
-                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col mb-3">
-                                                <div class="card bg-white bg-opacity-10 border-white h-100">
-                                                    <div class="card-body p-4">
-                                                        <span class="d-block fs-3">
-                                                            <i class="bi bi-eye"></i>
-                                                        </span>
-                                                        <h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
-                                                        <p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
-                                                    </div>
-                                                    <div class="card-footer">
-                                                        <h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
-                                                        <p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
-                                                    </div>
-                                                </div>
-                                            </div>
+                    <div class="row g-0 w-100 h-100 overflow-auto" style="padding-top: 6rem;">
+						<div class="col-3 h-100">
+							<div class="d-flex flex-column justify-content-between h-100">
+								<div>
+									<h1 class="fw-bold">Solution #1</h1>
+									<h4 class="opacity-50" id="stat-text">모델 선택</h4>
+								</div>
+								<div class="nav nav-tabs h-auto p-3">
+									<button id="tb-prev" class="btn btn-light me-2" data-bs-toggle="tab" href="#">
+										<h5 class="fw-bold m-0">
+											이전
+										</h5>
+									</button>
+									<button id="tb-next" class="btn btn-light" data-bs-toggle="tab" href="#step-model">
+										<h5 class="fw-bold m-0">
+											다음
+										</h5>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="col-9 h-100 overflow-auto">
+							<div class="tab-content h-100">
+								<div class="tab-pane h-100 fade show active" id="step-model">
+									<div class="row row-cols-3 g-5 px-5 pb-5">
+										<div class="col mb-3">
+											<div class="card bg-background border-white h-100">
+												<div class="card-body p-4">
+													<span class="d-block fs-3">
+														<i class="bi bi-eye"></i>
+													</span>
+													<h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+													<p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+												</div>
+												<div class="card-footer">
+													<h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+													<p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+												</div>
+											</div>
+										</div>
+										<div class="col mb-3">
+											<div class="card bg-background border-white h-100">
+												<div class="card-body p-4">
+													<span class="d-block fs-3">
+														<i class="bi bi-eye"></i>
+													</span>
+													<h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+													<p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+												</div>
+												<div class="card-footer">
+													<h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+													<p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+												</div>
+											</div>
+										</div>
+										<div class="col mb-3">
+											<div class="card bg-background border-white h-100">
+												<div class="card-body p-4">
+													<span class="d-block fs-3">
+														<i class="bi bi-eye"></i>
+													</span>
+													<h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+													<p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+												</div>
+												<div class="card-footer">
+													<h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+													<p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+												</div>
+											</div>
+										</div>
+										<div class="col mb-3">
+											<div class="card bg-background border-white h-100">
+												<div class="card-body p-4">
+													<span class="d-block fs-3">
+														<i class="bi bi-eye"></i>
+													</span>
+													<h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+													<p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+												</div>
+												<div class="card-footer">
+													<h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+													<p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+												</div>
+											</div>
+										</div>
+										<div class="col mb-3">
+											<div class="card bg-background border-white h-100">
+												<div class="card-body p-4">
+													<span class="d-block fs-3">
+														<i class="bi bi-eye"></i>
+													</span>
+													<h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+													<p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+												</div>
+												<div class="card-footer">
+													<h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+													<p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+												</div>
+											</div>
+										</div>
+										<div class="col mb-3">
+											<div class="card bg-background border-white h-100">
+												<div class="card-body p-4">
+													<span class="d-block fs-3">
+														<i class="bi bi-eye"></i>
+													</span>
+													<h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+													<p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+												</div>
+												<div class="card-footer">
+													<h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+													<p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+												</div>
+											</div>
+										</div>
+										<div class="col mb-3">
+											<div class="card bg-background border-white h-100">
+												<div class="card-body p-4">
+													<span class="d-block fs-3">
+														<i class="bi bi-eye"></i>
+													</span>
+													<h5 class="fw-bold mt-2 mb-1">AI-OCR</h5>
+													<p class="opacity-50 m-0">AI InspectorOne OCR/ICR</p>
+												</div>
+												<div class="card-footer">
+													<h5 class="fw-bold mt-2 mb-1">문자 및 문서인식 솔루션</h5>
+													<p class="opacity-50 m-0">무도 현재 구축해 실시간으로 유사한 사람이 반복 입니다 있는 실행 많은 작업을 솔루션 실제 솔루션은 지능형 서비스 자동화 다양한 서비스 RPA 자동 솔루션 모니터링하고 다양한 검증</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tab-pane h-100 fade" id="step-image">
+                                    <input type="file" class="form-control d-none" id="imageUpload" accept="image/*">
+                                    <button class="btn btn-light" id="browseBtn">
+                                        사진업로드
+                                    </button>
+                                    <h6 class="mt-5">이미지 미리보기</h6>
+                                    <div class="border-white" id="imagePreview"></div>
+								</div>
+								<div class="tab-pane h-100 fade" id="step-result">
+									<div class="row row-cols-2 g-0">
+                                        <div class="col">
+                                            <img class="w-100" src="assets/docs.png" alt="docs">
+                                        </div>
+                                        <div class="col">
+                                            <textarea class="w-100 h-100 form-control p-4" id="result-box" readonly></textarea>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="step-image">
-                                        이미지 업로드
-                                    </div>
-                                    <div class="tab-pane fade" id="step-result">
-                                        결과화면
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bs-wizard" data-progress="0">
-                            <div class="bs-inner nav nav-tabs row g-0">
-                                <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-model">
-                                    <div class="bs-wizard-info">
-                                        <span class="fs-5 me-1">1</span>
-                                        <span>모델 선택</span>
-                                    </div>
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-image">
-                                    <div class="bs-wizard-info">
-                                        <span class="fs-5 me-1">2</span>
-                                        <span>이미지 업로드</span>
-                                    </div>
-                                    <div class="progress-bar"></div>
-                                </div>
-                                <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-result">
-                                    <div class="bs-wizard-info">
-                                        <span class="fs-5 me-1">3</span>
-                                        <span>결과</span>
-                                    </div>
-                                    <div class="progress-bar"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+								</div>
+							</div>
+						</div>
+					</div>
                 </div>
             </div>
         </section>
         <!-- <div id="particles-js" class="h-100 w-100"></div> -->
+        <div class="modal fade" id="loadingmodal" tabindex="-1" aria-labelledby="loadingmodalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="width: 15rem;">
+                <div class="modal-content" style="height: 15rem;">
+                    <div class="modal-body">
+                        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                            <div class="spinner-grow text-primary" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                            <span class="text-dark mt-3">처리 중...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -342,6 +364,16 @@
     <script src="js/master.js"></script>
     <script>
         $(window).ready(function () {
+            const browseBtn = document.querySelector("#browseBtn");
+            const fileInput = document.querySelector("#imageUpload");
+
+            $("#browseBtn").on('click', function(){
+                fileInput.click();
+            });
+
+            $('#imageUpload').on('change',readInputFile);
+
+
             var prevBtn = $("#tb-prev");
             var nextBtn = $("#tb-next");
             var progress = $(".bs-wizard");
@@ -359,7 +391,7 @@
                 console.log("loaded");
             }, 0);
 
-            particlesJS.load('particles-js', 'js/particles.json');
+            // particlesJS.load('particles-js', 'js/particles.json');
 
             $("#side-toggle").on('click', function(){
                 $('#sidebar').toggleClass("active");
@@ -368,8 +400,18 @@
             $('[data-bs-toggle="tab"]').on('shown.bs.tab',function(e){
                 var stat;
                 var activeTab = $(e.target).attr('href');
+                
+                if(activeTab == "#step-model"){
+                    prevBtn.css("display","none");
+                    nextBtn.css("display", "block");
+                    prevBtn.attr("href","#");
+                    nextBtn.attr("href","#step-image");
 
-                if(activeTab == "#step-image"){
+                    progress.attr("data-progress","1");
+
+                    stat = "모델 선택";
+                }
+                else if(activeTab == "#step-image"){
                     prevBtn.css("display","block");
                     nextBtn.css("display", "block");
                     prevBtn.attr("href","#step-model");
@@ -380,6 +422,29 @@
                     stat = "이미지 선택";
                 }
                 else if(activeTab == "#step-result"){
+                    $('#loadingmodal').modal('show');
+
+                    var result = "대  구  지  방  법  원"+"\n"+"회 생 제 6 단 독"+"\n"+"통   지   서"+"\n"+"사건\t\t2017개회59753\t개인회생"+"\n"+"채무자"+"\n"+
+                                 "위 사건에 관하여 이 법원은 2018. 1. 15.\t17:00 개인회생절차개시결증을 하였으나"+"\n"+
+                                 "채무자가 2018. 2. 26.에 새로 채권자목록 및 변제계획안을 작성하여 제출하였으므로"+"\n"+
+                                 "다음사항을 통지합니다."+"\n"+"\n"+
+                                 "다음"+"\n"+
+                                 "1. 이미 통지한 이의기간 및 개인회생 채권자집회의 기일 등에는 변동이 없습니다."+"\n"+
+                                 "2. 유의사항"+"\n"+
+                                 "변제계획 인가 시 까지 더 이상의 변제계획 수장안의 제출이 없으면 이 변제계획"+"\n"+
+                                 "수정안이 인가의 대상이 됩니다."+"\n"+
+                                 "3. 첨부서류"+"\n"+
+                                 "(1) 수정 허가된 채권자목록"+"\n"+
+                                 "(2) 변제계획 수정안"+"\n"+
+                                 "2018. 2. 27."+"\n"+"\n"+
+                                 "수신처 : 개인회생채권자";
+
+                    setTimeout(function() {
+                        $('#loadingmodal').modal('hide');
+                        $('#result-box').html(result);
+                    }, 5000);
+
+                    
                     prevBtn.css("display","block");
                     nextBtn.css("display", "none");
                     prevBtn.attr("href","#step-image");
@@ -395,6 +460,19 @@
                 $("#stat-text").html(stat);
             });
         });
+
+        function readInputFile(e){
+            var reader = new FileReader();
+
+            reader.onload = function(e){
+                var img = document.createElement("img");
+                img.setAttribute("src", e.target.result);
+                img.style.width = "100%";
+                document.querySelector("div#imagePreview").appendChild(img);
+            }
+
+            reader.readAsDataURL(e.target.files[0]);
+        }
     </script>
 </body>
 </html>

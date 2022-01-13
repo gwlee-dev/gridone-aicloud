@@ -49,37 +49,35 @@
         </a>
     </div>
     <main class="vh-100 vw-100 d-flex align-items-center justify-content-center position-relative">
-        <section data-aos="zoom-in" class="d-flex flex-column h-100 w-100 p-5">
-            <nav class="navbar navbar-light" id="navbar">
-                <div class="inner pe-4 position-relative">
-                    <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
-                        <div class="col-2 d-flex justify-content-center align-items-center">
-                            <a class="navbar-brand" href="#home">
-                                <img src="assets/logo-ai.png" style="filter: invert(1);" alt="그리드원">
-                            </a>
-                        </div>
-                        <div class="col-10 d-flex justify-content-between align-items-center">
-                            <ul class="nav nav-tabs my-2">
-                                <li class="nav-item">
-                                  <a class="nav-link" href="index.html">홈</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link active" href="#">솔루션</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
-                                </li>
-                            </ul>
-                            <p class="text-muted mb-0">
-                                © 2021 gridone Co., Ltd. All rights reserved.
-                            </p>
-                        </div>
+        <section data-aos="zoom-in" class="d-flex flex-column h-100 w-100">
+            <nav class="navbar navbar-light mx-5 mt-5 px-5" id="navbar">
+                <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <a class="navbar-brand" href="#home">
+                            <img src="assets/logo-ai.png" style="filter: invert(1);" alt="그리드원">
+                        </a>
+                    </div>
+                    <div class="col-10 d-flex justify-content-between align-items-center">
+                        <ul class="nav nav-tabs my-2">
+                            <li class="nav-item">
+                              <a class="nav-link" href="index.html">홈</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link active" href="#">솔루션</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
+                            </li>
+                        </ul>
+                        <p class="text-muted mb-0">
+                            © 2021 gridone Co., Ltd. All rights reserved.
+                        </p>
                     </div>
                 </div>
             </nav>
-            <div class="row g-0 pt-5 flex-grow-1 position-relative overflow-auto">
-                <div class="col-auto me-5" id="sidebar">
-                    <div class="inner d-flex flex-column h-100">
+            <div class="row g-0 flex-grow-1 position-relative overflow-auto">
+                <div class="col-auto m-5 active" id="sidebar">
+                    <div class="d-flex flex-column h-100">
                         <span id="side-toggle">
                             <i class="bi bi-pin-angle"></i>
                             <i class="bi bi-pin-angle-fill"></i>
@@ -93,14 +91,14 @@
                         </ul>
                         <ul class="list-group list-group-flush border-top border-white">
                             <li class="list-group-item list-group-header toggle-item">솔루션</li>
-                            <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-aida" aria-expanded="false">
+                            <li class="list-group-item opacity-100 d-flex " data-bs-toggle="collapse" href="#collpase-aida" aria-expanded="false">
                                 <i class="bi bi-file-earmark-text me-3"></i>
                                 <span class="fw-bold text-nowrap">
                                     <span class="toggle-item">AIDA</span>
                                 </span>
                                 <i class="bi bi-chevron-right toggle-item ms-auto"></i>
                             </li>
-                            <div class="collapse position-relative" id="collpase-aida">
+                            <div class="collapse position-relative show" id="collpase-aida">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item ps-5" onclick="location.href='solution.html'">
                                         AI-OCR
@@ -117,7 +115,7 @@
                                 </span>
                                 <i class="bi bi-chevron-right toggle-item ms-auto"></i>
                             </li>
-                            <div class="collapse position-relative" id="collpase-thirdeye">
+                            <div class="collapse position-relative show" id="collpase-thirdeye">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item ps-5">Visitor Checker</li>
                                     <li class="list-group-item ps-5">Auto Facial Blur</li>
@@ -131,7 +129,7 @@
                                 </span>
                                 <i class="bi bi-chevron-right toggle-item ms-auto"></i>
                             </li>
-                            <div class="collapse position-relative" id="collpase-umean">
+                            <div class="collapse position-relative show" id="collpase-umean">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item ps-5">Chatbot</li>
                                     <li class="list-group-item ps-5">AI-ARS</li>
@@ -161,26 +159,24 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col h-100">
-                    <div class="row row-cols-2 g-5 w-100 h-100">
-                        <div class="col-auto">
-                            <div class="d-flex flex-column justify-content-between h-100">
-                                <div>
-                                    <h1 class="fw-bold">AI-OCR</h1>
-                                    <h4 class="opacity-50">AI InspectorOne OCR/ICR</h4>
-                                    <h4 class="fw-bold">문자 및 문서인식 솔루션</h4>
-                                    <span class="divider"></span>
-                                    <h6 class="opacity-50 lh-base">
-                                        AI-OCR은 AI 기반의 문자인식(OCR) 솔루션입니다.<br>
-                                        다양한 비정형 문서 이미지에서 문자를 인식하여<br>
-                                        문서처리 업무자동화가 보다 손쉬워집니다.<br>
-                                        그리드원의 핵심기술인 실환경 문자인식 기술을 적용하여<br>
-                                        비교적 높은 정확성과 빠른 처리 속도를 자랑합니다. 
-                                    </h6>
-                                </div>
+                <div class="col tab-content h-100 overflow-auto py-5 pe-5">
+					<div class="d-flex flex-column justify-content-between h-100 overflow-auto">
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <h1 class="fw-bold">AI-OCR</h1>
+                                <h4 class="opacity-50">AI InspectorOne OCR/ICR</h4>
+                                <h4 class="fw-bold">문자 및 문서인식 솔루션</h4>
+                                <span class="divider"></span>
+                                <h6 class="opacity-50 lh-base">
+                                    AI-OCR은 AI 기반의 문자인식(OCR) 솔루션입니다.<br>
+                                    다양한 비정형 문서 이미지에서 문자를 인식하여 문서처리 업무자동화가 보다 손쉬워집니다.<br>
+                                    그리드원의 핵심기술인 실환경 문자인식 기술을 적용하여 비교적 높은 정확성과 빠른 처리 속도를 자랑합니다. 
+                                </h6>
+                            </div>
+                            <div class="col">
                                 <video
                                     id="my-player"
-                                    class="video-js vjs-theme-fantasy vjs-16-9 mt-auto"
+                                    class="video-js vjs-theme-fantasy vjs-16-9 mb-5"
                                     controls
                                     preload="auto"
                                     poster="/assets/thumbnail.png"
@@ -190,26 +186,14 @@
                                     영상 재생을 위해 브라우저의 스크립트 활성화가 필요합니다.
                                     </p>
                                 </video>
-                                <!-- <div>
-                                    <button class="btn btn-light border-white bg-transparent text-white me-2">
-                                        <h5 class="fw-bold m-0">
-                                            이전
-                                        </h5>
-                                    </button>
-                                    <button class="btn btn-light border-white bg-transparent text-white">
-                                        <h5 class="fw-bold m-0">
-                                            다음
-                                        </h5>
-                                    </button>
-                                </div> -->
                             </div>
                         </div>
-                        <div class="col flex-grow-1 h-100 overflow-auto tab-detail">
+                        <div class="d-flex flex-column justify-content-between py-5">
                             <span class="divider my-2"></span>
                             <h5 class="fw-bold mb-3">기능과 특징</h5>
-                            <div class="row row-cols-5 row-cols-lg-5 align-items-stretch justify-content-center text-center mb-5">
+                            <div class="row row-cols-5 row-cols-lg-5 g-5 align-items-stretch justify-content-center text-center mb-5">
                                 <div class="col">
-                                    <div class="card bg-background border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-2 my-2">
                                                 <i class="bi bi-camera"></i>
@@ -220,7 +204,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card bg-background border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-2 my-2">
                                                 <i class="bi bi-arrow-clockwise"></i>
@@ -231,7 +215,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card bg-background border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-2 my-2">
                                                 <i class="bi bi-files"></i>
@@ -242,7 +226,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card bg-background border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-2 my-2">
                                                 <i class="bi bi-file-earmark-x"></i>
@@ -253,7 +237,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card bg-background border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-2 my-2">
                                                 <i class="bi bi-lightning-fill"></i>
@@ -268,7 +252,7 @@
                             <h5 class="fw-bold mb-3">특장점</h5>
                             <div class="row row-cols-5 row-cols-lg-5 align-items-stretch justify-content-start text-center mb-5">
                                 <div class="col mb-3">
-                                    <div class="card bg-background border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-2 my-2">
                                                 <i class="bi bi-type"></i>
@@ -279,7 +263,7 @@
                                     </div>
                                 </div>
                                 <div class="col mb-3">
-                                    <div class="card bg-background border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-2 my-2">
                                                 <i class="bi bi-cloud-arrow-up"></i>
@@ -290,7 +274,7 @@
                                     </div>
                                 </div>
                                 <div class="col mb-3">
-                                    <div class="card bg-background border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-2 my-2">
                                                 <i class="bi bi-briefcase"></i>
@@ -305,8 +289,8 @@
                             <h5 class="fw-bold mb-3">활용사례</h5>
                             <div class="row row-cols-5 row-cols-lg-5 align-items-stretch justify-content-center text-center">
                                 <div class="col square">
-                                    <div class="card bg-background border-white h-100">
-                                        <div class="card-body position-relative p-0">
+                                    <div class="card h-100">
+                                        <div class="card-body p-0">
                                             <img class="w-100 h-100" src="assets/exam1.jpg" alt="exam1">
                                             <div class="hover-box">
                                                 <h6 class="fw-bold mb-0">통장사본</h6>
@@ -316,8 +300,8 @@
                                     </div>
                                 </div>
                                 <div class="col square">
-                                    <div class="card bg-background border-white h-100">
-                                        <div class="card-body position-relative p-0">
+                                    <div class="card h-100">
+                                        <div class="card-body p-0">
                                             <img class="w-100 h-100" src="assets/exam2.jpg" alt="exam1">
                                             <div class="hover-box">
                                                 <h6 class="fw-bold mb-0">사업자등록증</h6>
@@ -327,8 +311,8 @@
                                     </div>
                                 </div>
                                 <div class="col square">
-                                    <div class="card bg-background border-white h-100">
-                                        <div class="card-body position-relative p-0">
+                                    <div class="card h-100">
+                                        <div class="card-body p-0">
                                             <img class="w-100 h-100" src="assets/exam3.jpg" alt="exam1">
                                             <div class="hover-box">
                                                 <h6 class="fw-bold mb-0">팩스문서</h6>
@@ -338,8 +322,8 @@
                                     </div>
                                 </div>
                                 <div class="col square">
-                                    <div class="card bg-background border-white h-100">
-                                        <div class="card-body position-relative p-0">
+                                    <div class="card h-100">
+                                        <div class="card-body p-0">
                                             <img class="w-100 h-100" src="assets/exam4.jpg" alt="exam1">
                                             <div class="hover-box">
                                                 <h6 class="fw-bold mb-0">신분증 3종</h6>
@@ -349,8 +333,8 @@
                                     </div>
                                 </div>
                                 <div class="col square">
-                                    <div class="card bg-background border-white h-100">
-                                        <div class="card-body position-relative p-0">
+                                    <div class="card h-100">
+                                        <div class="card-body p-0">
                                             <img class="w-100 h-100" src="assets/exam5.png" alt="exam1">
                                             <div class="hover-box">
                                                 <h6 class="fw-bold mb-0">타자체 문서</h6>

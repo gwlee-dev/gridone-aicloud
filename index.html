@@ -47,37 +47,35 @@
         </a>
     </div>
     <main class="vh-100 vw-100 d-flex align-items-center justify-content-center position-relative">
-        <section data-aos="zoom-in" class="d-flex flex-column h-100 w-100 p-5">
-            <nav class="navbar navbar-light" id="navbar">
-                <div class="inner pe-4 position-relative">
-                    <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
-                        <div class="col-2 d-flex justify-content-center align-items-center">
-                            <a class="navbar-brand" href="#home">
-                                <img src="assets/logo-ai.png" style="filter: invert(1);" alt="그리드원">
-                            </a>
-                        </div>
-                        <div class="col-10 d-flex justify-content-between align-items-center">
-                            <ul class="nav nav-tabs my-2">
-                                <li class="nav-item">
-                                  <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" data-bs-toggle="tab" href="#home-solution">솔루션</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
-                                </li>
-                            </ul>
-                            <p class="text-muted mb-0">
-                                © 2021 gridone Co., Ltd. All rights reserved.
-                            </p>
-                        </div>
+        <section data-aos="zoom-in" class="d-flex flex-column h-100 w-100">
+            <nav class="navbar navbar-light mx-5 mt-5 px-5" id="navbar">
+                <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
+                    <div class="col-2 d-flex justify-content-center align-items-center">
+                        <a class="navbar-brand" href="#home">
+                            <img src="assets/logo-ai.png" style="filter: invert(1);" alt="그리드원">
+                        </a>
+                    </div>
+                    <div class="col-10 d-flex justify-content-between align-items-center">
+                        <ul class="nav nav-tabs my-2">
+                            <li class="nav-item">
+                              <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" data-bs-toggle="tab" href="#home-solution">솔루션</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="http://forum.gridone.co.kr/" target="_blank">개발자 센터</a>
+                            </li>
+                        </ul>
+                        <p class="text-muted mb-0">
+                            © 2021 gridone Co., Ltd. All rights reserved.
+                        </p>
                     </div>
                 </div>
             </nav>
-            <div class="row g-0 pt-5 flex-grow-1 position-relative">
-                <div class="col-auto me-5" id="sidebar">
-                    <div class="inner d-flex flex-column h-100">
+            <div class="row g-0 flex-grow-1 position-relative overflow-auto">
+                <div class="col-auto m-5 active" id="sidebar">
+                    <div class="d-flex flex-column h-100">
                         <span id="side-toggle">
                             <i class="bi bi-pin-angle"></i>
                             <i class="bi bi-pin-angle-fill"></i>
@@ -91,14 +89,14 @@
                         </ul>
                         <ul class="list-group list-group-flush border-top border-white">
                             <li class="list-group-item list-group-header toggle-item">솔루션</li>
-                            <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-aida" aria-expanded="false">
+                            <li class="list-group-item opacity-100 d-flex " data-bs-toggle="collapse" href="#collpase-aida" aria-expanded="false">
                                 <i class="bi bi-file-earmark-text me-3"></i>
                                 <span class="fw-bold text-nowrap">
                                     <span class="toggle-item">AIDA</span>
                                 </span>
                                 <i class="bi bi-chevron-right toggle-item ms-auto"></i>
                             </li>
-                            <div class="collapse position-relative" id="collpase-aida">
+                            <div class="collapse position-relative show" id="collpase-aida">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item ps-5" onclick="location.href='solution.html'">
                                         AI-OCR
@@ -115,7 +113,7 @@
                                 </span>
                                 <i class="bi bi-chevron-right toggle-item ms-auto"></i>
                             </li>
-                            <div class="collapse position-relative" id="collpase-thirdeye">
+                            <div class="collapse position-relative show" id="collpase-thirdeye">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item ps-5">Visitor Checker</li>
                                     <li class="list-group-item ps-5">Auto Facial Blur</li>
@@ -129,7 +127,7 @@
                                 </span>
                                 <i class="bi bi-chevron-right toggle-item ms-auto"></i>
                             </li>
-                            <div class="collapse position-relative" id="collpase-umean">
+                            <div class="collapse position-relative show" id="collpase-umean">
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item ps-5">Chatbot</li>
                                     <li class="list-group-item ps-5">AI-ARS</li>
@@ -159,62 +157,30 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col tab-content">
+                <div class="col tab-content h-100 overflow-auto py-5 pe-5">
                     <div class="tab-pane fade show active h-100" id="home-tab">
                         <div class="d-flex flex-column h-100">
-                            <div class="tab-header position-relative">
-                                <div class="inner p-5">
-                                    <div id="main-text">
-                                        <p class="opacity-50 mb-0">Robotic Process Automation: 로보틱 처리 자동화</p>
-                                        <h1 class="fw-bold lh-base display-2">
-                                            <!-- <sup class="fs-1 me-1 text-graident" style="margin-left: -0.5rem;">*</sup> -->
-                                            <strong class="text-graident">RPA와 AI의 융합.<br></strong>
-                                        </h1>
-                                        <h2 class="fw-bold lh-sm display-5 opacity-75">
-                                            <strong>
-                                                비용은 줄이고,<br>
-                                                성과는 향상시켜 보세요.
-                                            </strong>
-                                        </h2>
-                                    </div>
-                                    <div class="m-3" id="main-graphic">
-                                        <div class="position-relative">
-                                            <div class="card border-white overflow-hidden" id="ai-box" data-tilt data-tilt-glare="true">
-                                                <div class="card-body d-flex flex-column justify-content-center">
-                                                    <div class="card-inner px-4">
-                                                        <span class="fw-bold display-4">AI</span>
-                                                        <p class="fs-3 lh-sm m-0 fw-bold">
-                                                            <span class="d-block">Artificial</span>
-                                                            <span class="d-block">Inteligence</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="graphic-ball"></span>
-                                            <div class="card border-white overflow-hidden active" id="rpa-box" data-tilt data-tilt-glare="true">
-                                                <div class="card-body d-flex flex-column justify-content-center">
-                                                    <div class="card-inner px-3">
-                                                        <span class="fw-bold display-4">RPA</span>
-                                                        <p class="fs-3 lh-sm m-0 fw-bold">
-                                                            <span class="d-block">Robotic</span>
-                                                            <span class="d-block">Process</span>
-                                                            <span class="d-block">Automation</span>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <span class="graphic-ball"></span>
-                                        </div>
-                                    </div>
-                                    <img src="assets/main-bg.png" alt="main-bg">
+                            <div class="tab-header p-5 position-relative">
+                                <div id="main-text">
+                                    <p class="opacity-50 mb-0">Robotic Process Automation: 로보틱 처리 자동화</p>
+                                    <h1 class="fw-bold lh-base display-2">
+                                        <strong class="text-graident">RPA와 AI의 융합.<br></strong>
+                                    </h1>
+                                    <h2 class="fw-bold lh-sm display-5 opacity-75">
+                                        <strong>
+                                            비용은 줄이고,<br>
+                                            성과는 향상시켜 보세요.
+                                        </strong>
+                                    </h2>
                                 </div>
+                                <img src="assets/main-bg.png" alt="main-bg">
                             </div>
                             <div class="tab-body mt-auto">
                                 <h2 class="fw-bold">Quick Start</h2>
                                 <h5 class="opacity-50 mb-4">미리 준비된 문서들로 빠르게 체험해보세요.</h5>
                                 <div class="row row-cols-3 g-5">
                                     <div class="col">
-                                        <div class="card bg-white bg-opacity-10 border-white h-100 overflow-hidden" onclick="location.href='detail.html'">
+                                        <div class="card h-100 overflow-hidden" onclick="location.href='detail.html'">
                                             <div class="inner h-100 position-relative">
                                                 <div class="card-body card-down h-100 p-0">
                                                     <img src="assets/quick1.png" alt="quick1">
@@ -275,14 +241,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade h-100" id="home-solution">
-                        <div class="tab-body p-5 h-100 overflow-auto">
+                    <div class="tab-pane fade h-100 " id="home-solution">
+                        <div class="tab-body px-5 pb-5 h-100 overflow-auto">
                             <h1 class="fw-bold">솔루션</h1>
                             <p class="opacity-50">소프트웨어 2.0을 완성하는 AI & Automation 기술</p>
                             <h5 class="fw-bold mt-4">AIDA</h5>
                             <div class="row row-cols-4 mb-3">
                                 <div class="col">
-                                    <div class="card bg-white bg-opacity-10 border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-3">
                                                 <i class="bi bi-eye"></i>
@@ -297,7 +263,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card bg-white bg-opacity-10 border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-3">
                                                 <i class="bi bi-eye"></i>
@@ -312,7 +278,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card bg-white bg-opacity-10 border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-3">
                                                 <i class="bi bi-eye"></i>
@@ -327,7 +293,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card bg-white bg-opacity-10 border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-3">
                                                 <i class="bi bi-eye"></i>
@@ -345,7 +311,7 @@
                             <h5 class="fw-bold mt-4">ThirdEye</h5>
                             <div class="row row-cols-4 mb-3">
                                 <div class="col">
-                                    <div class="card bg-white bg-opacity-10 border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-3">
                                                 <i class="bi bi-eye"></i>
@@ -360,7 +326,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card bg-white bg-opacity-10 border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-3">
                                                 <i class="bi bi-eye"></i>
@@ -375,7 +341,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card bg-white bg-opacity-10 border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-3">
                                                 <i class="bi bi-eye"></i>
@@ -391,9 +357,9 @@
                                 </div>
                             </div>
                             <h5 class="fw-bold mt-4">UMean</h5>
-                            <div class="row row-cols-4 mb-3">
+                            <div class="row row-cols-4">
                                 <div class="col">
-                                    <div class="card bg-white bg-opacity-10 border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-3">
                                                 <i class="bi bi-eye"></i>
@@ -408,7 +374,7 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <div class="card bg-white bg-opacity-10 border-white h-100">
+                                    <div class="card h-100">
                                         <div class="card-body p-4">
                                             <span class="d-block fs-3">
                                                 <i class="bi bi-eye"></i>
