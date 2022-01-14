@@ -1,5 +1,5 @@
 .bs-wizard {
-  width: calc(100% - 3rem);
+  width: calc(100% - 6rem);
   position: absolute;
   top: 3rem;
   left: 0;
@@ -9,17 +9,18 @@
 .bs-inner{
   position: relative;
   padding: 0.75rem;
-  background: #e0e0e0;
-  box-shadow:  20px 20px 60px #bebebe;
+  background: linear-gradient(-45deg, rgba(0,192,250,1), rgba(1,94,234,1));
   border-radius: 1rem;
 }
 
 .bs-wizard .bs-wizard-step {
+  color: #fff;
   padding: 0 0.25rem;
   z-index: 10011;
 }
 
 .bs-wizard .bs-wizard-step .bs-wizard-info {
+  color: #fff;
   font-size: 0.75rem;
   font-weight: bold;
   margin-bottom: 0.25rem;
@@ -32,19 +33,19 @@
   width: 100%;
   box-shadow: 0px 2px 0px rgba(0,0,0,0.03) inset,
               0px -2px 0px rgba(0,0,0,0.015) inset;
-  background-color: rgba(0,0,0,0.25);
+  background-color: rgba(255,255,255,0.25);
 }
 
 .bs-wizard[data-progress="1"] .bs-wizard-step:nth-child(-n+1) .progress-bar{
-  background-color: rgba(0,0,0,0.75);
+  background-color: rgba(255,255,255,0.75);
 }
 
 .bs-wizard[data-progress="2"] .bs-wizard-step:nth-child(-n+2) .progress-bar{
-  background-color: rgba(0,0,0,0.75);
+  background-color: rgba(255,255,255,0.75);
 }
 
 .bs-wizard[data-progress="3"] .bs-wizard-step:nth-child(-n+3) .progress-bar{
-  background-color: rgba(0,0,0,0.75);
+  background-color: rgba(255,255,255,0.75);
 }
 
 .bs-wizard[data-progress="1"] .bs-wizard-step:nth-child(-n+1) .bs-wizard-info{

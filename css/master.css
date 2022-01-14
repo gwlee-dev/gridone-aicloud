@@ -5,8 +5,8 @@
 /**************** Basic Settings ****************/
 body {
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-    background-color: #e0e0e0;
-    color: #000;
+    background-color: #ffffff;
+    color: #323333;
     word-break: keep-all;
     word-wrap: break-word;
 }
@@ -76,7 +76,7 @@ a:active {
 }
 
 .bg-background {
-    background-color: #e0e0e0 !important;
+    background-color: #ffffff !important;
 }
 
 .card,
@@ -91,22 +91,32 @@ a:active {
 
 /**** Navbar ****/
 #navbar{
-    height: 4rem;
-    background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe,
-                -20px -20px 60px #ffffff;
+    height: 2rem;
+    background: #ffffff;
+    /* box-shadow:  10px 10px 30px #d9d9d9,
+                -20px -20px 60px #ffffff; */
     border-radius: 1rem;
 }
 
 /**** Sidebar ****/
 #sidebar {
-    background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe;
+    background: #ffffff;
+    box-shadow:  10px 10px 30px #d9d9d9;
     border-radius: 1rem;
     position: relative;
     width: 3rem;
     transition: width .5s;
     overflow-x: hidden;
+}
+
+#sidebar > div > ul{
+    padding: 0;
+    transition: padding .5s;
+}
+
+#sidebar.active > div > ul,
+#sidebar:hover > div > ul{
+    padding: 0 1rem;
 }
 
 #sidebar.active,
@@ -176,6 +186,7 @@ a:active {
     font-size: 0.75rem;
     opacity: 0!important;
     transition: all .5s;
+    margin: 0.25rem 0;
 }
 
 #sidebar.active li.list-group-header,
@@ -186,9 +197,9 @@ a:active {
 
 #sidebar li.list-group-item {
     background-color: transparent;
-    color: #000000;
+    color: #323333;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.35rem 1rem;
     opacity: 0.5;
     transition: opacity .2s, font-weight .2s;
     width: 100%;
@@ -199,9 +210,11 @@ a:active {
 #sidebar li.list-group-item.active {
     position: relative;
     font-weight: bold;
-    background: #e0e0e0;
-    box-shadow:  inset 20px 20px 60px #bebebe,
-                 inset -20px -20px 60px #ffffff;
+    background: linear-gradient(-45deg, rgba(0,192,250,1), rgba(1,94,234,1));
+    color: #fff;
+    border-radius: 1rem;
+    /* box-shadow:  inset 3px 3px 10px #d9d9d9,
+                 inset -3px -3px 10px #ffffff; */
     opacity: 1;
 }
 
@@ -253,7 +266,9 @@ a:active {
     align-items: center;
     border: 0;
     opacity: 0.5;
-    color: #000000;
+    color: #323333;
+    font-weight: bold;
+    /* font-size: 1.25rem; */
     transition: opacity .2s;
 }
 
@@ -269,8 +284,8 @@ a:active {
 
 /**************** Tab Layout ****************/
 .tab-header{
-    background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe;
+    background: #ffffff;
+    box-shadow:  10px 10px 30px #d9d9d9;
     border-radius: 1rem;
 }
 
@@ -289,16 +304,38 @@ a:active {
 }
 
 .tab-content .card{
+    position: relative;
     min-height: 15rem;
-    background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe;
+    background: #ffffff;
+    box-shadow:  10px 10px 30px #d9d9d9;
     border-radius: 1rem;
     border: none;
-    transition: transform .2s;
+    transition: transform .5s, color .5s;
 }
 
 .tab-content .card:hover{
     transform: translateY(-1rem);
+    color: #fff;
+}
+
+.tab-content .card::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    height: 0%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(-45deg, rgba(0,192,250,1), rgba(1,94,234,1));
+    z-index: -1;
+    transition: width .5s, height .5s, border-radius .5s;
+}
+
+.tab-content .card:hover::after{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
 }
 
 .card-up{
@@ -307,8 +344,9 @@ a:active {
     z-index: 10011;
     width: 65%;
     border-radius: 1rem;
-    box-shadow:  -10px -10px 30px #bebebe;
-    background: #e0e0e0;
+    box-shadow:  -10px -10px 30px #d9d9d9;
+    background: #ffffff;
+    color: #323333;
 }
 
 .card-down{
@@ -343,10 +381,11 @@ a:active {
     left: 0;
     justify-content: center;
     align-items: center;
-    background-color: #e0e0e0;
+    background-color: #ffffff;
+    color: #323333;
     border-radius: 1rem;
-    box-shadow:  20px 20px 60px #bebebe,
-                -20px -20px 60px #ffffff;
+    box-shadow:  10px 10px 30px #ffffff,
+                -20px -20px 60px #d9d9d9;
     transition: opacity .5s;
 }
 
@@ -355,22 +394,25 @@ a:active {
     width: 20px;
     height: 3px;
     margin: 0.75rem 0;
-    background-color: #000000;
+    background-color: #323333;
 }
 
 #tb-prev,
 #tb-next{
-    background: #e0e0e0;
-    box-shadow:  20px 20px 60px #bebebe,
+    background: #ffffff;
+    box-shadow:  10px 10px 30px #d9d9d9,
                 -20px -20px 60px #ffffff;
     border: none;
     border-radius: 1rem; 
 }
 
+#result-box,
 #result-box:focus,
 #result-box:active{
+    resize: none;
     box-shadow: none;
     border: none;
+    outline: none;
 }
 
 .text-graident{

@@ -12,32 +12,21 @@
 
 <body class="loading">
     <div class="loader d-flex justify-content-center align-items-center position-fixed">
-        <svg id="anim-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 203.67 38.33">
+        <svg id="anim-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 95.11 34.56">
             <defs>
                 <style>
                     path {
                         fill: rgba(255, 255, 255, 0);
                         stroke: #ffffff;
-                        stroke-width: 0.5;
+                        stroke-width: 0.25;
                     }
                 </style>
             </defs>
-            <path class="anim-line"
-                d="M25,27.24H14.4L11.92,32.5H6.17L19.76,5.84h0L33.36,32.5H27.47Zm-2.1-4.44-3.17-6.68L16.54,22.8Z" />
-            <path class="anim-line" d="M36.72,5.84h6.17V32.5H36.72Z" />
-            <path class="anim-line" d="M49.24,18H60v4.76H49.24Z" />
-            <path class="anim-line" d="M91.55,5.84H98V27.22l13.12,0V32.5H91.55Z" />
-            <path class="anim-line"
-                d="M172.69,5.84H182.8c8.72,0,14.7,5.25,14.7,13.33s-6,13.33-14.7,13.33H172.69Zm9.81,21.4c5.29,0,8.75-3.13,8.75-8.18s-3.46-8.18-8.75-8.18h-3.39V27.24Z" />
-            <path class="anim-line"
-                d="M126.62,5.84a13.22,13.22,0,1,0,13.22,13.22A13.22,13.22,0,0,0,126.62,5.84Zm0,21.4a8.18,8.18,0,1,1,8.18-8.18A8.18,8.18,0,0,1,126.62,27.24Z" />
-            <path class="anim-line"
-                d="M77.7,27.24A8.18,8.18,0,1,1,84,13.83l3.71-3.42a13.22,13.22,0,1,0,0,17.29L84,24.29A8.17,8.17,0,0,1,77.7,27.24Z" />
-            <path class="anim-line" d="M87.7,10.41h0s0,0,0,0Z" />
-            <path class="anim-line" d="M87.7,27.7Z" />
-            <path class="anim-line"
-                d="M161.6,21.62c0,3.62-2.11,5.62-5.66,5.62s-5.65-2-5.65-5.62V5.84h-6.42V20.51c0,7.72,4.5,12,12.07,12S168,28.23,168,20.51V5.84H161.6Z" />
-            <rect width="380" height="80" style="fill: none;" />
+            <path class="anim-line" d="M20.41.36v25.2H15.33V14.83H5.11V25.56H0V.36H5.11v10H15.33V.36Z"/>
+            <path class="anim-line" d="M43.23,7.2,32.4,34.56H24.55V30.24h4.61l1.73-4.4L23.29,7.2h5l5.07,12.42L38.27,7.2Z"/>
+            <path class="anim-line" d="M63.61,8.82c0,5.43-4.21,8.46-8.75,8.46h-4v8.28H45.72V.36h9.14C59.4.36,63.61,3.38,63.61,8.82Zm-4.75,0a3.67,3.67,0,0,0-4-3.85h-4v7.7h4A3.67,3.67,0,0,0,58.86,8.82Z"/>
+            <path class="anim-line" d="M95.11.36v25.2H90V.36Z"/>
+            <path class="anim-line" d="M75.38,0,63.14,25.56H87.66Zm2.48,20.88h-7L75,12.12l.34-.75v0L80,20.88Z"/>
         </svg>
     </div>
     <div data-aos="fade-up" class="fixed-bottom p-4 opacity-50 d-flex" id="back-to-top">
@@ -48,15 +37,15 @@
     </div>
     <main class="vh-100 vw-100 d-flex align-items-center justify-content-center position-relative">
         <section data-aos="zoom-in" class="d-flex flex-column h-100 w-100">
-            <nav class="navbar navbar-light mx-5 mt-5 px-5" id="navbar">
+            <nav class="navbar navbar-light mx-5 mt-5 px-2" id="navbar">
                 <div class="d-flex w-100 h-100 justify-content-center align-items-center position-relative">
-                    <div class="col-2 d-flex justify-content-center align-items-center">
+                    <div class="col-2 d-flex align-items-center">
                         <a class="navbar-brand" href="#home">
                             <img src="assets/logo-ai.png" style="filter: invert(1);" alt="그리드원">
                         </a>
                     </div>
                     <div class="col-10 d-flex justify-content-between align-items-center">
-                        <ul class="nav nav-tabs my-2">
+                        <ul class="nav nav-tabs mx-auto">
                             <li class="nav-item">
                               <a class="nav-link active" data-bs-toggle="tab" href="#home-tab">홈</a>
                             </li>
@@ -74,7 +63,7 @@
                 </div>
             </nav>
             <div class="row g-0 flex-grow-1 position-relative overflow-auto">
-                <div class="col-auto m-5 active" id="sidebar">
+                <div class="col-auto ms-5 my-5 active" id="sidebar">
                     <div class="d-flex flex-column h-100">
                         <span id="side-toggle">
                             <i class="bi bi-pin-angle"></i>
@@ -134,7 +123,7 @@
                                 </ul>
                             </div>
                         </ul>
-                        <ul class="list-group list-group-flush mt-auto" id="sitemap">
+                        <ul class="list-group list-group-flush mt-auto mb-3" id="sitemap">
                             <li class="list-group-item list-group-header toggle-item">관련 사이트</li>
                             <li class="list-group-item linkage text-nowrap">
                                 <a href="http://gridone.gwlee.dev/" target="_blank">
@@ -157,9 +146,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col tab-content h-100 overflow-auto py-5 pe-5">
-                    <div class="tab-pane fade show active h-100" id="home-tab">
-                        <div class="d-flex flex-column h-100">
+                <div class="col tab-content h-100 overflow-auto pe-5">
+                    <div class="tab-pane fade show active h-100 py-5" id="home-tab">
+                        <div class="d-flex flex-column h-100 ps-5">
                             <div class="tab-header p-5 position-relative">
                                 <div id="main-text">
                                     <p class="opacity-50 mb-0">Robotic Process Automation: 로보틱 처리 자동화</p>
@@ -241,11 +230,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade h-100 " id="home-solution">
+                    <div class="tab-pane fade h-100 pt-5" id="home-solution">
                         <div class="tab-body px-5 pb-5 h-100 overflow-auto">
                             <h1 class="fw-bold">솔루션</h1>
                             <p class="opacity-50">소프트웨어 2.0을 완성하는 AI & Automation 기술</p>
-                            <h5 class="fw-bold mt-4">AIDA</h5>
+                            <h5 class="fw-bold my-4">AIDA</h5>
                             <div class="row row-cols-4 mb-3">
                                 <div class="col">
                                     <div class="card h-100">
@@ -308,7 +297,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h5 class="fw-bold mt-4">ThirdEye</h5>
+                            <h5 class="fw-bold my-4">ThirdEye</h5>
                             <div class="row row-cols-4 mb-3">
                                 <div class="col">
                                     <div class="card h-100">
@@ -356,7 +345,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h5 class="fw-bold mt-4">UMean</h5>
+                            <h5 class="fw-bold my-4">UMean</h5>
                             <div class="row row-cols-4">
                                 <div class="col">
                                     <div class="card h-100">
