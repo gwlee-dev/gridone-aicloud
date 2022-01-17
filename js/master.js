@@ -1,3 +1,6 @@
+const hamburger = $(".hamburger");
+const sideMenu = $(".side-menu");
+
 $(function(){
     console.log("              _      _                     \n" +
                 "             (_)    | |                    \n" +
@@ -9,5 +12,22 @@ $(function(){
                 " |___/                     (C) 2022 grid%cone",
                 'color: #E68011;', 'color: #000;', 'color: #E68011;',
                 'color: #000;', 'color: #E68011;', 'color: #000;',
-                'color: #E68011;', 'color: #000;', 'color: #E68011;');    
+                'color: #E68011;', 'color: #000;', 'color: #E68011;');
+
+    /* Navbar Start */
+    $("#sidebar ul.mainlist").clone().appendTo(sideMenu);
+
+    hamburger.on("click", mobileMenu);
+
+    function mobileMenu() {
+        hamburger.toggleClass("active");
+        sideMenu.toggleClass("active");
+    }
+    /* Navbar End */
 });
+
+
+function closeMenu() {
+    hamburger.removeClass("active");
+    sideMenu.removeClass("active");
+}

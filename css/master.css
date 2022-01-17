@@ -98,6 +98,68 @@ a:active {
     border-radius: 1rem;
 }
 
+/**************** NAV CUSTOM ****************/
+
+.navbar{
+    background-color: rgba(0,0,0,0.85);
+    height: 5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #323333;
+}
+
+.side-menu{
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    #sidebar{
+        display: none;
+    }
+
+    .side-menu.active {
+        display: flex;
+        position: fixed;
+        left: 0;
+        top: 0;
+        flex-direction: column!important;
+        justify-content: center!important;
+        background-color: rgba(0,0,0,0.85);
+        height: 100vh;
+        width: 100vw;
+        /* text-align: center; */
+        transition: 0.3s;
+        padding: 5% !important;
+        z-index: 99999;
+    }
+
+    .mainlist{
+        margin-bottom: 0 !important;
+    }
+
+    .side-menu li.list-group-item{
+        color: #fff !important;
+        background: none !important;
+        border: none !important;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+}
+
 /**** Sidebar ****/
 #sidebar {
     background: #ffffff;
@@ -122,6 +184,7 @@ a:active {
 #sidebar.active,
 #sidebar:hover {
     width: 16.66666667%;
+    min-width: 20rem;
 }
 
 #sidebar ul {
@@ -398,8 +461,7 @@ a:active {
 }
 
 #tb-prev,
-#tb-next,
-#browseBtn{
+#tb-next{
     background: #ffffff;
     box-shadow:  10px 10px 30px #d9d9d9,
                 -20px -20px 60px #ffffff;
@@ -416,9 +478,37 @@ a:active {
     outline: none;
 }
 
+#preview-text{
+    display: none;
+}
+
 .text-graident{
     background: linear-gradient(-45deg, rgba(0,192,250,1), rgba(1,94,234,1));   
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+}
+
+/*dropzone */
+.thumbnail{
+    width: 100%;
+    height: 100%;
+    border: 10px;
+    overflow: hidden;
+    background: #ccc;
+    background-size: cover;
+    position: relative;
+}
+
+.thumbnail::after{
+    content: attr(data-label);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 0;
+    color: #ffffff;
+    background: rgba(0,0,0,0.75);
+    font-size: 14px;
+    text-align: center;
 }

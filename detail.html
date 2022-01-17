@@ -74,262 +74,203 @@
                     </div>
                 </div>
             </nav>
-            <div class="row g-0 flex-grow-1 position-relative overflow-auto">
-                <div class="col-auto m-5 active" id="sidebar">
-                    <div class="d-flex flex-column h-100">
-                        <span id="side-toggle">
-                            <i class="bi bi-pin-angle"></i>
-                            <i class="bi bi-pin-angle-fill"></i>
-                        </span>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item list-group-header toggle-item">홈</li>
-                            <li class="list-group-item text-nowrap active" data-bs-toggle="tab" href="#home-tab">
-                                <i class="bi bi-terminal me-3"></i>
-                                <span class="toggle-item">Quick Start</span>
-                            </li>
-                        </ul>
-                        <ul class="list-group list-group-flush border-top border-white">
-                            <li class="list-group-item list-group-header toggle-item">솔루션</li>
-                            <li class="list-group-item opacity-100 d-flex " data-bs-toggle="collapse" href="#collpase-aida" aria-expanded="false">
-                                <i class="bi bi-file-earmark-text me-3"></i>
-                                <span class="fw-bold text-nowrap">
-                                    <span class="toggle-item">AIDA</span>
-                                </span>
-                                <i class="bi bi-chevron-right toggle-item ms-auto"></i>
-                            </li>
-                            <div class="collapse position-relative show" id="collpase-aida">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item ps-5" onclick="location.href='solution.html'">
-                                        AI-OCR
-                                    </li>
-                                    <li class="list-group-item ps-5">Keyword Checker</li>
-                                    <li class="list-group-item ps-5">Table Detector</li>
-                                    <li class="list-group-item ps-5">Document Understanding</li>
-                                </ul>
-                            </div>
-                            <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-thirdeye" aria-expanded="false">
-                                <i class="bi bi-eye me-3"></i>
-                                <span class="fw-bold text-nowrap">
-                                    <span class="toggle-item">ThirdEye</span>
-                                </span>
-                                <i class="bi bi-chevron-right toggle-item ms-auto"></i>
-                            </li>
-                            <div class="collapse position-relative show" id="collpase-thirdeye">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item ps-5">Visitor Checker</li>
-                                    <li class="list-group-item ps-5">Auto Facial Blur</li>
-                                    <li class="list-group-item ps-5">Video Analyze Engine</li>
-                                </ul>
-                            </div>
-                            <li class="list-group-item opacity-100 d-flex" data-bs-toggle="collapse" href="#collpase-umean" aria-expanded="false">
-                                <i class="bi bi-chat-text me-3"></i>
-                                <span class="fw-bold text-nowrap">
-                                    <span class="toggle-item">UMean</span>
-                                </span>
-                                <i class="bi bi-chevron-right toggle-item ms-auto"></i>
-                            </li>
-                            <div class="collapse position-relative show" id="collpase-umean">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item ps-5">Chatbot</li>
-                                    <li class="list-group-item ps-5">AI-ARS</li>
-                                </ul>
-                            </div>
-                        </ul>
-                        <ul class="list-group list-group-flush mt-auto mb-3" id="sitemap">
-                            <li class="list-group-item list-group-header toggle-item">관련 사이트</li>
-                            <li class="list-group-item linkage text-nowrap">
-                                <a href="http://gridone.gwlee.dev/" target="_blank">
-                                    <i class="bi bi-house me-3"></i>
-                                    <span class="toggle-item">gridone</span>
-                                </a>
-                            </li>
-                            <li class="list-group-item linkage text-nowrap">
-                                <a href="http://nh.gwlee.dev/" target="_blank">
-                                    <i class="bi bi-robot me-3"></i>
-                                    <span class="toggle-item">RPA Portal</span>
-                                </a>
-                            </li>
-                            <li class="list-group-item linkage text-nowrap">
-                                <a href="http://forum.gridone.co.kr/" target="_blank">
-                                    <i class="bi bi-terminal me-3"></i>
-                                    <span class="toggle-item">DEV Center</span>
-                                </a>
-                            </li>
-                        </ul>
+            <div class="bs-wizard p-5" data-progress="0">
+                <div class="bs-inner nav nav-tabs row g-0">
+                    <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-model">
+                        <div class="bs-wizard-info">
+                            <span class="fs-5 me-1">1</span>
+                            <span>모델 선택</span>
+                        </div>
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-image">
+                        <div class="bs-wizard-info">
+                            <span class="fs-5 me-1">2</span>
+                            <span>이미지 업로드</span>
+                        </div>
+                        <div class="progress-bar"></div>
+                    </div>
+                    <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-result">
+                        <div class="bs-wizard-info">
+                            <span class="fs-5 me-1">3</span>
+                            <span>결과</span>
+                        </div>
+                        <div class="progress-bar"></div>
                     </div>
                 </div>
-                <div class="col tab-content h-100 py-5 pe-5 position-relative">
-                    <div class="bs-wizard" data-progress="0">
-                        <div class="bs-inner nav nav-tabs row g-0">
-                            <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-model">
-                                <div class="bs-wizard-info">
-                                    <span class="fs-5 me-1">1</span>
-                                    <span>모델 선택</span>
+            </div>
+            <h1 class="fw-bold mb-3 px-5">Solution #1</h1>
+            <span class="nav nav-tabs h-auto align-items-center px-5">
+                <h4 class="d-inline-flex opacity-50 me-auto mb-0" id="stat-text">모델 선택</h4>
+                <button id="tb-prev" class="btn btn-light me-2" data-bs-toggle="tab" href="#">
+                    <h5 class="fw-bold m-0">
+                        이전
+                    </h5>
+                </button>
+                <button id="tb-next" class="btn btn-light" data-bs-toggle="tab" href="#step-model">
+                    <h5 class="fw-bold m-0">
+                        다음
+                    </h5>
+                </button>
+            </span>
+            <div class="tab-content h-100 overflow-auto pb-5">
+                <div class="tab-pane h-100 fade show active" id="step-model">
+                    <div class="row row-cols-4 g-5 p-5">
+                        <div class="col">
+                            <div class="card bg-background border-white h-100">
+                                <div class="card-body p-4">
+                                    <span class="d-block fs-3">
+                                        <i class="bi bi-box-seam"></i>
+                                    </span>
+                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">407-textxtractor-403general</h5>
                                 </div>
-                                <div class="progress-bar"></div>
+                                <div class="card-footer">
+                                    <h5 class="fw-bold mt-2 mb-1">모델명 #1</h5>
+                                    <p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
+                                </div>
                             </div>
-                            <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-image">
-                                <div class="bs-wizard-info">
-                                    <span class="fs-5 me-1">2</span>
-                                    <span>이미지 업로드</span>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-background border-white h-100">
+                                <div class="card-body p-4">
+                                    <span class="d-block fs-3">
+                                        <i class="bi bi-box-seam"></i>
+                                    </span>
+                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">ocr-403-general-latest</h5>
                                 </div>
-                                <div class="progress-bar"></div>
+                                <div class="card-footer">
+                                    <h5 class="fw-bold mt-2 mb-1">모델명 #2</h5>
+                                    <p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
+                                </div>
                             </div>
-                            <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-result">
-                                <div class="bs-wizard-info">
-                                    <span class="fs-5 me-1">3</span>
-                                    <span>결과</span>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-background border-white h-100">
+                                <div class="card-body p-4">
+                                    <span class="d-block fs-3">
+                                        <i class="bi bi-box-seam"></i>
+                                    </span>
+                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">text-detector</h5>
                                 </div>
-                                <div class="progress-bar"></div>
+                                <div class="card-footer">
+                                    <h5 class="fw-bold mt-2 mb-1">모델명 #3</h5>
+                                    <p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-background border-white h-100">
+                                <div class="card-body p-4">
+                                    <span class="d-block fs-3">
+                                        <i class="bi bi-box-seam"></i>
+                                    </span>
+                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">app-701-text-corrector</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="fw-bold mt-2 mb-1">모델명 #4</h5>
+                                    <p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-background border-white h-100">
+                                <div class="card-body p-4">
+                                    <span class="d-block fs-3">
+                                        <i class="bi bi-box-seam"></i>
+                                    </span>
+                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">img-rotation-checker</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="fw-bold mt-2 mb-1">모델명 #5</h5>
+                                    <p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-background border-white h-100">
+                                <div class="card-body p-4">
+                                    <span class="d-block fs-3">
+                                        <i class="bi bi-box-seam"></i>
+                                    </span>
+                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">nlp-text-summarizer</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="fw-bold mt-2 mb-1">모델명 #6</h5>
+                                    <p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-background border-white h-100">
+                                <div class="card-body p-4">
+                                    <span class="d-block fs-3">
+                                        <i class="bi bi-box-seam"></i>
+                                    </span>
+                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">ocr-idcard-drvlicno</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="fw-bold mt-2 mb-1">모델명 #7</h5>
+                                    <p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-background border-white h-100">
+                                <div class="card-body p-4">
+                                    <span class="d-block fs-3">
+                                        <i class="bi bi-box-seam"></i>
+                                    </span>
+                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">my-ocr-test</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="fw-bold mt-2 mb-1">모델명 #8</h5>
+                                    <p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card bg-background border-white h-100">
+                                <div class="card-body p-4">
+                                    <span class="d-block fs-3">
+                                        <i class="bi bi-box-seam"></i>
+                                    </span>
+                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">my-table-test</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="fw-bold mt-2 mb-1">모델명 #9</h5>
+                                    <p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="row g-0 w-100 h-100 overflow-auto" style="padding-top: 3rem;">
-						<div class="col-3 h-100">
-							<div class="d-flex flex-column justify-content-between pt-5 h-100">
-								<div>
-									<h1 class="fw-bold">Solution #1</h1>
-									<h4 class="opacity-50" id="stat-text">모델 선택</h4>
-								</div>
-								<div class="nav nav-tabs h-auto p-4">
-									<button id="tb-prev" class="btn btn-light me-2" data-bs-toggle="tab" href="#">
-										<h5 class="fw-bold m-0">
-											이전
-										</h5>
-									</button>
-									<button id="tb-next" class="btn btn-light" data-bs-toggle="tab" href="#step-model">
-										<h5 class="fw-bold m-0">
-											다음
-										</h5>
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="col-9 h-100 overflow-auto">
-							<div class="tab-content h-100">
-								<div class="tab-pane h-100 fade show active" id="step-model">
-									<div class="row row-cols-3 g-5 p-5">
-										<div class="col mb-3">
-											<div class="card bg-background border-white h-100">
-												<div class="card-body p-4">
-													<span class="d-block fs-3">
-														<i class="bi bi-box-seam"></i>
-													</span>
-													<h5 class="fw-bold mt-2 mb-1 text-truncate">407-textxtractor-403general</h5>
-												</div>
-												<div class="card-footer">
-													<h5 class="fw-bold mt-2 mb-1">모델명 #1</h5>
-													<p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
-												</div>
-											</div>
-										</div>
-										<div class="col mb-3">
-											<div class="card bg-background border-white h-100">
-												<div class="card-body p-4">
-													<span class="d-block fs-3">
-														<i class="bi bi-box-seam"></i>
-													</span>
-													<h5 class="fw-bold mt-2 mb-1 text-truncate">ocr-403-general-latest</h5>
-												</div>
-												<div class="card-footer">
-													<h5 class="fw-bold mt-2 mb-1">모델명 #2</h5>
-													<p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
-												</div>
-											</div>
-										</div>
-										<div class="col mb-3">
-											<div class="card bg-background border-white h-100">
-												<div class="card-body p-4">
-													<span class="d-block fs-3">
-														<i class="bi bi-box-seam"></i>
-													</span>
-													<h5 class="fw-bold mt-2 mb-1 text-truncate">text-detector</h5>
-												</div>
-												<div class="card-footer">
-													<h5 class="fw-bold mt-2 mb-1">모델명 #3</h5>
-													<p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
-												</div>
-											</div>
-										</div>
-										<div class="col mb-3">
-											<div class="card bg-background border-white h-100">
-												<div class="card-body p-4">
-													<span class="d-block fs-3">
-														<i class="bi bi-box-seam"></i>
-													</span>
-													<h5 class="fw-bold mt-2 mb-1 text-truncate">app-701-text-corrector</h5>
-												</div>
-												<div class="card-footer">
-													<h5 class="fw-bold mt-2 mb-1">모델명 #4</h5>
-													<p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
-												</div>
-											</div>
-										</div>
-										<div class="col mb-3">
-											<div class="card bg-background border-white h-100">
-												<div class="card-body p-4">
-													<span class="d-block fs-3">
-														<i class="bi bi-box-seam"></i>
-													</span>
-													<h5 class="fw-bold mt-2 mb-1 text-truncate">img-rotation-checker</h5>
-												</div>
-												<div class="card-footer">
-													<h5 class="fw-bold mt-2 mb-1">모델명 #5</h5>
-													<p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
-												</div>
-											</div>
-										</div>
-										<div class="col mb-3">
-											<div class="card bg-background border-white h-100">
-												<div class="card-body p-4">
-													<span class="d-block fs-3">
-														<i class="bi bi-box-seam"></i>
-													</span>
-													<h5 class="fw-bold mt-2 mb-1 text-truncate">nlp-text-summarizer</h5>
-												</div>
-												<div class="card-footer">
-													<h5 class="fw-bold mt-2 mb-1">모델명 #6</h5>
-													<p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
-												</div>
-											</div>
-										</div>
-										<div class="col mb-3">
-											<div class="card bg-background border-white h-100">
-												<div class="card-body p-4">
-													<span class="d-block fs-3">
-														<i class="bi bi-box-seam"></i>
-													</span>
-													<h5 class="fw-bold mt-2 mb-1 text-truncate">ocr-idcard-drvlicno</h5>
-												</div>
-												<div class="card-footer">
-													<h5 class="fw-bold mt-2 mb-1">모델명 #7</h5>
-													<p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="tab-pane h-100 fade p-5" id="step-image">
-                                    <input type="file" class="form-control d-none" id="imageUpload" accept="image/*">
-                                    <button class="btn btn-light" id="browseBtn">
+                </div>
+                <div class="tab-pane h-100 fade" id="step-image">
+                    <form class="px-5 pt-5 h-100">
+                        <div class="drop-zone border border-dark d-flex flex-column h-100 justify-content-center align-items-center">
+                            <input type="file" class="form-control d-none" id="imageUpload" accept="image/*">
+                            <div class="prompt">
+                                <i class="bi bi-cloud-arrow-up text-dark display-4"></i>
+                                <h4>이미지 파일을 이곳에 드래그 하세요.</h4>
+                                <h6 class="text-muted">또는
+                                    <button class="btn btn-sm btn-primary" id="browseBtn">
                                         사진업로드
                                     </button>
-                                    <h6 class="mt-5">이미지 미리보기</h6>
-                                    <div class="border-white" id="imagePreview"></div>
-								</div>
-								<div class="tab-pane h-100 fade pt-5 pb-4 px-5" id="step-result">
-									<div class="row row-cols-2 g-0 border border-light h-100">
-                                        <div class="col">
-                                            <img class="w-100" src="assets/docs.png" alt="docs">
-                                        </div>
-                                        <div class="col">
-                                            <textarea class="w-100 h-100 form-control p-4" id="result-box" readonly></textarea>
-                                        </div>
-                                    </div>
-								</div>
-							</div>
-						</div>
-					</div>
+                                    를 클릭하세요.
+                                </h6>
+                            </div>
+                            <!-- <div class="thumbnail" data-label="myfile.txt"></div> -->
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane h-100 fade" id="step-result">
+                    <div class="row row-cols-2 g-0 border border-light h-100">
+                        <div class="col">
+                            <img class="w-100" src="assets/docs.png" alt="docs">
+                        </div>
+                        <div class="col">
+                            <textarea class="w-100 h-100 form-control p-4" id="result-box" readonly></textarea>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -357,22 +298,71 @@
     <script src="js/master.js"></script>
     <script>
         $(window).ready(function () {
-            const browseBtn = document.querySelector("#browseBtn");
-            const fileInput = document.querySelector("#imageUpload");
+            document.querySelectorAll("#imageUpload").forEach(inputElement => {
+                const dropZoneElement = inputElement.closest(".drop-zone");
 
-            $("#browseBtn").on('click', function(){
-                fileInput.click();
+                dropZoneElement.addEventListener("click", e => {
+                    inputElement.click();
+                });
+
+                inputElement.addEventListener("change", e => {
+                    if(inputElement.files.length) {
+                        updateThumbnail(dropZoneElement, inputElement.files[0]);
+                    }
+                })
+
+                dropZoneElement.addEventListener("dragover", e => {
+                    e.preventDefault();
+                    dropZoneElement.classList.add("over");
+                });
+
+                ["dragleave", "dragend"].forEach(type => {
+                        dropZoneElement.addEventListener(type, e => {
+                            dropZoneElement.classList.remove("over");
+                    });
+                });
+
+                dropZoneElement.addEventListener("drop", e => {
+                    e.preventDefault();
+                    
+                    if(e.dataTransfer.files.length) {
+                        inputElement.files = e.dataTransfer.files;
+                        updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+                    }
+
+                    dropZoneElement.classList.remove("over");
+                });
             });
 
-            $('#imageUpload').on('change',readInputFile);
+            function updateThumbnail(dropZoneElement, file){
+                let thumbnailElement = dropZoneElement.querySelector(".thumbnail");
 
+                if(dropZoneElement.querySelector(".prompt")){
+                    dropZoneElement.querySelector(".prompt").remove();
+                }
+
+                if(!thumbnailElement){
+                    thumbnailElement = document.createElement("div");
+                    thumbnailElement.classList.add("thumbnail");
+                    dropZoneElement.appendChild(thumbnailElement);
+                }
+
+                thumbnailElement.dataset.label = file.name;
+
+                const reader = new FileReader();
+
+                reader.readAsDataURL(file);
+                reader.onload = () => {
+                    thumbnailElement.style.backgroundImage = `url('${ reader.result }')`;
+                };
+            }
 
             var prevBtn = $("#tb-prev");
             var nextBtn = $("#tb-next");
             var progress = $(".bs-wizard");
 
             prevBtn.css("display","none");
-            nextBtn.css("display", "block");
+            nextBtn.css("display", "inline-block");
             prevBtn.attr("href","#");
             nextBtn.attr("href","#step-image");
 
@@ -396,7 +386,7 @@
                 
                 if(activeTab == "#step-model"){
                     prevBtn.css("display","none");
-                    nextBtn.css("display", "block");
+                    nextBtn.css("display", "inline-block");
                     prevBtn.attr("href","#");
                     nextBtn.attr("href","#step-image");
 
@@ -405,8 +395,8 @@
                     stat = "모델 선택";
                 }
                 else if(activeTab == "#step-image"){
-                    prevBtn.css("display","block");
-                    nextBtn.css("display", "block");
+                    prevBtn.css("display","inline-block");
+                    nextBtn.css("display", "inline-block");
                     prevBtn.attr("href","#step-model");
                     nextBtn.attr("href","#step-result");
 
@@ -438,7 +428,7 @@
                     }, 5000);
 
                     
-                    prevBtn.css("display","block");
+                    prevBtn.css("display","inline-block");
                     nextBtn.css("display", "none");
                     prevBtn.attr("href","#step-image");
                     nextBtn.attr("href","#");
@@ -453,19 +443,6 @@
                 $("#stat-text").html(stat);
             });
         });
-
-        function readInputFile(e){
-            var reader = new FileReader();
-
-            reader.onload = function(e){
-                var img = document.createElement("img");
-                img.setAttribute("src", e.target.result);
-                img.style.width = "100%";
-                document.querySelector("div#imagePreview").appendChild(img);
-            }
-
-            reader.readAsDataURL(e.target.files[0]);
-        }
     </script>
 </body>
 </html>
