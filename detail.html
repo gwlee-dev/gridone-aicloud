@@ -117,7 +117,7 @@
                 <div class="tab-pane h-100 fade show active" id="step-model">
                     <div class="row row-cols-4 g-5 p-5">
                         <div class="col">
-                            <div class="card bg-background border-white h-100">
+                            <div class="card bg-background border-white h-100 active">
                                 <div class="card-body p-4">
                                     <span class="d-block fs-3">
                                         <i class="bi bi-box-seam"></i>
@@ -248,17 +248,16 @@
                     <form class="px-5 pt-5 h-100">
                         <div class="drop-zone border border-dark d-flex flex-column h-100 justify-content-center align-items-center">
                             <input type="file" class="form-control d-none" id="imageUpload" accept="image/*">
-                            <div class="prompt">
+                            <div class="prompt text-center">
                                 <i class="bi bi-cloud-arrow-up text-dark display-4"></i>
                                 <h4>이미지 파일을 이곳에 드래그 하세요.</h4>
                                 <h6 class="text-muted">또는
-                                    <button class="btn btn-sm btn-primary" id="browseBtn">
+                                    <button type="button" class="btn btn-sm btn-primary" id="browseBtn">
                                         사진업로드
                                     </button>
                                     를 클릭하세요.
                                 </h6>
                             </div>
-                            <!-- <div class="thumbnail" data-label="myfile.txt"></div> -->
                         </div>
                     </form>
                 </div>
@@ -274,7 +273,6 @@
                 </div>
             </div>
         </section>
-        <!-- <div id="particles-js" class="h-100 w-100"></div> -->
         <div class="modal fade" id="loadingmodal" tabindex="-1" aria-labelledby="loadingmodalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" style="width: 15rem;">
                 <div class="modal-content" style="height: 15rem;">
@@ -292,16 +290,14 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tilt.js@1.2.1/dest/tilt.jquery.min.js"></script>
     <script src="js/master.js"></script>
     <script>
         $(window).ready(function () {
             document.querySelectorAll("#imageUpload").forEach(inputElement => {
                 const dropZoneElement = inputElement.closest(".drop-zone");
 
-                dropZoneElement.addEventListener("click", e => {
+                $("#browseBtn").on("click", function(){
                     inputElement.click();
                 });
 
@@ -336,15 +332,19 @@
 
             function updateThumbnail(dropZoneElement, file){
                 let thumbnailElement = dropZoneElement.querySelector(".thumbnail");
+                let thumbnailDelete = dropZoneElement.querySelector("#thumbDelete");
 
                 if(dropZoneElement.querySelector(".prompt")){
-                    dropZoneElement.querySelector(".prompt").remove();
+                    // dropZoneElement.querySelector(".prompt").remove();
+                    $(".prompt").css("display", "none");
                 }
 
                 if(!thumbnailElement){
                     thumbnailElement = document.createElement("div");
                     thumbnailElement.classList.add("thumbnail");
                     dropZoneElement.appendChild(thumbnailElement);
+
+                    thumbnailElement.insertAdjacentHTML("beforeend", "<span id='thumbDelete' onclick='resetImg();'><i class='bi bi-x-circle-fill text-white display-4' style='z-index: 10011'></i></span>");
                 }
 
                 thumbnailElement.dataset.label = file.name;
@@ -443,6 +443,14 @@
                 $("#stat-text").html(stat);
             });
         });
+
+        function resetImg(){
+            let thumbnailElement = document.querySelector(".thumbnail");
+            thumbnailElement.remove();
+
+            $(".prompt").css("display", "block");
+            $("#imageUpload").val("");
+        }
     </script>
 </body>
 </html>

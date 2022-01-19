@@ -1,8 +1,5 @@
 .bs-wizard {
   width: 100%;
-  /* position: absolute;
-  top: 3rem;
-  left: 0; */
   z-index: 99999;
 }
 
