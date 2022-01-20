@@ -76,21 +76,21 @@
             </nav>
             <div class="bs-wizard p-5" data-progress="0">
                 <div class="bs-inner nav nav-tabs row g-0">
-                    <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-model">
+                    <div class="bs-wizard-step col">
                         <div class="bs-wizard-info">
                             <span class="fs-5 me-1">1</span>
                             <span>모델 선택</span>
                         </div>
                         <div class="progress-bar"></div>
                     </div>
-                    <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-image">
+                    <div class="bs-wizard-step col">
                         <div class="bs-wizard-info">
                             <span class="fs-5 me-1">2</span>
                             <span>이미지 업로드</span>
                         </div>
                         <div class="progress-bar"></div>
                     </div>
-                    <div class="bs-wizard-step col" data-bs-toggle="tab" href="#step-result">
+                    <div class="bs-wizard-step col">
                         <div class="bs-wizard-info">
                             <span class="fs-5 me-1">3</span>
                             <span>결과</span>
@@ -115,14 +115,32 @@
             </span>
             <div class="tab-content h-100 overflow-auto pb-5">
                 <div class="tab-pane h-100 fade show active" id="step-model">
-                    <div class="row row-cols-4 g-5 p-5">
+                    <h6 class="px-5 my-3 fw-bold">추천 모델</h6>
+                    <div class="row row-cols-4 g-5 px-5 mb-5">
                         <div class="col">
                             <div class="card bg-background border-white h-100 active">
                                 <div class="card-body p-4">
                                     <span class="d-block fs-3">
                                         <i class="bi bi-box-seam"></i>
                                     </span>
-                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">407-textxtractor-403general</h5>
+                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">407-TEXTEXTRACTOR-PREPROC-DEV</h5>
+                                </div>
+                                <div class="card-footer">
+                                    <h5 class="fw-bold mt-2 mb-1">Text Extractor</h5>
+                                    <p class="opacity-50 m-0">이상은 인생의 살 우리 이것이다. 미인을 바이며, 있으며, 눈에 가슴에 철환하였는가? 우리는 목숨이 밝은 무엇이 얼음 대한 충분히 때에, 보라. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h6 class="px-5 my-3 fw-bold">모든 모델</h6>
+                    <div class="row row-cols-4 g-5 px-5 pb-5">
+                        <div class="col">
+                            <div class="card bg-background border-white h-100">
+                                <div class="card-body p-4">
+                                    <span class="d-block fs-3">
+                                        <i class="bi bi-box-seam"></i>
+                                    </span>
+                                    <h5 class="fw-bold mt-2 mb-1 text-truncate">407-TEXTEXTRACTOR-PREPROC-DEV</h5>
                                 </div>
                                 <div class="card-footer">
                                     <h5 class="fw-bold mt-2 mb-1">모델명 #1</h5>
@@ -246,7 +264,7 @@
                 </div>
                 <div class="tab-pane h-100 fade" id="step-image">
                     <form class="px-5 pt-5 h-100">
-                        <div class="drop-zone border border-dark d-flex flex-column h-100 justify-content-center align-items-center">
+                        <div class="drop-zone d-flex flex-column h-100 justify-content-center align-items-center">
                             <input type="file" class="form-control d-none" id="imageUpload" accept="image/*">
                             <div class="prompt text-center">
                                 <i class="bi bi-cloud-arrow-up text-dark display-4"></i>
